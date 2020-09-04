@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
     "storybook": "start-storybook -s ./dist -p 6006",
-    "build-storybook": "build-storybook",
-    "build-dev": "webpack --config ./webpack.dev.config.js --mode development"
+    "build": "webpack --config ./webpack.prod.config.js --mode production",
+    "build-dev": "webpack --config ./webpack.dev.config.js --mode development",
+    "build-css-dev": "webpack --config ./webpack.css.dev.config.js --mode development",
+    "build-storybook": "build-storybook -c .storybook -o .out -s ./dist"
   },
   "author": "",
   "license": "ISC",
