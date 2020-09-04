@@ -1,0 +1,16 @@
+.skip-link {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  overflow:hidden;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.skip-link:focus, .skip-link--shown {
+  position: relative;
+  left: auto;
+  text-transform: uppercase;
+  outline: .25rem solid get-color("focus"); // #2491ff;
+  outline-offset: 0;
+}

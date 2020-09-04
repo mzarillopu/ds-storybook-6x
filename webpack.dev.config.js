@@ -71,6 +71,11 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            // SVG
+            {
+                test: /\.svg$/,
+                loader: 'svg-url-loader'
             }
         ]
     },

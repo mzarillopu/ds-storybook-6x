@@ -2,7 +2,7 @@ import { html } from 'lit-html';
 
 export default { title: 'Components/Color' };
 
-export const AllColors = () => html`
+export const Primary = () => html`
     <style>
         .color-block {
             display: block;
@@ -15,7 +15,6 @@ export const AllColors = () => html`
             margin-right: 10px;
         }
     </style>
-    <h2>Primary</h2>
     
     <div class="color-block-container">
         <div class="color-block puds-primary-bg"></div>
@@ -41,6 +40,5 @@ export const AllColors = () => html`
         <div class="color-block puds-primary-bg-darker"></div>
         .puds-primary-bg-darker
     </div>
-    <h2>Secondary</h2>
     
 `;

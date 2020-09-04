@@ -7,6 +7,8 @@
 @import 'button';
 @import 'forms';
 @import 'table';
+@import 'skip-link';
+@import 'breadcrumb';
 
 body {
   background-color: white;
@@ -29,4 +31,8 @@ body {
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
+}
+
+a:visited {
+  color: rgb(0,0,238);
 }
