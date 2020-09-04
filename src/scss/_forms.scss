@@ -1,0 +1,41 @@
+.puds-label {
+  display: block;
+  line-height: 1.1;
+  margin-top: 1.5rem;
+  max-width: 30rem;
+}
+
+.puds-input, .puds-select, .puds-textarea {
+  border-radius: 0;
+  border: 1px solid black;
+  color: #1b1b1b;
+  display: block;
+  margin-top: .5rem;
+  max-width: 30rem;
+  padding: .5rem;
+  background-color: white;
+}
+
+.puds-input:focus {
+  outline: .25rem solid #2491ff;
+  outline-offset: 0;
+}
+
+.puds-input.puds-input--error {
+  border-width: .25rem;
+  border-color: #b50909;
+  border-style: solid;
+}
+
+// taken from digital.gov
+.puds-fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+// TODO: doesn't work in firefox
+.puds-checkbox__input {
+  width: 1.25em;
+  height: 1.25em;
+}

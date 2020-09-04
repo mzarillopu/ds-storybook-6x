@@ -1,0 +1,37 @@
+.puds-table__bordered {
+  border: 1px solid grey;
+  border-collapse: collapse;
+}
+
+.puds-table__bordered th,
+.puds-table__bordered td {
+  border: 1px solid grey;
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.puds-table__bordered th {
+  background-color: get-color('primary-bg');
+  color: white;
+}
+
+.puds-table__borderless {
+  border-collapse: collapse;
+}
+
+.puds-table__borderless th,
+.puds-table__borderless td {
+  border-bottom: 1px solid grey;
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.puds-table__borderless th {
+  border-bottom: 3px solid get-color('primary-bg');
+}
+
+.puds-table__borderless tr:nth-child(even) {
+  background-color: #e9e9e9;
+}
