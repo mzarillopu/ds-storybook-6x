@@ -1,0 +1,35 @@
+ol.puds-tab-list {
+  list-style: none;
+  display: flex;
+  padding-inline-start: 0px;
+}
+
+li.puds-tab {
+  text-align: center;
+  height: 35px;
+}
+
+li.puds-tab--active {
+  background-color: #0c76cb;
+}
+
+li.puds-tab--active a.puds-tab-link {
+  color: white;
+}
+
+a.puds-tab-link {
+  text-decoration: none;
+  color: rgba(0,0,0,.87);
+  height: 35px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: 'Open Sans';
+  padding: 0 24px;
+  display: inline-flex;
+  align-items: center;
+}
+
+a.puds-tab-link:focus:not([aria-current="page"]) {
+  background-color: lightblue;
+}

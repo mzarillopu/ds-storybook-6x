@@ -9,6 +9,7 @@
 @import 'table';
 @import 'skip-link';
 @import 'breadcrumb';
+@import 'tabs';
 
 body {
   background-color: white;
@@ -16,6 +17,11 @@ body {
 
 // taken from digital.gov
 .puds-focus {
+  outline: .25rem solid #2491ff;
+  outline-offset: 0;
+}
+
+*:focus {
   outline: .25rem solid #2491ff;
   outline-offset: 0;
 }
