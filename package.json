@@ -1,5 +1,5 @@
 {
-  "name": "ds-storybook-6x",
+  "name": "@princeton_puds/ds-storybook",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
