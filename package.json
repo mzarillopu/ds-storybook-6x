@@ -1,5 +1,5 @@
 {
-  "name": "@princeton_puds/ds-storybook",
+  "name": "@princeton_puds/ds-storybook-6x",
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
@@ -45,5 +45,8 @@
     "optimize-css-assets-webpack-plugin": "^5.0.4",
     "sass-loader": "^10.0.1",
     "webpack": "^4.44.1"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
