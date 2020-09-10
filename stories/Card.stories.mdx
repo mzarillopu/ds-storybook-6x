@@ -1,0 +1,29 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { html } from 'lit-html';
+
+<Meta title="Components/Card" component="Card" />
+
+export const Template = (args) => html`
+    <div class="puds-card">
+        <h2 class="puds-card__heading">${ args.heading }</h2>
+        <div class="puds-card__content">
+            ${ args.bodyContent }
+        </div>
+        <div class="puds-card__footer">
+            ${ args.footerContent }
+        </div>
+            
+    </div>
+`;
+
+# Cards
+
+<Canvas>
+    <Story name="Basic" args={{
+        heading: 'Heading',
+        bodyContent: 'This is the content that will go in the body of the card.',
+        footerContent: 'Footer Content'
+    }}>
+      {Template.bind({})}
+    </Story>
+</Canvas>

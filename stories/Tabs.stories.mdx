@@ -28,3 +28,17 @@ The following section demonstrates a simple set of tabs:
       {Template.bind({})}
     </Story>
 </Canvas>
+
+Some general considerations:
+
+* ARIA guidance was not completely followed because it actually decreases usability (https://simplyaccessible.com/article/danger-aria-tabs/)
+* Ordered list (ol tag) and navigation (nav tag) containers were used for semantic purposes. 
+
+TODO: 
+
+* Hover/focus color for tabs that are not selected needs to be improved.
+* Labels that break onto multiple lines
+* Tabs that use icons and/or are completely made up of icons.
+* Scrolling of the tabs panel (perhaps can simply create a scrolling panel)
+* Javascript to show selection
+* Javascript events?
