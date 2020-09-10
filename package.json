@@ -1,6 +1,6 @@
 {
-  "name": "@mzarillo_pu/ds-storybook-6x",
-  "version": "1.0.4",
+  "name": "ds-storybook-6x",
+  "version": "1.0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
