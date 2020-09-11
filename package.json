@@ -1,6 +1,6 @@
 {
   "name": "@mzarillopu/ds-storybook-6x",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "index.js",
   "repository": {
@@ -13,7 +13,8 @@
     "build": "webpack --config ./webpack.prod.config.js --mode production",
     "build-dev": "webpack --config ./webpack.dev.config.js --mode development",
     "build-css-dev": "webpack --config ./webpack.css.dev.config.js --mode development",
-    "build-storybook": "build-storybook -c .storybook -o .out -s ./dist"
+    "build-storybook": "build-storybook -c .storybook -o .out -s ./dist",
+    "prepublish": "npm run build-dev"
   },
   "author": "",
   "license": "ISC",
