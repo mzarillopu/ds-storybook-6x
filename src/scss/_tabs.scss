@@ -30,6 +30,6 @@ a.puds-tab-link {
   align-items: center;
 }
 
-a.puds-tab-link:focus:not([aria-current="page"]) {
+a.puds-tab-link:focus:not([aria-current="page"]), a.puds-tab-link:hover:not([aria-current="page"]) {
   background-color: lightblue;
 }
