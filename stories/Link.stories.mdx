@@ -1,0 +1,39 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { html } from 'lit-html';
+
+<Meta title="Components/Link" component="Link" />
+
+export const Template = (args) => html`
+    <a href="">${ args.text }</a>
+`;
+
+export const ExternalLinkTemplate = (args) => html`
+    <a href="" target="_blank" rel="noopener noreferrer">${ args.text }</a>
+`;
+
+# Link
+
+A link (or "hyperlink") is a word or phrase that the user can click on to navigate to a new web page/document or
+navigate to a different section within the same page/document.
+
+## Implementation Notes
+
+<i>TODO: The "external" icon needs aligned and does not scale with the surrounding text as it should.</i>
+
+<Canvas>
+    <Story name="Simple Link" args={{
+        text: "Link Text"
+    }}>
+      {Template.bind({})}
+    </Story>
+</Canvas>
+
+<Canvas>
+    <Story name="External Link" args={{
+        text: "Link Text"
+    }}>
+      {ExternalLinkTemplate.bind({})}
+    </Story>
+</Canvas>
+
+
