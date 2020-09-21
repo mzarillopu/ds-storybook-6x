@@ -70,3 +70,26 @@ label {
   font-size: 17px;
   line-height: 1.3em;
 }
+
+.puds-page-title {
+  border-bottom: 3px solid #e77500;
+  padding-bottom: 5px;
+  margin: 0.2em 0 0.75em;
+  font-size: 3.35rem;
+  font-weight: 500;
+}
+
+.puds-block-heading {
+  font-weight: 700;
+  font-size: 2.125rem;
+  line-height: 1.53;
+}
+
+.puds-block-heading:after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  display: block;
+  background-color: #e77500;
+  margin-top: 2px;
+}
