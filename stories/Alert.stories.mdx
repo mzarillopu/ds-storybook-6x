@@ -1,0 +1,48 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { html } from 'lit-html';
+
+<Meta title="Components/Alert" component="Alert" />
+
+export const Template = (args) => html`
+    <section class="puds-alert-section">
+        <h2 class="puds-alert-section__heading puds-visually-hidden">${ args.heading }</h2>
+        <div class="puds-alert-section__content">
+            <div class="puds-row">
+                <h3 class="puds-alert-section__title">${ args.title }</h3>
+                <p>${ args.content }</p>
+            </div>
+        </div>
+        <a href="#" aria-label="Hide alert with title ${ args.title } until it is updated" title="Hide alert with title ${ args.title } until it is updated" class="puds-alert-section__close" role="button">X</a>
+    </section>
+`;
+
+# Alert
+
+An "Alert" is a section that draws attention to content that is important for the user to read.
+
+There are different scenarios under which you might want to use an Alert:
+
+* to draw attention to content that is intended to be very prominent on the page (such as a notice for an upcoming outage)
+* to draw immediate attention to an important condition that has just arisen on the page (such as a critical error)
+
+## Alert Section
+
+In may be desirable to group alerts under an Alert Section to improve screen reader capabilities and provide a 
+heading (visibile or invisible) for the alert section of the page.
+
+## Implementation Notes
+
+To accomplish this, width, height, margin, padding, borders, and word wrap are all removed to attempt to remove 
+all visual impact of the component, while leaving the content in the document.
+
+<Canvas>
+    <Story name="Basic" args={{
+        heading: "Alerts",
+        title: "Alert Title",
+        content: "This is the content of the alert.  It can be a simple paragraph or something more complex."
+    }}>
+      {Template.bind({})}
+    </Story>
+</Canvas>
+
+

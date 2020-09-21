@@ -64,6 +64,7 @@ module.exports = {
                 loader: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
+                    'svg-transform-loader/encode-query', // necessary to encode hash (#) for params in svg-transform-loader
                     {
                         loader: 'sass-loader',
                         options: {
@@ -74,8 +75,13 @@ module.exports = {
             },
             // SVG
             {
-                test: /\.svg$/,
-                loader: 'svg-url-loader'
+                test: /\.svg(\?.*)?$/, // match img.svg and img.svg?param=value
+                // test: /\.svg$/,
+                // loader: 'svg-url-loader'
+                use: [
+                    'url-loader',
+                    'svg-transform-loader' // allows transformation of svg to set fill/stroke values
+                ]
             }
         ]
     },
