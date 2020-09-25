@@ -1,0 +1,61 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { html } from 'lit-html';
+
+<Meta title="Components/Side Bar Menu" component="SideBarMenu" />
+
+export const Template = (args) => html`
+    <div style="width: 200px">
+    <nav class="puds-sidebar-menu" aria-label="section">
+        <h2 class="puds-sr-only">Section Menu</h2>
+        <ul class="puds-sidebar-menu__list" role="list">
+            <li class="puds-sidebar-menu__list-item--active">
+                <a href="/blocks/accordion" data-drupal-link-system-path="node/1261" class="is-active">Accordion<span class="puds-sr-only">, (current page)</span></a>
+            </li>
+            <li class="puds-sidebar-menu__list-item">
+                <a href="/blocks/content-slider" data-drupal-link-system-path="node/1276">Content Slider</a>
+            </li>
+            <li class="puds-sidebar-menu__list-item">
+                <a href="/blocks/feature" data-drupal-link-system-path="node/1241">Feature</a>
+            </li>
+            <li class="puds-sidebar-menu__list-item">
+                <a href="/blocks/iframe" data-drupal-link-system-path="node/1246">iFrame</a>
+            </li>
+            <li class="puds-sidebar-menu__list-item">
+                <a href="/blocks/map" data-drupal-link-system-path="node/1251">Map</a>
+            </li>
+            <li class="puds-sidebar-menu__list-item">
+                <a href="/blocks/related-links-and-documents" data-drupal-link-system-path="node/1271">Related Links and Documents</a>
+            </li>
+            <li class="puds-sidebar-menu__list-item">
+                <a href="/blocks/text" data-drupal-link-system-path="node/1256">Text</a>
+            </li>
+            <li class="puds-sidebar-menu__list-item">
+                <a href="/blocks/social-links" data-drupal-link-system-path="node/1266">Social Links</a>
+            </li>
+            <li class="puds-sidebar-menu__list-item">
+                <a href="/blocks/lists" data-drupal-link-system-path="node/1306">Lists</a>
+            </li>
+        </ul>
+    </nav>
+    </div>
+`;
+
+# Side Bar Menu
+
+The Side Bar Menu can be used as a primary or secondary navigation.
+
+## Implementation Notes
+
+<i>TODO:</i>
+
+<Canvas>
+    <Story name="Basic" args={{
+        heading: "Alerts",
+        title: "Alert Title",
+        content: "This is the content of the alert.  It can be a simple paragraph or something more complex."
+    }}>
+      {Template.bind({})}
+    </Story>
+</Canvas>
+
+
