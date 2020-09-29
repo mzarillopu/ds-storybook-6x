@@ -1,0 +1,74 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { html } from 'lit-html';
+
+<Meta title="Components/Nav Menu" component="NavMenu" />
+
+export const Template = (args) => html`
+    <nav class="puds-nav-menu" aria-label="site">
+        <h2 class="puds-sr-only">Main Menu</h2>
+        <div class="puds-nav-menu-container">
+            <ul class="puds-nav-menu__list" role="list">
+                <li class="puds-nav-menu__list-item--active">
+                    <a href="/blocks/accordion">Content Types<span class="puds-sr-only">, (current page)</span></a>
+                    <button class="puds-nav-menu__toggle-button" type="button"></button>
+                    <ul class="puds-nav-menu__submenu">
+                        <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Page</a></li>
+                        <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Alert</a></li>
+                        <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">News</a></li>
+                        <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Person</a></li>
+                    </ul>
+                </li>
+                <li class="puds-nav-menu__list-item">
+                    <a href="/blocks/content-slider">Blocks</a>
+                    <button class="puds-nav-menu__toggle-button" type="button"></button>
+                    <ul class="puds-nav-menu__submenu">
+                        <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Accordion</a></li>
+                        <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Content Slider</a></li>
+                        <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Feature</a></li>
+                        <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">iFrame</a></li>
+                        <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Map</a></li>
+                        <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Related Links</a></li>
+                    </ul>
+                </li>
+                <li class="puds-nav-menu__list-item">
+                    <a href="/blocks/content-slider">Images &amp; Media</a>
+                    <button class="puds-nav-menu__toggle-button" type="button"></button>
+                    <ul class="puds-nav-menu__submenu">
+                        <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Featured Images</a></li>
+                        <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Billboard Image</a></li>
+                        <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Billboard Slider</a></li>
+                        <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Billboard Video</a></li>
+                        <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Image Gallery</a></li>
+                        <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Image Embed</a></li>
+                        <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Social Media</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    </div>
+`;
+
+# Nav Menu
+
+The Navigation Menu can be used as a primary or secondary navigation.
+
+## Implementation Notes
+
+* It is recommended that your navigation container have padding on the right hand side to allow the menus to open
+  without triggering a horizontal scrollbar.  Depending on the natural width of the labels that you use, you may
+  need to add extra padding to support the next-to-the-last menu item.
+
+<i>TODO:</i>
+
+<Canvas>
+    <Story name="Basic" args={{
+        heading: "Alerts",
+        title: "Alert Title",
+        content: "This is the content of the alert.  It can be a simple paragraph or something more complex."
+    }}>
+      {Template.bind({})}
+    </Story>
+</Canvas>
+
+
