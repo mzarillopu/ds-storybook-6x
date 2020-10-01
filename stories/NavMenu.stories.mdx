@@ -9,7 +9,7 @@ export const Template = (args) => html`
         <div class="puds-nav-menu-container">
             <ul class="puds-nav-menu__list" role="list">
                 <li class="puds-nav-menu__list-item--active">
-                    <a href="/blocks/accordion">Content Types<span class="puds-sr-only">, (current page)</span></a>
+                    <a href="/blocks/accordion" aria-current="true">Content Types<span class="puds-sr-only">, (current page)</span></a>
                     <button class="puds-nav-menu__toggle-button" type="button" aria-expanded="false">
                         <span class="puds-sr-only">
                             Content Types
@@ -18,7 +18,7 @@ export const Template = (args) => html`
                     </button>
                     <ul class="puds-nav-menu__submenu">
                         <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Page</a></li>
-                        <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Alert</a></li>
+                        <li class="puds-nav-menu__submenu-item" aria-current="page"><a href="/content-types/page">Alert</a></li>
                         <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">News</a></li>
                         <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Person</a></li>
                     </ul>
@@ -76,6 +76,10 @@ The Navigation Menu can be used as a primary or secondary navigation.
 
 ## TODO
 
+* Style Cleanup: Would like the focus border around the toggle menu button to be the same height as the corresponding
+  link next to it so they appear consistent when tabbing through.
+* Style Cleanup: When the toggle menu button has focus it should not obscure the link text next to it.
+* Styles: Configurable Colors
 * What is the best way to wrap this as a component?  Do we need a data interface and a non-data interface?
 
 ```

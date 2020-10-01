@@ -1,0 +1,42 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { html } from 'lit-html';
+
+<Meta title="Components/Menu Toggle" component="MenuToggle" />
+
+export const Template = (args) => html`
+    <button class="puds-menu-toggle" type="button" aria-controls="menu-container" aria-expanded="false" aria-label="Toggle navigation">
+        ${ args.title }
+    </button>
+`;
+
+export const TemplateExpanded = (args) => html`
+    <button class="puds-menu-toggle" type="button" aria-controls="menu-container" aria-expanded="true" aria-label="Toggle navigation">
+      ${ args.title }
+    </button>
+`;
+
+# Menu Toggle
+
+The Menu Toggle is a common pattern for toggling the visibility of a menu.
+
+## Implementation Notes
+
+## TODO
+
+<Canvas>
+    <Story name="Collapsed" args={{
+        title: "Menu"
+    }}>
+      {Template.bind({})}
+    </Story>
+</Canvas>
+
+<Canvas>
+    <Story name="Expanded" args={{
+        title: "Menu"
+    }}>
+      {TemplateExpanded.bind({})}
+    </Story>
+</Canvas>
+
+

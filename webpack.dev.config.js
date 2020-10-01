@@ -100,7 +100,8 @@ module.exports = {
         }),
         new CopyPlugin({
             patterns: [
-                { from: 'node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js', to: 'webcomponents-bundle.js' }
+                { from: 'node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js', to: 'webcomponents-bundle.js' },
+                { from: 'src/icons', to: 'icons' }
             ],
         })
     ]

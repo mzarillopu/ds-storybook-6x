@@ -1,0 +1,23 @@
+.puds-menu-toggle {
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  height: 32px;
+  padding: 4px;
+}
+.puds-menu-toggle:after {
+  display: inline-block;
+  content: '';
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  background-position: -3px 3px;
+  width: 18px;
+  height: 18px;
+}
+.puds-menu-toggle[aria-expanded="false"]:after {
+  background-image: url(../icons/menu-24px.svg);
+}
+.puds-menu-toggle[aria-expanded="true"]:after {
+  background-image: url(../icons/close-24px.svg);
+}
