@@ -15,6 +15,10 @@ export const TemplateExpanded = (args) => html`
     </button>
 `;
 
+export const TemplateWebComponent = (args) => html`
+    <puds-menu-toggle></puds-menu-toggle>
+`;
+
 # Menu Toggle
 
 The Menu Toggle is a common pattern for toggling the visibility of a menu.
@@ -39,4 +43,10 @@ The Menu Toggle is a common pattern for toggling the visibility of a menu.
     </Story>
 </Canvas>
 
-
+<Canvas>
+    <Story name="Web Component" args={{
+        title: "Menu"
+    }}>
+      {TemplateWebComponent.bind({})}
+    </Story>
+</Canvas>
