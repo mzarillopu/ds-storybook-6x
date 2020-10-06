@@ -11,13 +11,15 @@
   content: '';
   background-size: 18px 18px;
   background-repeat: no-repeat;
-  background-position: -3px 3px;
+  background-position: 0px 3px;
   width: 18px;
   height: 18px;
 }
-.puds-menu-toggle[aria-expanded="false"]:after {
+.puds-menu-toggle[aria-expanded="false"]:after,
+.puds-menu-toggle:not([aria-expanded]):after {
   background-image: url(../icons/menu-24px.svg);
 }
-.puds-menu-toggle[aria-expanded="true"]:after {
+.puds-menu-toggle[aria-expanded="true"]:after,
+.puds-menu-toggle[aria-expanded=""]:after {
   background-image: url(../icons/close-24px.svg);
 }

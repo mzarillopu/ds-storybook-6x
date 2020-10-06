@@ -4,19 +4,22 @@ import { html } from 'lit-html';
 <Meta title="Components/Menu Toggle" component="MenuToggle" />
 
 export const Template = (args) => html`
-    <button class="puds-menu-toggle" type="button" aria-controls="menu-container" aria-expanded="false" aria-label="Toggle navigation">
-        ${ args.title }
-    </button>
+    <button class="puds-menu-toggle" type="button" aria-controls="menu-container" aria-expanded="false" aria-label="Toggle navigation">${ args.title }</button>
 `;
 
 export const TemplateExpanded = (args) => html`
-    <button class="puds-menu-toggle" type="button" aria-controls="menu-container" aria-expanded="true" aria-label="Toggle navigation">
-      ${ args.title }
-    </button>
+    <button class="puds-menu-toggle" type="button" aria-controls="menu-container" aria-expanded="true" aria-label="Toggle navigation">${ args.title }</button>
 `;
 
 export const TemplateWebComponent = (args) => html`
     <puds-menu-toggle></puds-menu-toggle>
+`;
+
+export const TemplateChild = (args) => html`
+    <puds-child-test>
+        <puds-child name="Test1"></puds-child>
+        <puds-child name="Test2"></puds-child>
+    </puds-child-test>
 `;
 
 # Menu Toggle
@@ -48,5 +51,13 @@ The Menu Toggle is a common pattern for toggling the visibility of a menu.
         title: "Menu"
     }}>
       {TemplateWebComponent.bind({})}
+    </Story>
+</Canvas>
+
+<Canvas>
+    <Story name="Child" args={{
+        title: "Menu"
+    }}>
+      {TemplateChild.bind({})}
     </Story>
 </Canvas>

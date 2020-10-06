@@ -1,6 +1,7 @@
 .puds-accordion {
 }
-.puds-accordion__button, .puds-accordion__button--expanded {
+.puds-accordion__button,
+.puds-accordion__button[aria-expanded='true'] {
   padding: 1rem 50px 1rem 1rem;
   position: relative;
   border: none;
@@ -11,7 +12,7 @@
   text-align: left;
   cursor: pointer;
 }
-.puds-accordion__button--collapsed {
+.puds-accordion__button[aria-expanded='false'] {
   padding: 1rem 50px 1rem 1rem;
   position: relative;
   border: none;
@@ -22,6 +23,26 @@
   text-align: left;
   background-color: #fff;
   cursor: pointer;
+}
+.puds-accordion__button[aria-expanded='false']:after {
+  content: ' ';
+  background-image: url(../icons/expand_more-24px.svg);
+  width: 18px;
+  height: 17px;
+  background-size: 18px 18px;
+  background-position: 0px 3px;
+  display: inline-block;
+  float: right;
+}
+.puds-accordion__button[aria-expanded='true']:after {
+  content: ' ';
+  background-image: url(../icons/expand_less-24px.svg);
+  width: 18px;
+  height: 17px;
+  background-size: 18px 18px;
+  background-position: 0px 3px;
+  display: inline-block;
+  float: right;
 }
 .puds-accordion__content {
   border-left: 2px solid #e77500;
