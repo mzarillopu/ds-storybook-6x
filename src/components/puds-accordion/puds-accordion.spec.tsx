@@ -9,9 +9,7 @@ describe('puds-accordion', () => {
     });
     expect(page.root).toEqualHtml(`
       <puds-accordion>
-        <mock:shadow-root>
-          <slot></slot>
-        </mock:shadow-root>
+        <div class="puds-accordion" role="region"></div>
       </puds-accordion>
     `);
   });

@@ -12,10 +12,6 @@ export namespace Components {
         "itemId": string;
         "itemTitle": string;
     }
-    interface PudsChildTest {
-        "isExpanded": boolean;
-        "options": string[];
-    }
     interface PudsMenuToggle {
         "isExpanded": boolean;
     }
@@ -33,12 +29,6 @@ declare global {
         prototype: HTMLPudsAccordionItemElement;
         new (): HTMLPudsAccordionItemElement;
     };
-    interface HTMLPudsChildTestElement extends Components.PudsChildTest, HTMLStencilElement {
-    }
-    var HTMLPudsChildTestElement: {
-        prototype: HTMLPudsChildTestElement;
-        new (): HTMLPudsChildTestElement;
-    };
     interface HTMLPudsMenuToggleElement extends Components.PudsMenuToggle, HTMLStencilElement {
     }
     var HTMLPudsMenuToggleElement: {
@@ -48,7 +38,6 @@ declare global {
     interface HTMLElementTagNameMap {
         "puds-accordion": HTMLPudsAccordionElement;
         "puds-accordion-item": HTMLPudsAccordionItemElement;
-        "puds-child-test": HTMLPudsChildTestElement;
         "puds-menu-toggle": HTMLPudsMenuToggleElement;
     }
 }
@@ -59,17 +48,12 @@ declare namespace LocalJSX {
         "itemId"?: string;
         "itemTitle"?: string;
     }
-    interface PudsChildTest {
-        "isExpanded"?: boolean;
-        "options"?: string[];
-    }
     interface PudsMenuToggle {
         "isExpanded"?: boolean;
     }
     interface IntrinsicElements {
         "puds-accordion": PudsAccordion;
         "puds-accordion-item": PudsAccordionItem;
-        "puds-child-test": PudsChildTest;
         "puds-menu-toggle": PudsMenuToggle;
     }
 }
@@ -79,7 +63,6 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "puds-accordion": LocalJSX.PudsAccordion & JSXBase.HTMLAttributes<HTMLPudsAccordionElement>;
             "puds-accordion-item": LocalJSX.PudsAccordionItem & JSXBase.HTMLAttributes<HTMLPudsAccordionItemElement>;
-            "puds-child-test": LocalJSX.PudsChildTest & JSXBase.HTMLAttributes<HTMLPudsChildTestElement>;
             "puds-menu-toggle": LocalJSX.PudsMenuToggle & JSXBase.HTMLAttributes<HTMLPudsMenuToggleElement>;
         }
     }

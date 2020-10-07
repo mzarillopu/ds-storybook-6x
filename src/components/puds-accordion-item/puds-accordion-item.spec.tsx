@@ -9,9 +9,8 @@ describe('puds-accordion-item', () => {
     });
     expect(page.root).toEqualHtml(`
       <puds-accordion-item>
-        <mock:shadow-root>
-          <slot></slot>
-        </mock:shadow-root>
+        <button aria-expanded="false" class="puds-accordion__button" id="undefined__btn" role="button"></button>
+        <div aria-hidden="true" aria-labelledby="undefined__btn" class="puds-accordion__content" role="region" tabindex="0"></div>
       </puds-accordion-item>
     `);
   });
