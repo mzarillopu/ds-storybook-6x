@@ -5,3 +5,10 @@ a[target="_blank"]::after {
   width: .5em;
   height: .5em;
 }
+.puds-no-icon[target="_blank"]::after {
+  content: none;
+  display: inherit;
+  margin-left: inherit;;
+  width: 0px;
+  height: 0px;
+}

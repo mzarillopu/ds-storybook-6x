@@ -1,0 +1,152 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { html } from 'lit-html';
+
+<Meta title="Components/Footer" component="Footer" />
+
+export const Template = (args) => html`
+    <style>
+        footer.puds-footer {
+            background: #1b1b1b;
+            color: #fff;
+            padding-top: 2rem;
+        }
+        footer.puds-footer h2 {
+            font-family: Roboto,sans-serif;
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: #fff !important;
+            font-weight: bold !important;
+            font-style: normal !important;
+            margin-bottom: 0;
+        }
+        footer.puds-footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer.puds-footer a:hover {
+            text-decoration: underline;
+        }
+        ul.puds-footer__list {
+            list-style: none;
+            padding-left: 0px;
+        }
+        ul.puds-footer__list li {
+            margin-bottom: .50rem;
+        }
+        .puds-container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .puds-footer__content {
+            padding-bottom: 2rem;
+        }
+        .puds-footer__subfooter {
+            background: #000000;
+            border-top: 1px solid #979797;
+            padding: 1rem 0;
+        }
+        .puds-footer__logo {
+             width: 142px;
+             float: right;
+        }
+        @media (min-width: 576px) {
+            .puds-container {
+                max-width: 540px;
+            }
+        }
+        @media (min-width: 768px) {
+            .puds-container {
+                max-width: 720px;
+            }
+        }
+        @media (min-width: 992px) {
+            .puds-container {
+                max-width: 960px;
+            }
+        }
+        @media (min-width: 1200px) {
+            .puds-container {
+                max-width: 1200px;
+            }            
+        }
+    </style>
+    <footer role="contentinfo" class="puds-footer">
+        <div class="puds-container puds-footer__content">
+            <div class="row">
+                <div class="col-sm-3 col-xs-12">
+                    <h2>General Information</h2>
+                    <ul class="puds-footer__list">
+                        <li><a href="javascript:void(0);">Contact Us</a></li>
+                        <li><a href="javascript:void(0);">About Us</a></li>
+                        <li><a href="javascript:void(0);">News</a></li>
+                        <li><a href="javascript:void(0);">Data Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <h2>Services</h2>
+                    <ul class="puds-footer__list">
+                        <li><a href="javascript:void(0);">Update Your Info</a></li>
+                        <li><a href="javascript:void(0);">Online Resources</a></li>
+                        <li><a href="javascript:void(0);">Visiting Campus</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <h2>University Links</h2>
+                    <ul class="puds-footer__list">
+                        <li><a href="javascript:void(0);">Princeton University</a></li>
+                        <li><a href="javascript:void(0);">Princeton Athletics</a></li>
+                        <li><a href="javascript:void(0);">Princeton Career Development</a></li>
+                        <li><a href="javascript:void(0);">Princeton Prize</a></li>
+                        <li><a href="javascript:void(0);">Princetoniana</a></li>
+                        <li><a href="javascript:void(0);">Giving to Princeton</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <h2>Share</h2>
+                    <ul class="puds-footer__list">
+                        <li><a href="javascript:void(0);">Facebook</a></li>
+                        <li><a href="javascript:void(0);">Twitter</a></li>
+                        <li><a href="javascript:void(0);">Linked In</a></li>
+                        <li><a href="javascript:void(0);">Instagram</a></li>
+                        <li><a href="javascript:void(0);">You Tube</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="puds-footer__subfooter">
+            <div class="puds-container">
+                <div class="row">
+                    <div class="col-sm-4 col-xs-12">
+                        <a href="javascript:void(0)">Accessibility</a>
+                    </div>
+                    <div class="col-sm-4 col-xs-12">
+                        &copy; 2020 The Trustees of Princeton University
+                    </div>
+                    <div class="col-sm-4 col-xs-12">
+                        <a href="https://www.princeton.edu" target="_blank" class="puds-no-icon"><img class="puds-footer__logo" src="/icons/pu-logo-stacked-white.svg" alt="Princeton University" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+`;
+
+# Footer
+
+The "Footer" is a section at the bottom of the page that is generally repeated for each page in the application.
+
+## Implementation Notes
+
+The footer tag is used and assigned a role of contentinfo to "identify information repeated at the end of every page
+of a website, including copyright information, navigation links, and privacy statements" (<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role">ARIA: contentinfo role</a>).
+
+<Canvas>
+    <Story name="Basic" args={{}}>
+      {Template.bind({})}
+    </Story>
+</Canvas>
+
+
