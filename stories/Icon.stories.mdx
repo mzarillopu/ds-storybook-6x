@@ -1,0 +1,50 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { html } from 'lit-html';
+
+<Meta title="Components/Icons" component="Icon" />
+
+export const Template = (args) => html`
+    <i class="puds-icon puds-icon-facebook"></i><span class="puds-sr-only">Follow Us on Facebook</span>
+`;
+
+export const TemplateButton = (args) => html`
+    <button class="puds-btn"><i style="vertical-align:-2px" class="puds-icon puds-inverted puds-icon-facebook"></i><span class="puds-sr-only">Follow Us on Facebook</span> Facebook</button>
+`;
+
+export const TemplateTextFlow = (args) => html`
+    <p>This is an icon in the flow<i style="vertical-align: -2px" class="puds-icon puds-icon-facebook"></i><span class="puds-sr-only">Follow Us on Facebook</span> Facebook</span> of the text.</p>
+`;
+
+# Icons
+
+Icons can be used as a way to represent information with a visual image instead of text, usually to convey information
+more compactly than it otherwise might be represented or to convey information using common branding or industry
+standard iconography.
+
+## Adding Icons
+
+A basic set of icons will be provided, but more icons can be added.
+
+## Implementation Notes
+
+## TODO 
+
+* cannot figure out why icons need -2px vertical alignment to properly align with text
+
+<Canvas>
+    <Story name="Simple" args={{}}>
+      {Template.bind({})}
+    </Story>
+</Canvas>
+
+<Canvas>
+    <Story name="Button" args={{}}>
+      {TemplateButton.bind({})}
+    </Story>
+</Canvas>
+
+<Canvas>
+    <Story name="Flow" args={{}}>
+      {TemplateTextFlow.bind({})}
+    </Story>
+</Canvas>

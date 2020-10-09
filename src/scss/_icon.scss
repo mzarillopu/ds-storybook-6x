@@ -1,0 +1,51 @@
+.puds-icon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  mask-size: auto;
+  -webkit-mask-size: 100%;
+  background-color: #000;
+}
+.puds-icon.puds-icon-2x {
+  width: 2em;
+  height: 2em;
+}
+.puds-icon.puds-icon-3x {
+  width: 3em;
+  height: 3em;
+}
+.puds-icon.puds-icon-5x {
+  width: 5em;
+  height: 5em;
+}
+.puds-icon.puds-icon-7x {
+  width: 7em;
+  height: 7em;
+}
+.puds-icon.puds-icon-9x {
+  width: 9em;
+  height: 9em;
+}
+.puds-icon.puds-inverted {
+  background-color: white;
+}
+.puds-icon-facebook {
+  -webkit-mask-image: url(../icons/iconmonstr-facebook-6.svg);
+  mask-image: url(../icons/iconmonstr-facebook-6.svg);
+}
+.puds-icon-twitter {
+  -webkit-mask-image: url(../icons/iconmonstr-twitter-1.svg);
+  mask-image: url(../icons/iconmonstr-twitter-1.svg);
+}
+.puds-icon-linkedin {
+  -webkit-mask-image: url(../icons/iconmonstr-linkedin-3.svg);
+  mask-image: url(../icons/iconmonstr-linkedin-3.svg);
+}
+.puds-icon-instagram {
+  -webkit-mask-image: url(../icons/iconmonstr-instagram-11.svg);
+  mask-image: url(../icons/iconmonstr-instagram-11.svg);
+}
+.puds-icon-youtube {
+  -webkit-mask-image: url(../icons/iconmonstr-youtube-6.svg);
+  mask-image: url(../icons/iconmonstr-youtube-6.svg);
+}
