@@ -5,9 +5,9 @@ export default {
 };
 
 export const Hidden = () => html`
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-content" class="puds-skip-link">Skip to main content</a>
 `;
 
 export const Shown = () => html`
-    <a href="#main-content" class="skip-link skip-link--shown">Skip to main content</a>
+    <a href="#main-content" class="puds-skip-link puds-skip-link--shown">Skip to main content</a>
 `;

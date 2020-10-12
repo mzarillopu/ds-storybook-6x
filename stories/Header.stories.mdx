@@ -1,0 +1,236 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { html } from 'lit-html';
+
+<Meta title="Components/Header" component="Header" />
+
+export const Template = (args) => html`
+    <style>
+        .puds-header {
+            border-top: 4px solid #e77500;
+        }
+        .puds-princeton-branding {
+            padding: 1.25rem 0;
+        }
+        .puds-princeton-branding__logo {
+            width: 260px;
+        }
+        .puds-site-branding {
+            margin-top: 1rem;
+            padding-left: 0px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .puds-site-branding__logo {
+            width: 60px;
+        }
+        .puds-site-branding__name a {
+            text-decoration: none;
+            color: #000;
+            font-size: 2.75rem;
+            font-weight: 700;
+        }
+        .puds-site-branding__slogan {
+            font-size: 1.25rem;
+            font-weight: 300;
+        }
+        .puds-site-branding__home-link {
+            padding-right: 1rem;
+        }
+        @media (min-width: 62rem) {
+            .puds-main-menu__toggle {
+                display: none;
+            }
+            .puds-nav-menu__utility-menu {
+                position: absolute;
+                top: 1rem;
+                right: 200px;
+                line-height: 1.65;
+            }
+        }
+        @media (min-width: 992px) {
+            .puds-nav-menu__utility-menu-list {
+                display: flex;
+                flex-direction: row;
+                padding-left: 0;
+                margin-top: 0;
+                margin-bottom: 0;
+                list-style: none;
+            }
+            .puds-nav-menu__utility-menu-list a {
+                font-size: .85rem;
+                font-weight: 600;
+                padding: .5rem 0 .2rem 0;
+                margin: 0 .65rem;
+                text-decoration: none;
+                color: #000;
+            }
+            .puds-nav-menu__utility-menu-list a:hover {
+                border-bottom: 1px solid #e77500;
+            }
+            .puds-search-bar__toggle {
+                display: none;
+            }
+        }
+        .puds-search-bar__toggle {
+            border: none;
+            background-color: #fff;
+        }       
+    </style>
+    <header role="banner" class="puds-header">
+        <h1 class="puds-sr-only">Princeton University Design System</h1>
+        <div class="puds-skip-links">
+            <a href="#main-content" class="puds-skip-link">Skip to main content</a>
+            <a href="#search" class="puds-skip-link">Skip to search options</a>
+        </div>
+        <div class="puds-container">
+            <div class="puds-princeton-branding">
+                <a href="https://www.princeton.edu" title="Princeton University"><img class="puds-princeton-branding__logo" src="/logos/pu-logo.svg" alt="Princeton University" /></a> 
+            </div>
+            <div class="puds-site-branding">
+                <a href="/" title="Home" tabindex="-1" aria-hidden="true" class="puds-site-branding__home-link"><img src="/logos/shield.svg" class="puds-site-branding__logo" /></a>
+                <div class="puds-site-branding__info">
+                    <div class="puds-site-branding__name">
+                        <a href="/" title="Home">Relativity</a>
+                    </div>
+                    <div class="puds-site-branding__slogan">
+                        The Princeton University Design System
+                    </div>
+                </div>
+            </div>
+            <nav aria-label="Main Menu" class="puds-main-menu">
+                <h2 class="puds-sr-only">Main Menu</h2>
+                <div class="puds-main-menu__navbar">
+                    <puds-menu-toggle class="puds-main-menu__toggle"></puds-menu-toggle>
+                    <div class="puds-nav-menu-container">
+                        <ul class="puds-nav-menu__list" role="list">
+                            <li class="puds-nav-menu__list-item--active">
+                                <a href="/blocks/accordion" aria-current="true">Content Types<span class="puds-sr-only">, (current page)</span></a>
+                                <button class="puds-nav-menu__toggle-button" type="button" aria-expanded="false">
+                                    <span class="puds-sr-only">
+                                        Content Types
+                                        SubMenu
+                                    </span>
+                                </button>
+                                <ul class="puds-nav-menu__submenu">
+                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Page</a></li>
+                                    <li class="puds-nav-menu__submenu-item" aria-current="page"><a href="/content-types/page">Alert</a></li>
+                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">News</a></li>
+                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Person</a></li>
+                                </ul>
+                            </li>
+                            <li class="puds-nav-menu__list-item">
+                                <a href="/blocks/content-slider">Blocks</a>
+                                <button class="puds-nav-menu__toggle-button" type="button" aria-expanded="false">
+                                    <span class="puds-sr-only">
+                                        Blocks
+                                        SubMenu
+                                    </span>
+                                </button>
+                                <ul class="puds-nav-menu__submenu">
+                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Accordion</a></li>
+                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Content Slider</a></li>
+                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Feature</a></li>
+                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">iFrame</a></li>
+                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Map</a></li>
+                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Related Links</a></li>
+                                </ul>
+                            </li>
+                            <li class="puds-nav-menu__list-item">
+                                <a href="/blocks/content-slider">Images &amp; Media</a>
+                                <button class="puds-nav-menu__toggle-button" type="button" aria-expanded="false">
+                                    <span class="puds-sr-only">
+                                        Images &amp; Media
+                                        SubMenu
+                                    </span>
+                                </button>
+                                <ul class="puds-nav-menu__submenu">
+                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Featured Images</a></li>
+                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Billboard Image</a></li>
+                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Billboard Slider</a></li>
+                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Billboard Video</a></li>
+                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Image Gallery</a></li>
+                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Image Embed</a></li>
+                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Social Media</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="puds-nav-menu__utility-menu">
+                            <ul class="puds-nav-menu__utility-menu-list">
+                                <li><a href="javascript void(0);">Documentation</a></li>
+                                <li><a href="javascript:void(0);">Log In</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="puds-search-bar">
+                <h2 class="puds-sr-only">Search</h2>
+                <button class="puds-search-bar__toggle" aria-expanded="false" aria-label="Toggle search"><i class="puds-icon puds-icon-search" aria-hidden="true"></i><span class="puds-sr-only">Follow Us on Facebook</span></button>
+                <div class="puds-search-bar__panel">
+                    <style>
+                    .puds-search [type='search'] {
+                        padding-right: 0px;
+                        margin-right: 0px;
+                        border-right: none;
+                        border-left: 1px solid #c8c8c8;
+                        border-top: 1px solid #c8c8c8;
+                        border-bottom: 1px solid #c8c8c8;
+                        height: 35px;
+                        max-width: 140px;
+                    }
+                    .puds-search [type='submit'] {
+                        background-image: url('/icons/iconmonstr-magnifier-2.svg');
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        background-size: 1rem;
+                        background-color: #fff;
+                        border: none;
+                        height: 35px;
+                        width: 35px;
+                        border-right: 1px solid #c8c8c8;
+                        border-top: 1px solid #c8c8c8;
+                        border-bottom: 1px solid #c8c8c8;
+                    }
+                    @media (min-width: 62rem) {
+                        .puds-search {
+                            display: flex;
+                            flex-basis: auto;
+                            flex-grow: 1;
+                            position: absolute;
+                            top: .75rem;
+                            right: 1rem;
+                        }
+                    }
+                    </style>
+                    <form class="puds-search" action="javascript:void(0)" method="get" accept-charset="UTF-8" role="search">
+                        <label class="puds-sr-only" for="search-field">Search</label>
+                        <input type="search" id="search-field" />
+                        <button class="puds-button" type="submit">
+                          <span class="puds-sr-only">Search</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+`;
+
+
+
+# Header
+
+The "Header" is a section usually placed at the beginning of each page, which "usually includes a logo, company name
+search icon, photo related to the page3, or slogan" (<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role">ARIA: banner role</a>).
+
+## Implementation Notes
+
+The footer tag is used and assigned a role of contentinfo to "identify information repeated at the end of every page
+of a website, including copyright information, navigation links, and privacy statements" (<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role">ARIA: contentinfo role</a>).
+
+<Canvas>
+    <Story name="Basic" args={{}}>
+      {Template.bind({})}
+    </Story>
+</Canvas>
+
+
