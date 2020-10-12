@@ -23,7 +23,18 @@ standard iconography.
 
 ## Adding Icons
 
-A basic set of icons will be provided, but more icons can be added.
+A basic set of icons will be provided, but more icons can be added.  Add your .svg file to the icons directory
+and provide the icon a class name in the /src/scss/_icon.scss file.
+
+For the best results, the svg should be square (the same width & height).  It should not matter what the actual
+width & height are, but be aware that the image will be scaled up/down based on user need.
+
+To enable flexibility for use in various designs, icons should be a single color (preferably black) or as few colors as possible.
+
+## Scaling icons
+
+Icons will generally take the size of the surrounding text, but can be made larger using the following styles: puds-icon-2x,
+puds-icon-3x, puds-icon-5x, puds-icon-7x, puds-icon-9x.
 
 ## Implementation Notes
 
