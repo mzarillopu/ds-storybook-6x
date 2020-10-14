@@ -74,8 +74,95 @@ export const Template = (args) => html`
         .puds-search-bar__toggle {
             border: none;
             background-color: #fff;
-        }       
+        }
+        .puds-search [type='search'] {
+            padding-right: 0px;
+            margin-right: 0px;
+            border-right: none;
+            border-left: 1px solid #c8c8c8;
+            border-top: 1px solid #c8c8c8;
+            border-bottom: 1px solid #c8c8c8;
+            height: 35px;
+            max-width: 140px;
+        }
+        .puds-search [type='submit'] {
+            background-image: url('/icons/iconmonstr-magnifier-2.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 1rem;
+            background-color: #fff;
+            border: none;
+            height: 35px;
+            width: 35px;
+            border-right: 1px solid #c8c8c8;
+            border-top: 1px solid #c8c8c8;
+            border-bottom: 1px solid #c8c8c8;
+        }
+        .puds-nav-menu-container--collapsed,
+        .puds-nav-menu-container--expanded {
+            display: block;
+        }
+        @media (min-width: 62rem) {
+            .puds-search {
+                display: flex;
+                flex-basis: auto;
+                flex-grow: 1;
+                position: absolute;
+                top: .75rem;
+                right: 1rem;
+            }
+        }
+        @media (max-width: 62rem) {
+            .puds-main-menu__toggle {
+                position: absolute;
+                top: .75rem;
+                right: 3rem;
+            }
+            .puds-search-bar__toggle {
+                position: absolute;
+                top: 1.175rem;
+                right: 1rem;
+            }
+            .puds-nav-menu-container--collapsed {
+                display: none;
+            }
+            .puds-nav-menu-container--expanded {
+                position: absolute;
+                left: 0;
+                top: 4rem;
+                background: #fff;
+                width: 100%;
+                z-index: 1000;
+            }
+            .puds-nav-menu__list {
+                display: block;
+            }
+            .puds-nav-menu__list-item,
+            .puds-nav-menu__list-item--active {
+                display: block;
+                padding-left: 1rem;
+            }
+            .puds-nav-menu__list-item ul li,
+            .puds-nav-menu__list-item--active ul li {
+                position: relative;
+            }
+        }
     </style>
+    <script id="initscript">
+        function toggleMenu(event) {
+            const el = document.getElementById("puds-nav-menu-container");
+            console.log(event);
+            if (event.detail) {
+                el.classList.remove("puds-nav-menu-container--collapsed");
+                el.classList.add("puds-nav-menu-container--expanded");
+            } else {
+                el.classList.remove("puds-nav-menu-container--expanded");
+                el.classList.add("puds-nav-menu-container--collapsed");
+            }
+        }
+        const myMainMenuToggle = document.getElementById("my-main-menu-toggle");
+        myMainMenuToggle.addEventListener('toggle', toggleMenu);
+    </script>
     <header role="banner" class="puds-header">
         <h1 class="puds-sr-only">Princeton University Design System</h1>
         <div class="puds-skip-links">
@@ -100,8 +187,8 @@ export const Template = (args) => html`
             <nav aria-label="Main Menu" class="puds-main-menu">
                 <h2 class="puds-sr-only">Main Menu</h2>
                 <div class="puds-main-menu__navbar">
-                    <puds-menu-toggle class="puds-main-menu__toggle"></puds-menu-toggle>
-                    <div class="puds-nav-menu-container">
+                    <puds-menu-toggle id="my-main-menu-toggle" class="puds-main-menu__toggle"></puds-menu-toggle>
+                    <div id="puds-nav-menu-container" class="puds-nav-menu-container--collapsed">
                         <ul class="puds-nav-menu__list" role="list">
                             <li class="puds-nav-menu__list-item--active">
                                 <a href="/blocks/accordion" aria-current="true">Content Types<span class="puds-sr-only">, (current page)</span></a>
@@ -167,41 +254,6 @@ export const Template = (args) => html`
                 <h2 class="puds-sr-only">Search</h2>
                 <button class="puds-search-bar__toggle" aria-expanded="false" aria-label="Toggle search"><i class="puds-icon puds-icon-search" aria-hidden="true"></i><span class="puds-sr-only">Follow Us on Facebook</span></button>
                 <div class="puds-search-bar__panel">
-                    <style>
-                    .puds-search [type='search'] {
-                        padding-right: 0px;
-                        margin-right: 0px;
-                        border-right: none;
-                        border-left: 1px solid #c8c8c8;
-                        border-top: 1px solid #c8c8c8;
-                        border-bottom: 1px solid #c8c8c8;
-                        height: 35px;
-                        max-width: 140px;
-                    }
-                    .puds-search [type='submit'] {
-                        background-image: url('/icons/iconmonstr-magnifier-2.svg');
-                        background-repeat: no-repeat;
-                        background-position: center center;
-                        background-size: 1rem;
-                        background-color: #fff;
-                        border: none;
-                        height: 35px;
-                        width: 35px;
-                        border-right: 1px solid #c8c8c8;
-                        border-top: 1px solid #c8c8c8;
-                        border-bottom: 1px solid #c8c8c8;
-                    }
-                    @media (min-width: 62rem) {
-                        .puds-search {
-                            display: flex;
-                            flex-basis: auto;
-                            flex-grow: 1;
-                            position: absolute;
-                            top: .75rem;
-                            right: 1rem;
-                        }
-                    }
-                    </style>
                     <form class="puds-search" action="javascript:void(0)" method="get" accept-charset="UTF-8" role="search">
                         <label class="puds-sr-only" for="search-field">Search</label>
                         <input type="search" id="search-field" />

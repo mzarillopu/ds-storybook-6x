@@ -50,6 +50,7 @@ declare namespace LocalJSX {
     }
     interface PudsMenuToggle {
         "isExpanded"?: boolean;
+        "onToggle"?: (event: CustomEvent<boolean>) => void;
     }
     interface IntrinsicElements {
         "puds-accordion": PudsAccordion;

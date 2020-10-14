@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Event, EventEmitter, Prop, h } from '@stencil/core';
 
 @Component({
     tag: 'puds-menu-toggle'
@@ -6,9 +6,11 @@ import { Component, Prop, h } from '@stencil/core';
 export class PrincetonDesignMenuToggle {
 
     @Prop() isExpanded: boolean = false;
+    @Event() toggle: EventEmitter<boolean>;
 
     toggleMenu() {
         this.isExpanded = !this.isExpanded;
+        this.toggle.emit(this.isExpanded);
     }
 
     render() {

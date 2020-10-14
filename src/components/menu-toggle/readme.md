@@ -12,6 +12,13 @@
 | `isExpanded` | `is-expanded` |             | `boolean` | `false` |
 
 
+## Events
+
+| Event    | Description | Type                   |
+| -------- | ----------- | ---------------------- |
+| `toggle` |             | `CustomEvent<boolean>` |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
