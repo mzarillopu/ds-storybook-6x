@@ -1,264 +1,90 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 import { html } from 'lit-html';
 
-<Meta title="Components/Nav Menu" component="NavMenu" />
+<Meta title="Components/Nav Bar" component="NavBar" />
 
 export const Template = (args) => html`
-    <style>
-        @media (min-width: 992px) {
-            .puds-navbar__container {
-                display: flex;
-                flex-basis: auto;
-                flex-grow: 1;
-                align-items: center;
-                justify-content: flex-end;
-                padding-right: 25px;
-            }
-            .puds-navbar__container > .puds-navbar__menu {
-                flex-direction: row;
-                display: -ms-flexbox;
-                display: flex;
-                -ms-flex-direction: row;
-                flex-direction: row;
-                -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-                padding-left: 0;
-                margin-bottom: 0;
-                list-style: none;
-            }
-          .puds-navbar__menu-item--active {
-            padding-right: 14px;
-            margin: 0 10px;
-            position: relative;
-          }
-          .puds-navbar__menu-item--active > a,
-          .puds-navbar__menu-item > a {
-            border-bottom: 7px solid transparent;
-            text-decoration: none;
-            color: #000;
-            font-weight: bold;
-            padding: 10px 0px;
-          }
-            .puds-navbar__menu-item--active > a {
-                border-bottom: 7px solid #e77500;
-            }
-          .puds-navbar__menu-item:hover > a {
-            border-bottom: 7px solid #c8c8c8;
-          }
-          .puds-navbar__menu-item {
-            border-color: #e77500;
-            padding-right: 14px;
-            margin: 0 10px;
-            position: relative;
-          }
-          .puds-navbar__submenu {
-            list-style: none;
-            margin-top: 17px;
-            position: absolute;
-            margin-left: 0;
-            padding-left: 0;
-            z-index: 100;
-            background: #fff;
-            box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3);
-            min-width: 250px;
-            border-top: 1px solid #c8c8c8;
-            border-left: 1px solid #c8c8c8;
-            display: none;
-          }
-          .puds-navbar__submenu--shown {
-            background-color: #fff;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-          }
-          .puds-navbar__submenu .puds-navbar__submenu--shown a {
-            padding-left: 15px;
-          }
-          .puds-navbar__submenu a {
-            text-decoration: none;
-            color: #000;
-            font-weight: bold;
-            padding: 13px 5px;
-            width: 100%;
-            display: block;
-          }
-          .puds-navbar__submenu-item a:hover {
-            background-color: #f4f4f4;
-          }
-          .puds-navbar__submenu button {
-            display: none;
-          }
-          .puds-navbar__menu-item:hover > ul,
-          .puds-navbar__menu-item--active:hover > ul,
-          .puds-navbar__submenu--shown {
-            left: 0;
-            display: block;
-          }
-          .puds-navbar__menu-item:last-child:hover > ul {
-            left: auto;
-            right: 0;
-          }
-          .puds-navbar__menu > .puds-navbar__menu-item > button,
-          .puds-navbar__menu > .puds-navbar__menu-item--active > button {
-            z-index: 2;
-            position: absolute;
-            right: auto;
-            top: 0;
-            bottom: 0;
-            padding: 0;
-            width: 20px;
-            overflow: hidden;
-            border: none;
-            background: transparent;
-            transform: rotate(0deg);
-            transition: transform 0.3s ease;
-            background: url(../icons/keyboard_arrow_down-black-18dp.svg) no-repeat center/2ex 2ex;
-          }
-          .puds-navbar__menu-item--active:hover > button,
-          .puds-navbar__menu-item:hover > button {
-            transform: rotate(180deg);
-          }
-        }
-        @media (max-width: 992px) {
-            .puds-navbar__menu {
-                display: block;
-                list-style: none;
-                padding-left: 0px;
-                padding-right: 10px;
-            }
-            .puds-navbar__menu-item,
-            .puds-navbar__menu-item--active {
-                padding-left: 1rem;
-                position: relative;
-            }
-            .puds-navbar__menu-item > a,
-            .puds-navbar__menu-item--active > a,
-            .puds-navbar__submenu-item > a,
-            .puds-navbar__submenu-item--active > a {
-                border-bottom: 1px solid #c8c8c8;
-                text-decoration: none;
-                color: #000;
-                font-weight: bold;
-                padding: 15px 0px;
-                padding-left: 5px;
-                display: block;
-            }
-            .puds-navbar__submenu {
-                display: block;
-                list-style: none;
-                padding-left: 0px;
-            }
-            .puds-navbar__submenu-item {
-                padding-left: 1rem;
-                position: relative;
-            }
-            .puds-navbar button {
-                position: absolute;
-                right: 10px;
-                top: .75rem;
-                border: none;
-                background: transparent;
-                width: 20px;
-                height: 20px;
-                overflow: hidden;
-                transform: rotate(0deg);
-                transition: transform 0.3s ease;
-                background: url(/icons/keyboard_arrow_down-black-18dp.svg) no-repeat center/2ex 2ex;
-            }
-            .puds-navbar__menu-item--active:hover > button,
-            .puds-navbar__menu-item:hover > button {
-                transform: rotate(180deg);
-            }
-        }
-    </style>
-    <div style="margin-right: 20px">
-    <nav class="puds-navbar" aria-label="Main Menu">
-        <h2 class="puds-sr-only">Main Menu</h2>
-        <div class="puds-navbar__container">
-            <ul class="puds-navbar__menu" role="list">
-                <li class="puds-navbar__menu-item--active">
-                    <a href="/blocks/accordion" aria-current="true">Content Types<span class="puds-sr-only">, (current page)</span></a>
-                    <button type="button" aria-expanded="false">
+    <ul class="puds-menubar" role="list">
+        <li aria-current="true">
+            <a href="/blocks/accordion" aria-current="page">Content Types</a>
+            <button type="button" aria-expanded="${ args.forceExpanded }">
+                <span class="puds-sr-only">
+                    Content Types
+                    SubMenu
+                </span>
+            </button>
+            <ul>
+                <li>
+                    <a href="/content-types/page">Page</a>
+                    <button type="button" aria-expanded="${ args.forceExpanded }">
                         <span class="puds-sr-only">
-                            Content Types
+                            Page
                             SubMenu
                         </span>
                     </button>
-                    <ul class="puds-navbar__submenu">
-                        <li class="puds-navbar__submenu-item">
-                            <a href="/content-types/page">Page</a>
-                            <button type="button" aria-expanded="false">
-                                <span class="puds-sr-only">
-                                    Page
-                                    SubMenu
-                                </span>
-                            </button>
-                            <ul class="puds-navbar__submenu--shown">
-                                <li class="puds-navbar__submenu-item"><a href="javascript:void(0);">Page List</a></li>
-                                <li class="puds-navbar__submenu-item"><a href="javascript:void(0);">Sub Page</a></li>
-                                <li class="puds-navbar__submenu-item"><a href="javascript:void(0);">Sub Page with Right Sidebar</a></li>
-                                <li class="puds-navbar__submenu-item"><a href="javascript:void(0);">Landing Page</a></li>
-                                <li class="puds-navbar__submenu-item"><a href="javascript:void(0);">Detail Page</a></li>
-                            </ul>
-                         </li>
-                        <li class="puds-navbar__submenu-item" aria-current="page"><a href="/content-types/page">Alert</a></li>
-                        <li class="puds-navbar__submenu-item">
-                            <a href="/content-types/page">News</a>
-                            <button type="button" aria-expanded="false">
-                                <span class="puds-sr-only">
-                                    News
-                                    SubMenu
-                                </span>
-                            </button>
-                            <ul class="puds-navbar__submenu">
-                                <li class="puds-navbar__submenu-item"><a href="javascript:void(0);">News List</a></li>
-                                <li class="puds-navbar__submenu-item"><a href="javascript:void(0);">News List with Archive Years</a></li>
-                                <li class="puds-navbar__submenu-item"><a href="javascript:void(0);">News Landing Page</a></li>
-                                <li class="puds-navbar__submenu-item"><a href="javascript:void(0);">Featured News</a></li>
-                            </ul>
-                        </li>
-                        <li class="puds-navbar__submenu-item"><a href="/content-types/page">Person</a></li>
+                    <ul class="puds-menubar__submenu--shown">
+                        <li><a href="javascript:void(0);">Page List</a></li>
+                        <li><a href="javascript:void(0);" aria-current="page">Sub Page</a></li>
+                        <li><a href="javascript:void(0);">Sub Page with Right Sidebar</a></li>
+                        <li><a href="javascript:void(0);">Landing Page</a></li>
+                        <li><a href="javascript:void(0);">Detail Page</a></li>
                     </ul>
-                </li>
-                <li class="puds-navbar__menu-item">
-                    <a href="/blocks/content-slider">Blocks</a>
+                 </li>
+                <li aria-current="page"><a href="/content-types/page">Alert</a></li>
+                <li>
+                    <a href="/content-types/page">News</a>
                     <button type="button" aria-expanded="false">
                         <span class="puds-sr-only">
-                            Blocks
+                            News
                             SubMenu
                         </span>
                     </button>
-                    <ul class="puds-navbar__submenu">
-                        <li class="puds-navbar__submenu-item"><a href="/content-types/page">Accordion</a></li>
-                        <li class="puds-navbar__submenu-item"><a href="/content-types/page">Content Slider</a></li>
-                        <li class="puds-navbar__submenu-item"><a href="/content-types/page">Feature</a></li>
-                        <li class="puds-navbar__submenu-item"><a href="/content-types/page">iFrame</a></li>
-                        <li class="puds-navbar__submenu-item"><a href="/content-types/page">Map</a></li>
-                        <li class="puds-navbar__submenu-item"><a href="/content-types/page">Related Links</a></li>
+                    <ul>
+                        <li><a href="javascript:void(0);">News List</a></li>
+                        <li><a href="javascript:void(0);">News List with Archive Years</a></li>
+                        <li><a href="javascript:void(0);">News Landing Page</a></li>
+                        <li><a href="javascript:void(0);">Featured News</a></li>
                     </ul>
                 </li>
-                <li class="puds-navbar__menu-item">
-                    <a href="/blocks/content-slider">Images &amp; Media</a>
-                    <button type="button" aria-expanded="false">
-                        <span class="puds-sr-only">
-                            Images &amp; Media
-                            SubMenu
-                        </span>
-                    </button>
-                    <ul class="puds-navbar__submenu">
-                        <li class="puds-navbar__submenu-item"><a href="/content-types/page">Featured Images</a></li>
-                        <li class="puds-navbar__submenu-item"><a href="/content-types/page">Billboard Image</a></li>
-                        <li class="puds-navbar__submenu-item"><a href="/content-types/page">Billboard Slider</a></li>
-                        <li class="puds-navbar__submenu-item"><a href="/content-types/page">Billboard Video</a></li>
-                        <li class="puds-navbar__submenu-item"><a href="/content-types/page">Image Gallery</a></li>
-                        <li class="puds-navbar__submenu-item"><a href="/content-types/page">Image Embed</a></li>
-                        <li class="puds-navbar__submenu-item"><a href="/content-types/page">Social Media</a></li>
-                    </ul>
-                </li>
+                <li><a href="/content-types/page">Person</a></li>
             </ul>
-        </div>
-    </nav>
-    </div>
+        </li>
+        <li>
+            <a href="/blocks/content-slider">Blocks</a>
+            <button type="button" aria-expanded="false">
+                <span class="puds-sr-only">
+                    Blocks
+                    SubMenu
+                </span>
+            </button>
+            <ul>
+                <li><a href="/content-types/page">Accordion</a></li>
+                <li><a href="/content-types/page">Content Slider</a></li>
+                <li><a href="/content-types/page">Feature</a></li>
+                <li><a href="/content-types/page">iFrame</a></li>
+                <li><a href="/content-types/page">Map</a></li>
+                <li><a href="/content-types/page">Related Links</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="/blocks/content-slider">Images &amp; Media</a>
+            <button type="button" aria-expanded="false">
+                <span class="puds-sr-only">
+                    Images &amp; Media
+                    SubMenu
+                </span>
+            </button>
+            <ul>
+                <li><a href="/content-types/page">Featured Images</a></li>
+                <li><a href="/content-types/page">Billboard Image</a></li>
+                <li><a href="/content-types/page">Billboard Slider</a></li>
+                <li><a href="/content-types/page">Billboard Video</a></li>
+                <li><a href="/content-types/page">Image Gallery</a></li>
+                <li><a href="/content-types/page">Image Embed</a></li>
+                <li><a href="/content-types/page">Social Media</a></li>
+            </ul>
+        </li>
+    </ul>
 `;
 
 # Nav Menu
@@ -296,9 +122,7 @@ The Navigation Menu can be used as a primary or secondary navigation.
 
 <Canvas>
     <Story name="Basic" args={{
-        heading: "Alerts",
-        title: "Alert Title",
-        content: "This is the content of the alert.  It can be a simple paragraph or something more complex."
+        forceExpanded: false
     }}>
       {Template.bind({})}
     </Story>

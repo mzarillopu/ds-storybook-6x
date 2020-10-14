@@ -188,56 +188,85 @@ export const Template = (args) => html`
                 <h2 class="puds-sr-only">Main Menu</h2>
                 <div class="puds-main-menu__navbar">
                     <puds-menu-toggle id="my-main-menu-toggle" class="puds-main-menu__toggle"></puds-menu-toggle>
-                    <div id="puds-nav-menu-container" class="puds-nav-menu-container--collapsed">
-                        <ul class="puds-nav-menu__list" role="list">
-                            <li class="puds-nav-menu__list-item--active">
-                                <a href="/blocks/accordion" aria-current="true">Content Types<span class="puds-sr-only">, (current page)</span></a>
-                                <button class="puds-nav-menu__toggle-button" type="button" aria-expanded="false">
+                    <div id="puds-nav-menu-container" class="puds-navbar__container">
+                        <ul class="puds-menubar" role="list">
+                            <li aria-current="true">
+                                <a href="/blocks/accordion" aria-current="page">Content Types</a>
+                                <button type="button" aria-expanded="${ args.forceExpanded }">
                                     <span class="puds-sr-only">
                                         Content Types
                                         SubMenu
                                     </span>
                                 </button>
-                                <ul class="puds-nav-menu__submenu">
-                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Page</a></li>
-                                    <li class="puds-nav-menu__submenu-item" aria-current="page"><a href="/content-types/page">Alert</a></li>
-                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">News</a></li>
-                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Person</a></li>
+                                <ul>
+                                    <li>
+                                        <a href="/content-types/page">Page</a>
+                                        <button type="button" aria-expanded="${ args.forceExpanded }">
+                                            <span class="puds-sr-only">
+                                                Page
+                                                SubMenu
+                                            </span>
+                                        </button>
+                                        <ul class="puds-menubar__submenu--shown">
+                                            <li><a href="javascript:void(0);">Page List</a></li>
+                                            <li><a href="javascript:void(0);" aria-current="page">Sub Page</a></li>
+                                            <li><a href="javascript:void(0);">Sub Page with Right Sidebar</a></li>
+                                            <li><a href="javascript:void(0);">Landing Page</a></li>
+                                            <li><a href="javascript:void(0);">Detail Page</a></li>
+                                        </ul>
+                                     </li>
+                                    <li aria-current="page"><a href="/content-types/page">Alert</a></li>
+                                    <li>
+                                        <a href="/content-types/page">News</a>
+                                        <button type="button" aria-expanded="false">
+                                            <span class="puds-sr-only">
+                                                News
+                                                SubMenu
+                                            </span>
+                                        </button>
+                                        <ul>
+                                            <li><a href="javascript:void(0);">News List</a></li>
+                                            <li><a href="javascript:void(0);">News List with Archive Years</a></li>
+                                            <li><a href="javascript:void(0);">News Landing Page</a></li>
+                                            <li><a href="javascript:void(0);">Featured News</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/content-types/page">Person</a></li>
                                 </ul>
                             </li>
-                            <li class="puds-nav-menu__list-item">
+                            <li>
                                 <a href="/blocks/content-slider">Blocks</a>
-                                <button class="puds-nav-menu__toggle-button" type="button" aria-expanded="false">
+                                <button type="button" aria-expanded="false">
                                     <span class="puds-sr-only">
                                         Blocks
                                         SubMenu
                                     </span>
                                 </button>
-                                <ul class="puds-nav-menu__submenu">
-                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Accordion</a></li>
-                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Content Slider</a></li>
-                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Feature</a></li>
-                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">iFrame</a></li>
-                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Map</a></li>
-                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Related Links</a></li>
+                                <ul>
+                                    <li><a href="/content-types/page">Accordion</a></li>
+                                    <li><a href="/content-types/page">Content Slider</a></li>
+                                    <li><a href="/content-types/page">Feature</a></li>
+                                    <li><a href="/content-types/page">iFrame</a></li>
+                                    <li><a href="/content-types/page">Map</a></li>
+                                    <li><a href="/content-types/page">Related Links</a></li>
                                 </ul>
                             </li>
-                            <li class="puds-nav-menu__list-item">
+                            <li>
                                 <a href="/blocks/content-slider">Images &amp; Media</a>
-                                <button class="puds-nav-menu__toggle-button" type="button" aria-expanded="false">
+                                <button type="button" aria-expanded="false">
                                     <span class="puds-sr-only">
                                         Images &amp; Media
                                         SubMenu
                                     </span>
                                 </button>
-                                <ul class="puds-nav-menu__submenu">
-                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Featured Images</a></li>
-                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Billboard Image</a></li>
-                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Billboard Slider</a></li>
-                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Billboard Video</a></li>
-                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Image Gallery</a></li>
-                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Image Embed</a></li>
-                                    <li class="puds-nav-menu__submenu-item"><a href="/content-types/page">Social Media</a></li>
+                                <ul>
+                                    <li><a href="/content-types/page">Featured Images</a></li>
+                                    <li><a href="/content-types/page">Billboard Image</a></li>
+                                    <li><a href="/content-types/page">Billboard Slider</a></li>
+                                    <li><a href="/content-types/page">Billboard Video</a></li>
+                                    <li><a href="/content-types/page">Image Gallery</a></li>
+                                    <li><a href="/content-types/page">Image Embed</a></li>
+                                    <li><a href="/content-types/page">Social Media</a></li>
                                 </ul>
                             </li>
                         </ul>
