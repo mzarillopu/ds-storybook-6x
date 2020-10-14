@@ -102,7 +102,7 @@ export const Template = (args) => html`
         .puds-nav-menu-container--expanded {
             display: block;
         }
-        @media (min-width: 62rem) {
+        @media (min-width: 992px) {
             .puds-search {
                 display: flex;
                 flex-basis: auto;
@@ -112,7 +112,7 @@ export const Template = (args) => html`
                 right: 1rem;
             }
         }
-        @media (max-width: 62rem) {
+        @media (max-width: 991px) {
             .puds-main-menu__toggle {
                 position: absolute;
                 top: .75rem;
@@ -134,30 +134,19 @@ export const Template = (args) => html`
                 width: 100%;
                 z-index: 1000;
             }
-            .puds-nav-menu__list {
-                display: block;
-            }
-            .puds-nav-menu__list-item,
-            .puds-nav-menu__list-item--active {
-                display: block;
-                padding-left: 1rem;
-            }
-            .puds-nav-menu__list-item ul li,
-            .puds-nav-menu__list-item--active ul li {
-                position: relative;
-            }
         }
     </style>
     <script id="initscript">
         function toggleMenu(event) {
-            const el = document.getElementById("puds-nav-menu-container");
+            const el = document.getElementById("puds-navbar-container");
+            const navbar = document.querySelector(".puds-menubar");
             console.log(event);
             if (event.detail) {
-                el.classList.remove("puds-nav-menu-container--collapsed");
                 el.classList.add("puds-nav-menu-container--expanded");
+                navbar.classList.add("puds-menubar--shown");
             } else {
                 el.classList.remove("puds-nav-menu-container--expanded");
-                el.classList.add("puds-nav-menu-container--collapsed");
+                navbar.classList.remove("puds-menubar--shown");
             }
         }
         const myMainMenuToggle = document.getElementById("my-main-menu-toggle");
@@ -188,7 +177,7 @@ export const Template = (args) => html`
                 <h2 class="puds-sr-only">Main Menu</h2>
                 <div class="puds-main-menu__navbar">
                     <puds-menu-toggle id="my-main-menu-toggle" class="puds-main-menu__toggle"></puds-menu-toggle>
-                    <div id="puds-nav-menu-container" class="puds-navbar__container">
+                    <div id="puds-navbar-container" class="puds-navbar__container">
                         <ul class="puds-menubar" role="list">
                             <li aria-current="true">
                                 <a href="/blocks/accordion" aria-current="page">Content Types</a>

@@ -114,10 +114,13 @@
 }
 @media (max-width: 991px) {
   ul.puds-menubar {
-    display: block;
+    display: none;
     list-style: none;
     padding-left: 0px;
     padding-right: 10px;
+  }
+  ul.puds-menubar.puds-menubar--shown {
+    display: block;
   }
   ul.puds-menubar ul {
     margin: 0px;

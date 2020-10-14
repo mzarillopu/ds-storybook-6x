@@ -4,7 +4,7 @@ import { html } from 'lit-html';
 <Meta title="Components/Nav Bar" component="NavBar" />
 
 export const Template = (args) => html`
-    <ul class="puds-menubar" role="list">
+    <ul class="puds-menubar puds-menubar--shown" role="list">
         <li aria-current="true">
             <a href="/blocks/accordion" aria-current="page">Content Types</a>
             <button type="button" aria-expanded="${ args.forceExpanded }">
