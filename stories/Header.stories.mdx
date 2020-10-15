@@ -36,41 +36,6 @@ export const Template = (args) => html`
         .puds-site-branding__home-link {
             padding-right: 1rem;
         }
-        @media (min-width: 992px) {
-            .puds-main-menu__toggle {
-                display: none;
-            }
-            .puds-utility-menu {
-                position: absolute;
-                top: 1rem;
-                right: 200px;
-                line-height: 1.65;
-            }
-        }
-        @media (min-width: 992px) {
-            .puds-utility-menu ul {
-                display: flex;
-                flex-direction: row;
-                padding-left: 0;
-                margin-top: 0;
-                margin-bottom: 0;
-                list-style: none;
-            }
-            .puds-utility-menu a {
-                font-size: .85rem;
-                font-weight: 600;
-                padding: .5rem 0 .2rem 0;
-                margin: 0 .65rem;
-                text-decoration: none;
-                color: #000;
-            }
-            .puds-utility-menu a:hover {
-                border-bottom: 1px solid #e77500;
-            }
-            .puds-search-bar__toggle {
-                display: none;
-            }
-        }
         .puds-search-bar__toggle {
             border: none;
             background-color: #fff;
@@ -111,6 +76,37 @@ export const Template = (args) => html`
             display: none;
         }
         @media (min-width: 992px) {
+            .puds-main-menu__toggle {
+                display: none;
+            }
+            .puds-utility-menu {
+                position: absolute;
+                top: 1rem;
+                right: 200px;
+                line-height: 1.65;
+            }
+            .puds-utility-menu ul {
+                display: flex;
+                flex-direction: row;
+                padding-left: 0;
+                margin-top: 0;
+                margin-bottom: 0;
+                list-style: none;
+            }
+            .puds-utility-menu a {
+                font-size: .85rem;
+                font-weight: 600;
+                padding: .5rem 0 .2rem 0;
+                margin: 0 .65rem;
+                text-decoration: none;
+                color: #000;
+            }
+            .puds-utility-menu a:hover {
+                border-bottom: 1px solid #e77500;
+            }
+            .puds-search-bar__toggle {
+                display: none;
+            }
             .puds-nav-container {
                 display: flex;
                 flex-basis: auto;
@@ -390,7 +386,9 @@ export const Template = (args) => html`
                 <div id="puds-search-bar-panel" class="puds-search-bar__panel">
                     <form class="puds-search" action="javascript:void(0)" method="get" accept-charset="UTF-8" role="search">
                         <label class="puds-sr-only" for="search-field">Search</label>
+                        <a name="search">
                         <input type="search" id="search-field" placeholder="Search" autocomplete="off" />
+                        </a>
                         <button class="puds-button" type="submit">
                           <span class="puds-sr-only">Search</span>
                         </button>
@@ -399,6 +397,7 @@ export const Template = (args) => html`
             </div>
         </div>
     </header>
+    <a name="main-content"></a>
 `;
 
 
