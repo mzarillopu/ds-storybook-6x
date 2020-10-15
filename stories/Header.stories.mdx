@@ -4,207 +4,9 @@ import { html } from 'lit-html';
 <Meta title="Components/Header" component="Header" />
 
 export const Template = (args) => html`
-    <style>
-        .puds-header {
-            border-top: 4px solid #e77500;
-        }
-        .puds-princeton-branding {
-            padding: 1.25rem 0;
-        }
-        .puds-princeton-branding__logo {
-            width: 260px;
-        }
-        .puds-site-branding {
-            margin-top: 1rem;
-            padding-left: 0px;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .puds-site-branding__logo {
-            width: 60px;
-        }
-        .puds-site-branding__name a {
-            text-decoration: none;
-            color: #000;
-            font-size: 2.75rem;
-            font-weight: 700;
-        }
-        .puds-site-branding__slogan {
-            font-size: 1.25rem;
-            font-weight: 300;
-        }
-        .puds-site-branding__home-link {
-            padding-right: 1rem;
-        }
-        .puds-search-bar__toggle {
-            border: none;
-            background-color: #fff;
-        }
-        .puds-search [type='search'] {
-            padding-right: 0px;
-            margin-right: 0px;
-            border-right: none;
-            border-left: 1px solid #c8c8c8;
-            border-top: 1px solid #c8c8c8;
-            border-bottom: 1px solid #c8c8c8;
-            height: 35px;
-            max-width: 140px;
-        }
-        .puds-search [type='submit'] {
-            background-image: url('/icons/iconmonstr-magnifier-2.svg');
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: 1rem;
-            background-color: #fff;
-            border: none;
-            height: 35px;
-            width: 35px;
-            border-right: 1px solid #c8c8c8;
-            border-top: 1px solid #c8c8c8;
-            border-bottom: 1px solid #c8c8c8;
-        }
-        .puds-nav-menu-container--collapsed,
-        .puds-nav-menu-container--expanded {
-            display: block;
-        }
-        .puds-search {
-            display: flex;
-            flex-basis: auto;
-            flex-grow: 1;
-        }
-        .puds-menu-toggle {
-            display: none;
-        }
-        @media (min-width: 992px) {
-            .puds-main-menu__toggle {
-                display: none;
-            }
-            .puds-utility-menu {
-                position: absolute;
-                top: 1rem;
-                right: 200px;
-                line-height: 1.65;
-            }
-            .puds-utility-menu ul {
-                display: flex;
-                flex-direction: row;
-                padding-left: 0;
-                margin-top: 0;
-                margin-bottom: 0;
-                list-style: none;
-            }
-            .puds-utility-menu a {
-                font-size: .85rem;
-                font-weight: 600;
-                padding: .5rem 0 .2rem 0;
-                margin: 0 .65rem;
-                text-decoration: none;
-                color: #000;
-            }
-            .puds-utility-menu a:hover {
-                border-bottom: 1px solid #e77500;
-            }
-            .puds-search-bar__toggle {
-                display: none;
-            }
-            .puds-nav-container {
-                display: flex;
-                flex-basis: auto;
-                flex-grow: 1;
-                align-items: center;
-                justify-content: flex-end;
-                padding-right: 25px;
-            }
-            .puds-search {
-                position: absolute;
-                top: .75rem;
-                right: 1rem;
-            }
-        }
-        @media (max-width: 991px) {
-            .puds-menu-toggle {
-                position: absolute;
-                top: 1.05rem;
-                right: 3rem;
-                background-color: transparent;
-                border: none;
-                text-transform: uppercase;
-                font-weight: bold;
-                height: 32px;
-                padding: 4px;
-                display: flex;
-            }
-            .puds-search-bar__toggle {
-                position: absolute;
-                top: 1.175rem;
-                right: 1rem;
-            }
-            .puds-search {
-                width: 100%;
-            }
-            .puds-search [type='search'] {
-                width: 100%;
-                max-width: 100%;
-            }
-            .puds-search-bar__panel {
-                position: absolute;
-                left: 0;
-                top: 4rem;
-                background: #fff;
-                width: 100%;
-                z-index: 1000;
-                padding-bottom: 20px;
-                border-bottom: 2px solid #f4f4f4;
-            }
-            .puds-search-bar__panel {
-                display: none;
-            }
-            .puds-search-bar__panel--shown {
-                display: block;
-            }
-            .puds-nav-container {
-                display: none;
-            }
-            .puds-nav-container--expanded {
-                position: absolute;
-                left: 0;
-                top: 4rem;
-                background: #fff;
-                width: 100%;
-                z-index: 1000;
-                display: block;
-            }
-            .puds-utility-menu {
-                // display: none;
-                padding-left: 1rem;
-                position: relative;
-            }
-            .puds-utility-menu ul {
-                list-style: none;
-                padding: 0px;
-                margin-right: 10px;
-                margin-top: 0px;
-            }
-            .puds-utility-menu a:hover {
-                border-bottom: 1px solid #e77500;
-            }
-            .puds-utility-menu li > a {
-                border-bottom: 1px solid #c8c8c8;
-                text-decoration: none;
-                color: #000;
-                font-weight: bold;
-                padding: 15px 0px;
-                padding-left: 5px;
-                display: block;
-            }
-            .puds-utility-menu--shown {
-                display: block;
-            }
-        }
-    </style>
     <script id="initscript">
         function toggleMenu(event) {
-            const menuToggle = document.getElementById("my-main-menu-toggle");
+            const menuToggle = document.getElementById("puds-header-menu-toggle");
             var expandedAttr = menuToggle.getAttribute("aria-expanded");
             var expand = !(expandedAttr && expandedAttr == "true");
             if (expand) {
@@ -213,18 +15,18 @@ export const Template = (args) => html`
             showMenu(expand);
         }
         function showMenu(expand) {
-            const menuToggle = document.getElementById("my-main-menu-toggle");
+            const menuToggle = document.getElementById("puds-header-menu-toggle");
             const menuToggleIcon = menuToggle.querySelector(".puds-icon");
-            const el = document.getElementById("puds-nav-container");
+            const el = document.getElementById("puds-header-nav-container");
             const navbar = document.querySelector(".puds-menubar");
             if (expand) {
-                el.classList.add("puds-nav-container--expanded");
+                el.classList.add("puds-header__nav-container--expanded");
                 navbar.classList.add("puds-menubar--shown");
                 menuToggle.setAttribute("aria-expanded", "true");
                 menuToggleIcon.classList.remove("puds-icon-menu");
                 menuToggleIcon.classList.add("puds-icon-close");
             } else {
-                el.classList.remove("puds-nav-container--expanded");
+                el.classList.remove("puds-header__nav-container--expanded");
                 navbar.classList.remove("puds-menubar--shown");
                 menuToggle.setAttribute("aria-expanded", "false");
                 menuToggleIcon.classList.remove("puds-icon-close");
@@ -241,24 +43,24 @@ export const Template = (args) => html`
             showSearch(expand);
         }
         function showSearch(expand) {
-            const searchbar = document.getElementById("puds-search-bar-panel");
+            const searchbar = document.getElementById("puds-header-search-bar-panel");
             const searchToggle = document.getElementById("my-search-toggle");
             const searchToggleIcon = searchToggle.querySelector(".puds-icon");
             if (expand) {
-                searchbar.classList.add("puds-search-bar__panel--shown");
+                searchbar.classList.add("puds-header__search-bar-panel--shown");
                 searchToggle.setAttribute("aria-expanded", "true");
                 searchToggleIcon.classList.remove("puds-icon-search");
                 searchToggleIcon.classList.add("puds-icon-close");
                 var input = searchbar.querySelector("input[type='search']");
                 input.focus();         
             } else {
-                searchbar.classList.remove("puds-search-bar__panel--shown");
+                searchbar.classList.remove("puds-header__search-bar-panel--shown");
                 searchToggle.setAttribute("aria-expanded", "false");
                 searchToggleIcon.classList.remove("puds-icon-close");
                 searchToggleIcon.classList.add("puds-icon-search");
             }
         }
-        myMainMenuToggle = document.getElementById("my-main-menu-toggle");
+        myMainMenuToggle = document.getElementById("puds-header-menu-toggle");
         myMainMenuToggle.addEventListener('click', toggleMenu);
         mySearchToggle = document.getElementById("my-search-toggle");
         mySearchToggle.addEventListener('click', toggleSearch); 
@@ -270,16 +72,16 @@ export const Template = (args) => html`
             <a href="#search" class="puds-skip-link">Skip to search options</a>
         </div>
         <div class="puds-container">
-            <div class="puds-princeton-branding">
-                <a href="https://www.princeton.edu" title="Princeton University"><img class="puds-princeton-branding__logo" src="/logos/pu-logo.svg" alt="Princeton University" /></a> 
+            <div class="puds-header__pu-branding">
+                <a href="https://www.princeton.edu" title="Princeton University"><img src="/logos/pu-logo.svg" alt="Princeton University" /></a> 
             </div>
-            <div class="puds-site-branding">
-                <a href="/" title="Home" tabindex="-1" aria-hidden="true" class="puds-site-branding__home-link"><img src="/logos/shield.svg" class="puds-site-branding__logo" /></a>
-                <div class="puds-site-branding__info">
-                    <div class="puds-site-branding__name">
+            <div class="puds-header__site-branding">
+                <a href="/" title="Home" tabindex="-1" aria-hidden="true" class="puds-header__site-branding-home-link"><img src="/logos/shield.svg" /></a>
+                <div class="puds-header__site-branding-info">
+                    <div class="puds-header__site-branding-name">
                         <a href="/" title="Home">${ args.siteBrandingName }</a>
                     </div>
-                    <div class="puds-site-branding__slogan">
+                    <div class="puds-header__site-branding-slogan">
                         ${ args.siteBrandingSlogan }
                     </div>
                 </div>
@@ -287,9 +89,8 @@ export const Template = (args) => html`
             <nav aria-label="Main Menu" class="puds-main-menu">
                 <h2 class="puds-sr-only">Main Menu</h2>
                 <div class="puds-main-menu__navbar">
-                    <button id="my-main-menu-toggle" class="puds-menu-toggle" aria-expanded="false" aria-label="Navigation Menu Toggle">Menu<i class="puds-icon puds-icon-menu" aria-hidden="true"></i></button>
-                    <!-- puds-menu-toggle id="my-main-menu-toggle" class="puds-main-menu__toggle"></puds-menu-toggle -->
-                    <div id="puds-nav-container" class="puds-nav-container">
+                    <button id="puds-header-menu-toggle" class="puds-header__menu-toggle" aria-expanded="false" aria-label="Navigation Menu Toggle">Menu<i class="puds-icon puds-icon-menu" aria-hidden="true"></i></button>
+                    <div id="puds-header-nav-container" class="puds-header__nav-container">
                         <ul class="puds-menubar" role="list">
                             <li aria-current="true">
                                 <a href="/blocks/accordion" aria-current="page">Content Types</a>
@@ -371,7 +172,7 @@ export const Template = (args) => html`
                                 </ul>
                             </li>
                         </ul>
-                        <div class="puds-utility-menu">
+                        <div class="puds-header__utility-menu">
                             <ul>
                                 <li><a href="javascript void(0);">Documentation</a></li>
                                 <li><a href="javascript:void(0);">Log In</a></li>
@@ -380,11 +181,11 @@ export const Template = (args) => html`
                     </div>
                 </div>
             </nav>
-            <div class="puds-search-bar">
+            <div class="puds-header__search-bar">
                 <h2 class="puds-sr-only">Search</h2>
-                <button id="my-search-toggle" class="puds-search-bar__toggle" aria-expanded="false" aria-label="Search Menu Toggle"><i class="puds-icon puds-icon-search" aria-hidden="true"></i><span class="puds-sr-only">Search Menu Toggle</span></button>
-                <div id="puds-search-bar-panel" class="puds-search-bar__panel">
-                    <form class="puds-search" action="javascript:void(0)" method="get" accept-charset="UTF-8" role="search">
+                <button id="my-search-toggle" class="puds-header__search-bar-toggle" aria-expanded="false" aria-label="Search Menu Toggle"><i class="puds-icon puds-icon-search" aria-hidden="true"></i><span class="puds-sr-only">Search Menu Toggle</span></button>
+                <div id="puds-header-search-bar-panel" class="puds-header__search-bar-panel">
+                    <form action="javascript:void(0)" method="get" accept-charset="UTF-8" role="search">
                         <label class="puds-sr-only" for="search-field">Search</label>
                         <a name="search">
                         <input type="search" id="search-field" placeholder="Search" autocomplete="off" />

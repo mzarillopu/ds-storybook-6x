@@ -1,0 +1,190 @@
+.puds-header {
+  border-top: 4px solid #e77500;
+}
+.puds-header__pu-branding {
+  padding: 1.25rem 0;
+}
+.puds-header__pu-branding img {
+  width: 260px;
+}
+.puds-header__site-branding {
+  margin-top: 1rem;
+  padding-left: 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.puds-header__site-branding img {
+  width: 60px;
+}
+.puds-header__site-branding-name a,
+.puds-header__site-branding-name a:visited {
+  text-decoration: none;
+  color: #000;
+  font-size: 2.75rem;
+  font-weight: 700;
+}
+.puds-header__site-branding-slogan {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+.puds-header__site-branding-home-link {
+  padding-right: 1rem;
+}
+.puds-header__search-bar form {
+  display: flex;
+  flex-basis: auto;
+  flex-grow: 1;
+}
+.puds-header__search-bar-toggle {
+  border: none;
+  background-color: #fff;
+}
+.puds-header__search-bar form [type='search'] {
+  padding-right: 0px;
+  margin-right: 0px;
+  border-right: none;
+  border-left: 1px solid #c8c8c8;
+  border-top: 1px solid #c8c8c8;
+  border-bottom: 1px solid #c8c8c8;
+  height: 35px;
+  max-width: 140px;
+}
+.puds-header__search-bar form [type='submit'] {
+  background-image: url(../icons/iconmonstr-magnifier-2.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1rem;
+  background-color: #fff;
+  border: none;
+  height: 35px;
+  width: 35px;
+  border-right: 1px solid #c8c8c8;
+  border-top: 1px solid #c8c8c8;
+  border-bottom: 1px solid #c8c8c8;
+}
+.puds-header__menu-toggle {
+  display: none;
+}
+@media (min-width: 992px) {
+  .puds-header__utility-menu {
+    position: absolute;
+    top: 1rem;
+    right: 200px;
+    line-height: 1.65;
+  }
+  .puds-header__utility-menu ul {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+  .puds-header__utility-menu a {
+    font-size: .85rem;
+    font-weight: 600;
+    padding: .5rem 0 .2rem 0;
+    margin: 0 .65rem;
+    text-decoration: none;
+    color: #000;
+  }
+  .puds-header__utility-menu a:hover {
+    border-bottom: 1px solid #e77500;
+  }
+  .puds-header__search-bar-toggle {
+    display: none;
+  }
+  .puds-header__nav-container {
+    display: flex;
+    flex-basis: auto;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 25px;
+  }
+  .puds-header__search-bar form {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+  }
+}
+@media (max-width: 991px) {
+  .puds-header__menu-toggle {
+    position: absolute;
+    top: 1.05rem;
+    right: 3rem;
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 32px;
+    padding: 4px;
+    display: flex;
+  }
+  .puds-header__search-bar-toggle {
+    position: absolute;
+    top: 1.175rem;
+    right: 1rem;
+  }
+  .puds-header__search-bar form,
+  .puds-header__search-bar form a {
+    width: 100%;
+  }
+  .puds-header__search-bar form [type='search'] {
+    width: 100%;
+    max-width: 100%;
+  }
+  .puds-header__search-bar-panel {
+    position: absolute;
+    left: 0;
+    top: 4rem;
+    background: #fff;
+    width: 100%;
+    z-index: 1000;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f4f4f4;
+  }
+  .puds-header__search-bar-panel {
+    display: none;
+  }
+  .puds-header__search-bar-panel--shown {
+    display: block;
+  }
+  .puds-header__nav-container {
+    display: none;
+  }
+  .puds-header__nav-container--expanded {
+    position: absolute;
+    left: 0;
+    top: 4rem;
+    background: #fff;
+    width: 100%;
+    z-index: 1000;
+    display: block;
+  }
+  .puds-header__utility-menu {
+    padding-left: 1rem;
+    position: relative;
+  }
+  .puds-header__utility-menu ul {
+    list-style: none;
+    padding: 0px;
+    margin-right: 10px;
+    margin-top: 0px;
+  }
+  .puds-header__utility-menu a:hover {
+    border-bottom: 1px solid #e77500;
+  }
+  .puds-header__utility-menu li > a {
+    border-bottom: 1px solid #c8c8c8;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding: 15px 0px;
+    padding-left: 5px;
+    display: block;
+  }
+  .puds-header__utility-menu--shown {
+    display: block;
+  }
+}
