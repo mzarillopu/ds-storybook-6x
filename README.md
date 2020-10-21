@@ -14,7 +14,7 @@ npm install
 You will want to run the build for the web components and CSS before running the server.
 
 ```
-npm run build-dev
+npm run stencil-build
 ```
 
 After that you should be ready to run the site locally.

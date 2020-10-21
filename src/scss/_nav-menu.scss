@@ -19,16 +19,16 @@
   ul.puds-menubar > li > a {
     border-bottom: 7px solid transparent;
     text-decoration: none;
-    color: #000;
+    color: get-theme('menubar-primary-text-color');
     font-weight: bold;
     padding: 10px 0px;
   }
   ul.puds-menubar > li:hover > a {
-    border-bottom: 7px solid #c8c8c8;
+    border-bottom: 7px solid get-theme('menubar-primary-hover-color');
   }
   ul.puds-menubar > li[aria-current='true'] > a,
-  .puds-menubar > ul > li[aria-current='true']:hover > a{
-    border-bottom: 7px solid #e77500;
+  .puds-menubar > ul > li[aria-current='true']:hover > a {
+    border-bottom: 7px solid get-theme('menubar-primary-selected-color');
   }
   ul.puds-menubar > li:hover > ul,
   ul.puds-menubar > li > button[aria-expanded='true'] + ul {
@@ -45,8 +45,8 @@
     background: #fff;
     box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3);
     min-width: 250px;
-    border-top: 1px solid #c8c8c8;
-    border-left: 1px solid #c8c8c8;
+    border-top: 1px solid get-theme('menubar-secondary-border-color');
+    border-left: 1px solid get-theme('menubar-secondary-border-color');
     display: none;
   }
   ul.puds-menubar > li:last-child:hover > ul {
@@ -67,6 +67,7 @@
     transform: rotate(0deg);
     transition: transform 0.3s ease;
     background: url(../icons/keyboard_arrow_down-black-18dp.svg) no-repeat center/2ex 2ex;
+    filter: get-theme('menubar-primary-arrow-filter');
   }
   ul.puds-menubar > li:hover > button,
   ul.puds-menubar > li > button[aria-expanded='true'] {
@@ -87,21 +88,23 @@
     padding-left: 15px;
   }
   ul.puds-menubar > li > ul a {
+    background-color: get-theme('menubar-secondary-background');
     text-decoration: none;
-    color: #000;
+    color: get-theme('menubar-secondary-text-color');
     font-weight: bold;
     padding: 13px 5px;
     width: 100%;
     display: block;
   }
   ul.puds-menubar > li > ul li a:hover {
-    background-color: #f4f4f4;
+    background-color: get-theme('menubar-secondary-background-hover');
+    color: get-theme('menubar-secondary-text-hover');
   }
   ul.puds-menubar > li > ul button {
     display: none;
   }
   ul.puds-menubar > li > ul a[aria-current='page'] {
-    border-left: 2px solid #e77500;
+    border-left: 2px solid get-theme('menubar-primary-selected-color');
   }
 }
 @media (max-width: 991px) {

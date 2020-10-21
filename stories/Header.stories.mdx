@@ -71,11 +71,14 @@ export const Template = (args) => html`
             <a href="#main-content" class="puds-skip-link">Skip to main content</a>
             <a href="#search" class="puds-skip-link">Skip to search options</a>
         </div>
-        <div class="puds-container">
+        <!-- div class="puds-container" -->
             <div class="puds-header__pu-branding">
-                <a href="https://www.princeton.edu" title="Princeton University"><img src="/logos/pu-logo.svg" alt="Princeton University" /></a> 
+                <div class="puds-container">
+                <a href="https://www.princeton.edu" title="Princeton University"><img src="/logos/pu-logo.svg" alt="Princeton University" /></a>
+                </div> 
             </div>
             <div class="puds-header__site-branding">
+                <div class="puds-container puds-header__site-branding-contents">
                 <a href="/" title="Home" tabindex="-1" aria-hidden="true" class="puds-header__site-branding-home-link"><img src="/logos/shield.svg" /></a>
                 <div class="puds-header__site-branding-info">
                     <div class="puds-header__site-branding-name">
@@ -85,10 +88,12 @@ export const Template = (args) => html`
                         ${ args.siteBrandingSlogan }
                     </div>
                 </div>
+                </div>
             </div>
-            <nav aria-label="Main Menu" class="puds-main-menu">
+            <nav aria-label="Main Menu" class="puds-header__main-menu">
                 <h2 class="puds-sr-only">Main Menu</h2>
-                <div class="puds-main-menu__navbar">
+                <div class="puds-container">
+                <div class="puds-header__main-menu-navbar">
                     <button id="puds-header-menu-toggle" class="puds-header__menu-toggle" aria-expanded="false" aria-label="Navigation Menu Toggle">Menu<i class="puds-icon puds-icon-menu" aria-hidden="true"></i></button>
                     <div id="puds-header-nav-container" class="puds-header__nav-container">
                         <ul class="puds-menubar" role="list">
@@ -180,8 +185,10 @@ export const Template = (args) => html`
                         </div>
                     </div>
                 </div>
+                </div>
             </nav>
             <div class="puds-header__search-bar">
+                <div class="puds-container">
                 <h2 class="puds-sr-only">Search</h2>
                 <button id="my-search-toggle" class="puds-header__search-bar-toggle" aria-expanded="false" aria-label="Search Menu Toggle"><i class="puds-icon puds-icon-search" aria-hidden="true"></i><span class="puds-sr-only">Search Menu Toggle</span></button>
                 <div id="puds-header-search-bar-panel" class="puds-header__search-bar-panel">
@@ -195,8 +202,9 @@ export const Template = (args) => html`
                         </button>
                     </form>
                 </div>
+                </div>
             </div>
-        </div>
+        <!-- /div -->
     </header>
     <a name="main-content"></a>
 `;
@@ -216,6 +224,10 @@ of a website, including copyright information, navigation links, and privacy sta
 ## TODO
 
 * Button arrows are not formatting correctly in Edge browser.
+* Ability to not have a search option by providing a class that changes the "right" property of the utility menu
+* Ability to collapse the search menu to a single icon that popups the menu in full screen mode
+* Ability to add a menu (instead of a link) to the utilities menu in full screen mode. 
+* Header images are a problem with dark background colors.  We will need a monochrome version (or need to mask/filter the current version)
 
 <Canvas>
     <Story name="Basic" args={{
@@ -226,5 +238,3 @@ of a website, including copyright information, navigation links, and privacy sta
       {Template.bind({})}
     </Story>
 </Canvas>
-
-
