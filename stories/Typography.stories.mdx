@@ -1,8 +1,9 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 import { html } from 'lit-html';
 
-export default { title: 'Components/Typography' };
+<Meta title="Components/Typography" component="Typography" />
 
-export const Fonts = () => html`
+export const Template = (args) => html`
     <h2>Paragraph Text</h2>
     <p class="puds-p">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
@@ -21,7 +22,7 @@ export const Fonts = () => html`
     </p>
 `;
 
-export const Headings = () => html`
+export const Template2 = (args) => html`
     <h1 class="puds-h1--display">Display</h1>
     <h1>Heading 1</h1>
     <h2>Heading 2</h2>
@@ -30,3 +31,29 @@ export const Headings = () => html`
     <h5>Heading 5</h5>
     <h6>Heading 6</h6>    
 `;
+
+# Typography
+
+## TODO
+
+* Ability to choose a font pairing.
+
+<Canvas>
+    <Story name="Fonts" args={{
+        forceExpanded: false,
+        siteBrandingName: 'Relativity',
+        siteBrandingSlogan: 'The Princeton University Design System'
+    }}>
+      {Template.bind({})}
+    </Story>
+</Canvas>
+
+<Canvas>
+    <Story name="Headings" args={{
+        forceExpanded: false,
+        siteBrandingName: 'Relativity',
+        siteBrandingSlogan: 'The Princeton University Design System'
+    }}>
+      {Template2.bind({})}
+    </Story>
+</Canvas>

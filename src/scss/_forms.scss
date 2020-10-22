@@ -1,10 +1,3 @@
-.puds-label {
-  display: block;
-  line-height: 1.1;
-  margin-top: 1.5rem;
-  max-width: 30rem;
-}
-
 .puds-input, .puds-select, .puds-textarea {
   border-radius: 0;
   border: 1px solid black;
@@ -17,9 +10,7 @@
 }
 
 .puds-input.puds-input--error {
-  border-width: .25rem;
-  border-color: #b50909;
-  border-style: solid;
+  border-width: .25rem solid get-theme('input--error-border-color');
 }
 
 // taken from digital.gov
