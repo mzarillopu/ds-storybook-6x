@@ -1,0 +1,58 @@
+.puds-dropdown,
+.puds-dropdown--error {
+  background-color: #fff;
+  position: relative;
+}
+.puds-dropdown:after,
+.puds-dropdown:before,
+.puds-dropdown--error:after,
+.puds-dropdown--error:before {
+  bottom: 0;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+}
+.puds-dropdown:before,
+.puds-dropdown--error:before {
+  right: 0;
+  width: 1.85em;
+}
+.puds-dropdown:after,
+.puds-dropdown--error:after {
+  border-bottom: 2px solid get-theme('dropdown-arrow-color');
+  border-right: 2px solid get-theme('dropdown-arrow-color');
+  height: .5em;
+  margin: auto;
+  right: .95em;
+  transform-origin: center right;
+  transform: rotate(45deg);
+  width: .5em;
+  z-index: 2;
+}
+.puds-dropdown select,
+.puds-dropdown--error select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: get-theme('input-bgcolor');
+  box-shadow: none;
+  border-radius: 0;
+  border: 1px solid get-theme('input-border-color');
+  color: get-theme('input-text-color');
+  line-height: normal;
+  max-width: 100%;
+  padding: .5em 2em .5em .5em;
+  width: 100%;
+}
+.puds-dropdown--error select {
+  border: .25rem solid get-theme('input--error-border-color');
+}
+.puds-dropdown select option,
+.puds-dropdown--error select option {
+  color: get-theme('input-text-color');
+}
+.puds-dropdown select option[disabled],
+.puds-dropdown--error select option[disabled] {
+  color: get-theme('input--disabled-text-color');
+}

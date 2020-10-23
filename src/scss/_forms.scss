@@ -1,16 +1,16 @@
 .puds-input, .puds-select, .puds-textarea {
   border-radius: 0;
-  border: 1px solid black;
-  color: #1b1b1b;
+  border: 1px solid get-theme('input-border-color');
+  color: get-theme('input-text-color');
   display: block;
   margin-top: .5rem;
   max-width: 30rem;
   padding: .5rem;
-  background-color: white;
+  background-color: get-theme('input-bgcolor');
 }
 
 .puds-input.puds-input--error {
-  border-width: .25rem solid get-theme('input--error-border-color');
+  border: .25rem solid get-theme('input--error-border-color');
 }
 
 // taken from digital.gov
@@ -24,4 +24,9 @@
 .puds-checkbox__input {
   width: 1.25em;
   height: 1.25em;
+}
+
+textarea.puds-input {
+  width: 100%;
+  max-width: 100%;
 }
