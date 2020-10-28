@@ -7,45 +7,45 @@ import { PrincetonDesignAutocomplete } from '../dist/index.js';
 <Meta title="Components/Form Inputs" component="Input" />
 
 export const TextInputTemplate = (args) => html`
-    <input class="puds-input" id="my-input" type="text" placeholder="Placeholder" value="${ args.value }" aria-label="My Input 1" />
-    <input class="puds-input puds-focus" id="my-input2" type="text" placeholder="Placeholder" value="${ args.value }" aria-label="My Input 2" />
-    <input class="puds-input puds-input--error" id="my-input3" type="text" placeholder="Placeholder" value="${ args.value }" aria-label="My Input 3" />
-    <input class="puds-input" id="my-input4" type="text" placeholder="Placeholder" required value="${ args.value }" aria-label="My Input 4" />
+    <input class="emc-input" id="my-input" type="text" placeholder="Placeholder" value="${ args.value }" aria-label="My Input 1" />
+    <input class="emc-input emc-focus" id="my-input2" type="text" placeholder="Placeholder" value="${ args.value }" aria-label="My Input 2" />
+    <input class="emc-input emc-input--error" id="my-input3" type="text" placeholder="Placeholder" value="${ args.value }" aria-label="My Input 3" />
+    <input class="emc-input" id="my-input4" type="text" placeholder="Placeholder" required value="${ args.value }" aria-label="My Input 4" />
 `;
 
 export const MultilineTextInputTemplate = (args) => html`
-    <textarea class="puds-input" id="my-input" type="text" aria-label="My Input">${ args.value }</textarea>
-    <textarea class="puds-input puds-focus" id="my-input2" type="text" aria-label="My Input 2">${ args.value }</textarea>
-    <textarea class="puds-input puds-input--error" id="my-input3" type="text" aria-label="My Input 3">${ args.value }</textarea>
-    <textarea class="puds-input" id="my-input4" type="text" aria-label="My Input 4" required>${ args.value }</textarea>
+    <textarea class="emc-input" id="my-input" type="text" aria-label="My Input">${ args.value }</textarea>
+    <textarea class="emc-input emc-focus" id="my-input2" type="text" aria-label="My Input 2">${ args.value }</textarea>
+    <textarea class="emc-input emc-input--error" id="my-input3" type="text" aria-label="My Input 3">${ args.value }</textarea>
+    <textarea class="emc-input" id="my-input4" type="text" aria-label="My Input 4" required>${ args.value }</textarea>
 `;
 
 export const CheckboxTemplate = (args) => html`
-    <fieldset class="puds-fieldset">
-        <legend class="puds-sr-only">${ args.legend }</legend>
-        <div class="puds-checkbox">
-            <input class="puds-checkbox__input" type="checkbox" id="apple" type="checkbox" checked />
-            <label class="puds-checkbox__label" for="apple">Apple</label>
+    <fieldset class="emc-fieldset">
+        <legend class="emc-sr-only">${ args.legend }</legend>
+        <div class="emc-checkbox">
+            <input class="emc-checkbox__input" type="checkbox" id="apple" type="checkbox" checked />
+            <label class="emc-checkbox__label" for="apple">Apple</label>
         </div>
-        <div class="puds-checkbox">
-            <input class="puds-checkbox__input" type="checkbox" id="orange" type="checkbox" />
-            <label class="puds-checkbox__label" for="orange">Orange</label>
+        <div class="emc-checkbox">
+            <input class="emc-checkbox__input" type="checkbox" id="orange" type="checkbox" />
+            <label class="emc-checkbox__label" for="orange">Orange</label>
         </div>
-        <div class="puds-checkbox">
-            <input class="puds-checkbox__input" type="checkbox" id="strawberry" type="checkbox" disabled />
-            <label class="puds-checkbox__label" for="strawberry">Strawberry</label>
+        <div class="emc-checkbox">
+            <input class="emc-checkbox__input" type="checkbox" id="strawberry" type="checkbox" disabled />
+            <label class="emc-checkbox__label" for="strawberry">Strawberry</label>
         </div>
-        <div class="puds-checkbox">
-            <input class="puds-checkbox__input" type="checkbox" id="watermelon" type="checkbox" disabled checked />
-            <label class="puds-checkbox__label" for="watermelon">Watermelon</label>
+        <div class="emc-checkbox">
+            <input class="emc-checkbox__input" type="checkbox" id="watermelon" type="checkbox" disabled checked />
+            <label class="emc-checkbox__label" for="watermelon">Watermelon</label>
         </div>
     </fieldset>
 `;
 
 export const DropdownTemplate = (args) => html`
-    <div class="puds-form-field">
+    <div class="emc-form-field">
         <label for="my-dropdown-1">Dropdown</label>
-        <div class="puds-dropdown">
+        <div class="emc-dropdown">
             <select id="my-dropdown-1">
                 <option>Option 1</option>
                 <option>Option 2</option>
@@ -54,9 +54,9 @@ export const DropdownTemplate = (args) => html`
             </select>
         </div>
     </div>
-    <div class="puds-form-field">
+    <div class="emc-form-field">
         <label for="my-dropdown-2">Dropdown - Focused</label>
-        <div class="puds-dropdown puds-focus">
+        <div class="emc-dropdown emc-focus">
             <select id="my-dropdown-2">
                 <option>Option 1</option>
                 <option>Option 2</option>
@@ -65,9 +65,9 @@ export const DropdownTemplate = (args) => html`
             </select>
         </div>
     </div>
-    <div class="puds-form-field">
+    <div class="emc-form-field">
         <label for="my-dropdown-3">Dropdown - Focused</label>
-        <div class="puds-dropdown--error">
+        <div class="emc-dropdown--error">
             <select id="my-dropdown-3">
                 <option>Option 1</option>
                 <option>Option 2</option>
@@ -79,7 +79,7 @@ export const DropdownTemplate = (args) => html`
 `;
 
 export const ComboBoxTemplate = () => html`
-    <puds-combobox id="mycombo"></puds-combobox>
+    <emc-combobox id="mycombo"></emc-combobox>
     <script id="initscript">
         (function() {
             let options = [
@@ -110,7 +110,7 @@ export const AutocompleteTemplate = (args) => html`
             console.log(e);
         }
     </script>
-    <puds-autocomplete id="myauto" @search-changed="${(e) => generateAutocompleteResults(e) }" @option-selected="${ args.optionSelected }"></puds-autocomplete>
+    <emc-autocomplete id="myauto" @search-changed="${(e) => generateAutocompleteResults(e) }" @option-selected="${ args.optionSelected }"></emc-autocomplete>
 `;
 
 # Form Inputs

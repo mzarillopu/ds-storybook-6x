@@ -1,36 +1,38 @@
-ol.puds-tab-list {
+@import 'variables';
+
+ol.emc-tab-list {
   list-style: none;
   display: flex;
   padding-inline-start: 0px;
   border-bottom: 1px solid get-theme('tab-border-color');
 }
 
-li.puds-tab {
+li.emc-tab {
   text-align: center;
   height: 40px;
   text-transform: uppercase;
   border-bottom: 4px solid #fff;
 }
 
-li.puds-tab:hover,
-li.puds-tab:focus-within {
+li.emc-tab:hover,
+li.emc-tab:focus-within {
   border-bottom: 4px solid get-theme('tab-border-color--hover');
 }
 
-li.puds-tab--active,
-li.puds-tab--active:focus-within,
-li.puds-tab--active:hover {
+li.emc-tab--active,
+li.emc-tab--active:focus-within,
+li.emc-tab--active:hover {
   border-bottom: 4px solid get-theme('tab-border-color');
 }
 
-a.puds-tab-link {
+a.emc-tab-link {
   text-decoration: none;
   color: rgba(0,0,0,.87);
   height: 40px;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
-  font-family: 'Open Sans';
+  font-family: $font-face-body;
   padding: 0 24px;
   display: inline-flex;
   align-items: center;

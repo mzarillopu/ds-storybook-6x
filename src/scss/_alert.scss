@@ -1,31 +1,19 @@
-.puds-alert-section {
+.emc-alert-section {
   background-color: #000;
   color: #fff;
   padding: 1rem;
   margin-bottom: 1rem;
 }
-.puds-alert-section__title {
+.emc-alert-section__title {
   padding-right: 3rem; // what is the purpose of this?
   font-weight: 700;
   font-size: 1.35rem;
   line-height: 1.75rem;
   margin: .5rem 0;
 }
-.puds-alert-section__close {
-  //width: 1em;
-  //height: 1em;
-  //background-color: #000;
-  //color: #fff;
-  //text-align: center;
-  //float: right;
-  //overflow: visible;
-  //margin: 0 1em 1em 1em;
-  //text-decoration: none;
-  // background-color: transparent;
+.emc-alert-section__close {
   width: 44px;
   height: 44px;
-  // border-bottom: none;
-  // border: 1px solid green;
   color: #fff;
   font-weight: bold;
   position: absolute;
@@ -33,9 +21,5 @@
   top: 1rem;
   right: 1rem;
   background: url(../icons/remove-symbol.svg?fill=#fff) no-repeat center/2ex 2ex;
-  //background-image: url(data:image/svg+xml,%3Csvg height='100px' width='100px' fill='%23ffffff' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 27 27' version='1.1' x='0px' y='0px'%3E%3Ctitle%3Eclose%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg transform='translate(-425.000000, -343.000000)' fill='%23ffffff'%3E%3Cpath d='M441.277487,356.036268 L451.274287,346.040535 C451.974021,345.340801 451.969754,344.219735 451.274287,343.523201 C450.577754,342.823468 449.456687,342.832001 448.761221,343.523201 L438.765487,353.518935 L428.769754,343.523201 C428.070021,342.823468 426.948954,342.827735 426.256687,343.523201 C425.556954,344.224001 425.561221,345.344001 426.256687,346.040535 L436.253487,356.036268 L426.256687,366.027735 C425.556954,366.727468 425.561221,367.848535 426.256687,368.544001 C426.953221,369.244801 428.074287,369.240535 428.769754,368.544001 L438.765487,358.548268 L448.761221,368.544001 C449.460954,369.244801 450.582021,369.240535 451.274287,368.544001 C451.974021,367.844268 451.969754,366.723201 451.274287,366.027735 L441.277487,356.036268 Z'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E);
-  // background-size: 22px 22px;
   text-indent: -9999rem;
-  // background-position: center;
-  // background-repeat: no-repeat;
 }

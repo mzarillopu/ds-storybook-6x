@@ -1,0 +1,48 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { html } from 'lit-html';
+
+<Meta title="Style/Colors" component="Color" />
+
+export const Template = () => html`
+    <style>
+        .color-block {
+            display: block;
+            width: 175px;
+            height: 175px;
+            border: 1px solid black;
+        }
+        .color-block-container {
+            display: inline-block;
+            margin-right: 10px;
+        }
+    </style>
+    <div class="color-block-container">
+        <div class="color-block emc-primary-bg"></div>
+        .emc-primary-bg
+    </div>
+    <div class="color-block-container">
+        <div class="color-block emc-primary-bg-light"></div>
+        .emc-primary-bg-light
+    </div>
+    <div class="color-block-container">
+        <div class="color-block emc-primary-bg-lighter"></div>
+        .emc-primary-bg-lighter
+    </div>
+    <div class="color-block-container">
+        <div class="color-block emc-primary-bg-dark"></div>
+        .emc-primary-bg-dark
+    </div>
+    <div class="color-block-container">
+        <div class="color-block emc-primary-bg-darker"></div>
+        .emc-primary-bg-darker
+    </div>
+`;
+
+# Breadcrumb
+
+<Canvas>
+    <Story name="Colors" args={{
+    }}>
+      {Template.bind({})}
+    </Story>
+</Canvas>

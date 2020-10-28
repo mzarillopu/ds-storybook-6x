@@ -1,11 +1,11 @@
 import { newE2EPage } from '@stencil/core/testing';
 
-describe('puds-accordion-item', () => {
+describe('emc-accordion', () => {
   it('renders', async () => {
     const page = await newE2EPage();
-    await page.setContent('<puds-accordion-item></puds-accordion-item>');
+    await page.setContent('<emc-accordion></emc-accordion>');
 
-    const element = await page.find('puds-accordion-item');
+    const element = await page.find('emc-accordion');
     expect(element).toHaveClass('hydrated');
   });
 });

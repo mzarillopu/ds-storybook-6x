@@ -1,8 +1,7 @@
-.puds-sidebar-menu {
+.emc-sidebar-menu {
   border-right: 1px solid #c8c8c8;
 }
-.puds-sidebar-menu__list {
-  flex-direction: column;
+.emc-sidebar-menu__list {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -12,19 +11,19 @@
   margin-bottom: 0;
   list-style: none;
 }
-.puds-sidebar-menu__list a {
+.emc-sidebar-menu__list a {
   text-decoration: none;
   color: #000;
   display: block;
   padding: 0.5rem 1rem;
   border-right: 4px solid transparent;
 }
-.puds-sidebar-menu__list-item {
+.emc-sidebar-menu__list-item {
   margin: 0.1em 0;
 }
-.puds-sidebar-menu__list-item--active {
+.emc-sidebar-menu__list-item--active {
 }
-.puds-sidebar-menu__list-item--active a {
+.emc-sidebar-menu__list-item--active a {
   font-weight: bold;
   border-right: 4px solid #e77500;
 }

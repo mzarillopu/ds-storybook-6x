@@ -6,9 +6,9 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface PudsAccordion {
+    interface EmcAccordion {
     }
-    interface PudsAccordionItem {
+    interface EmcAccordionItem {
         "itemId": string;
         "itemTitle": string;
     }
@@ -17,17 +17,17 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLPudsAccordionElement extends Components.PudsAccordion, HTMLStencilElement {
+    interface HTMLEmcAccordionElement extends Components.EmcAccordion, HTMLStencilElement {
     }
-    var HTMLPudsAccordionElement: {
-        prototype: HTMLPudsAccordionElement;
-        new (): HTMLPudsAccordionElement;
+    var HTMLEmcAccordionElement: {
+        prototype: HTMLEmcAccordionElement;
+        new (): HTMLEmcAccordionElement;
     };
-    interface HTMLPudsAccordionItemElement extends Components.PudsAccordionItem, HTMLStencilElement {
+    interface HTMLEmcAccordionItemElement extends Components.EmcAccordionItem, HTMLStencilElement {
     }
-    var HTMLPudsAccordionItemElement: {
-        prototype: HTMLPudsAccordionItemElement;
-        new (): HTMLPudsAccordionItemElement;
+    var HTMLEmcAccordionItemElement: {
+        prototype: HTMLEmcAccordionItemElement;
+        new (): HTMLEmcAccordionItemElement;
     };
     interface HTMLPudsMenuToggleElement extends Components.PudsMenuToggle, HTMLStencilElement {
     }
@@ -36,15 +36,15 @@ declare global {
         new (): HTMLPudsMenuToggleElement;
     };
     interface HTMLElementTagNameMap {
-        "puds-accordion": HTMLPudsAccordionElement;
-        "puds-accordion-item": HTMLPudsAccordionItemElement;
+        "emc-accordion": HTMLEmcAccordionElement;
+        "emc-accordion-item": HTMLEmcAccordionItemElement;
         "puds-menu-toggle": HTMLPudsMenuToggleElement;
     }
 }
 declare namespace LocalJSX {
-    interface PudsAccordion {
+    interface EmcAccordion {
     }
-    interface PudsAccordionItem {
+    interface EmcAccordionItem {
         "itemId"?: string;
         "itemTitle"?: string;
     }
@@ -53,8 +53,8 @@ declare namespace LocalJSX {
         "onToggle"?: (event: CustomEvent<boolean>) => void;
     }
     interface IntrinsicElements {
-        "puds-accordion": PudsAccordion;
-        "puds-accordion-item": PudsAccordionItem;
+        "emc-accordion": EmcAccordion;
+        "emc-accordion-item": EmcAccordionItem;
         "puds-menu-toggle": PudsMenuToggle;
     }
 }
@@ -62,8 +62,8 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "puds-accordion": LocalJSX.PudsAccordion & JSXBase.HTMLAttributes<HTMLPudsAccordionElement>;
-            "puds-accordion-item": LocalJSX.PudsAccordionItem & JSXBase.HTMLAttributes<HTMLPudsAccordionItemElement>;
+            "emc-accordion": LocalJSX.EmcAccordion & JSXBase.HTMLAttributes<HTMLEmcAccordionElement>;
+            "emc-accordion-item": LocalJSX.EmcAccordionItem & JSXBase.HTMLAttributes<HTMLEmcAccordionItemElement>;
             "puds-menu-toggle": LocalJSX.PudsMenuToggle & JSXBase.HTMLAttributes<HTMLPudsMenuToggleElement>;
         }
     }

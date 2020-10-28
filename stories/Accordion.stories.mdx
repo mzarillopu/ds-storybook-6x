@@ -4,26 +4,26 @@ import { html } from 'lit-html';
 <Meta title="Components/Accordion" component="Accordion" />
 
 export const Template = (args) => html`
-      <div class="puds-accordion" role="region">
-          <button id="acrd-btn-1" class="puds-accordion__button" aria-expanded="false" role="button">Sed porttitor lectus nibh?</button>
-          <div role="region" aria-hidden="true" aria-labelledby="acrd-btn-1" tabindex="0" class="puds-accordion__content">
+      <div class="emc-accordion" role="region">
+          <button id="acrd-btn-1" class="emc-accordion__button" aria-expanded="false" role="button">Sed porttitor lectus nibh?</button>
+          <div role="region" aria-hidden="true" aria-labelledby="acrd-btn-1" tabindex="0" class="emc-accordion__content">
               Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, convallis a 
               pellentesque nec, egestas non nisi.
           </div>
-          <button id="acrd-btn-2" class="puds-accordion__button" aria-expanded="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies ligula sed magna dictum porta?</button>
-          <div role="region" aria-hidden="false" aria-labelledby="acrd-btn-2" tabindex="0" class="puds-accordion__content">
+          <button id="acrd-btn-2" class="emc-accordion__button" aria-expanded="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies ligula sed magna dictum porta?</button>
+          <div role="region" aria-hidden="false" aria-labelledby="acrd-btn-2" tabindex="0" class="emc-accordion__content">
               Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet 
               et, porttitor at sem. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. 
               Cras ultricies ligula sed magna dictum porta.
           </div>
-          <button id="acrd-btn-3" class="puds-accordion__button" aria-expanded="false">Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit.</button>
-          <div role="region" aria-hidden="true" aria-labelledby="acrd-btn-3" tabindex="0" class="puds-accordion__content">
+          <button id="acrd-btn-3" class="emc-accordion__button" aria-expanded="false">Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit.</button>
+          <div role="region" aria-hidden="true" aria-labelledby="acrd-btn-3" tabindex="0" class="emc-accordion__content">
               Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices 
               posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. 
               Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
           </div>
-          <button id="acrd-btn-4" class="puds-accordion__button" aria-expanded="false">Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit.</button>
-          <div role="region" aria-hidden="true" aria-labelledby="acrd-btn-4" tabindex="0" class="puds-accordion__content">
+          <button id="acrd-btn-4" class="emc-accordion__button" aria-expanded="false">Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit.</button>
+          <div role="region" aria-hidden="true" aria-labelledby="acrd-btn-4" tabindex="0" class="emc-accordion__content">
               Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices 
               posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. 
               Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
@@ -32,10 +32,10 @@ export const Template = (args) => html`
   `;
   
   export const TemplateWebComponent = (args) => html`
-      <puds-accordion class="puds-wc">
-        <puds-accordion-item item-id="test1" item-title="Item 1" class="puds-wc">This is the test content (1)</puds-accordion-item>
-        <puds-accordion-item item-id="test2" item-title="Item 2" class="puds-wc">This is the test content (2)</puds-accordion-item>
-      </puds-accordion>
+      <emc-accordion class="emc-wc">
+        <emc-accordion-item item-id="test1" item-title="Item 1" class="emc-wc">This is the test content (1)</emc-accordion-item>
+        <emc-accordion-item item-id="test2" item-title="Item 2" class="emc-wc">This is the test content (2)</emc-accordion-item>
+      </emc-accordion>
   `;
 
 # Accordion

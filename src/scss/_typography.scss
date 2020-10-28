@@ -49,7 +49,7 @@ h6, .puds-h6 {
   line-height: 1.3em/15px;
 }
 
-.puds-p--lead {
+.emc-p--lead {
   font-family: $font-face-heading;
   font-weight: 400;
   font-size: 22px;
@@ -64,14 +64,14 @@ label {
   font-weight: bold;
 }
 
-.puds-p {
+.emc-p {
   font-family: $font-face-body;
   font-weight: 400;
   font-size: 17px;
   line-height: 1.3em;
 }
 
-.puds-page-title {
+.emc-page-title {
   border-bottom: 3px solid #e77500;
   padding-bottom: 5px;
   margin: 0.2em 0 0.75em;
@@ -79,13 +79,13 @@ label {
   font-weight: 500;
 }
 
-.puds-block-heading {
+.emc-block-heading {
   font-weight: 700;
   font-size: 2.125rem;
   line-height: 1.53;
 }
 
-.puds-block-heading:after {
+.emc-block-heading:after {
   content: "";
   width: 50px;
   height: 3px;

@@ -1,4 +1,4 @@
-.puds-skip-link {
+.emc-skip-link {
   position:absolute;
   left:-10000px;
   top:auto;
@@ -7,6 +7,6 @@
   margin: .25rem;
 }
 
-.puds-skip-link:focus, .puds-skip-link--shown {
+.emc-skip-link:focus, .emc-skip-link--shown {
   left: auto;
 }

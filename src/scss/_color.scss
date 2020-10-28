@@ -1,6 +1,6 @@
 @each $key, $value in $colors {
   @if $key != 'focus' {
-    .puds-#{$key} {
+    .emc-#{$key} {
       background-color: $value;
     }
   }

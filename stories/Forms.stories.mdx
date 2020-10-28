@@ -7,85 +7,85 @@ import { PrincetonDesignAutocomplete } from '../dist/index.js';
 <Meta title="Components/Form" component="Forms" />
 
 export const TextInputTemplate = (args) => html`
-    <div class="puds-form-field">
+    <div class="emc-form-field">
         <label for="my-input">${ args.label }</label>
-        <input class="puds-input" id="my-input" type="text" placeholder="Placeholder" value="${ args.value }" />
+        <input class="emc-input" id="my-input" type="text" placeholder="Placeholder" value="${ args.value }" />
     </div>
-    <div class="puds-form-field">
+    <div class="emc-form-field">
         <label for="my-input2">${ args.label } - Focused</label>
-        <input class="puds-input puds-focus" id="my-input2" type="text" placeholder="Placeholder" value="${ args.value }" />
+        <input class="emc-input emc-focus" id="my-input2" type="text" placeholder="Placeholder" value="${ args.value }" />
     </div>
-    <div class="puds-form-field--error">
+    <div class="emc-form-field--error">
         <label for="my-input3">${ args.label } - With Error</label>
-        <span class="puds-form-field-error-msg">Clear and brief error message</span>
-        <input class="puds-input puds-input--error" id="my-input3" type="text" placeholder="Placeholder" value="${ args.value }" />
+        <span class="emc-form-field-error-msg">Clear and brief error message</span>
+        <input class="emc-input emc-input--error" id="my-input3" type="text" placeholder="Placeholder" value="${ args.value }" />
     </div>
-    <div class="puds-form-field">
+    <div class="emc-form-field">
         <label for="my-input4">${ args.label } - Required (Required)</label>
-        <input class="puds-input" id="my-input4" type="text" placeholder="Placeholder" required value="${ args.value }" />
+        <input class="emc-input" id="my-input4" type="text" placeholder="Placeholder" required value="${ args.value }" />
     </div>
 `;
 
 export const MultilineTextInputTemplate = (args) => html`
-    <label class="puds-label" for="my-input4">${ args.label }</label>
-    <textarea class="puds-input" id="my-input4" type="text">${ args.value }</textarea>
+    <label class="emc-label" for="my-input4">${ args.label }</label>
+    <textarea class="emc-input" id="my-input4" type="text">${ args.value }</textarea>
 `;
 
 export const CheckboxTemplate = (args) => html`
-    <fieldset class="puds-fieldset">
-        <legend class="puds-sr-only">${ args.legend }</legend>
-        <div class="puds-checkbox">
-            <input class="puds-checkbox__input" type="checkbox" id="apple" type="checkbox" checked />
-            <label class="puds-checkbox__label" for="apple">Apple</label>
+    <fieldset class="emc-fieldset">
+        <legend class="emc-sr-only">${ args.legend }</legend>
+        <div class="emc-checkbox">
+            <input class="emc-checkbox__input" type="checkbox" id="apple" type="checkbox" checked />
+            <label class="emc-checkbox__label" for="apple">Apple</label>
         </div>
-        <div class="puds-checkbox">
-            <input class="puds-checkbox__input" type="checkbox" id="orange" type="checkbox" />
-            <label class="puds-checkbox__label" for="orange">Orange</label>
+        <div class="emc-checkbox">
+            <input class="emc-checkbox__input" type="checkbox" id="orange" type="checkbox" />
+            <label class="emc-checkbox__label" for="orange">Orange</label>
         </div>
-        <div class="puds-checkbox">
-            <input class="puds-checkbox__input" type="checkbox" id="strawberry" type="checkbox" disabled />
-            <label class="puds-checkbox__label" for="strawberry">Strawberry</label>
+        <div class="emc-checkbox">
+            <input class="emc-checkbox__input" type="checkbox" id="strawberry" type="checkbox" disabled />
+            <label class="emc-checkbox__label" for="strawberry">Strawberry</label>
         </div>
-        <div class="puds-checkbox">
-            <input class="puds-checkbox__input" type="checkbox" id="watermelon" type="checkbox" disabled checked />
-            <label class="puds-checkbox__label" for="watermelon">Watermelon</label>
+        <div class="emc-checkbox">
+            <input class="emc-checkbox__input" type="checkbox" id="watermelon" type="checkbox" disabled checked />
+            <label class="emc-checkbox__label" for="watermelon">Watermelon</label>
         </div>
     </fieldset>
 `;
 
 export const DropdownTemplate = (args) => html`
     <style>
-        .puds-form-field {
+        .emc-form-field {
             margin-top: 1.5rem;
         }
-        .puds-form-field label {
+        .emc-form-field label {
           display: block;
           line-height: 1.1;
           margin-bottom: .5rem;
           max-width: 30rem;    
         }
-        .puds-dropdown,
-        .puds-dropdown--error {
+        .emc-dropdown,
+        .emc-dropdown--error {
             background-color: #fff;
             position: relative;
         }
-        .puds-dropdown:after, 
-        .puds-dropdown:before,
-        .puds-dropdown--error:after,
-        .puds-dropdown--error:before {
+        .emc-dropdown:after, 
+        .emc-dropdown:before,
+        .emc-dropdown--error:after,
+        .emc-dropdown--error:before {
             bottom: 0;
             content: "";
             pointer-events: none;
             position: absolute;
             top: 0;
         }
-        .puds-dropdown:before,
-        .puds-dropdown--error:before {
+        .emc-dropdown:before,
+        .emc-dropdown--error:before {
             right: 0;
             width: 1.85em;
         }
-        .puds-dropdown:after,
-        .puds-dropdown--error:after {
+        .emc-dropdown:after,
+        .emc-dropdown--error:after {
             border-bottom: 2px solid #e77500;
             border-right: 2px solid #e77500;
             height: .5em;
@@ -96,8 +96,8 @@ export const DropdownTemplate = (args) => html`
             width: .5em;
             z-index: 2;
         }
-        .puds-dropdown select,
-        .puds-dropdown--error select {
+        .emc-dropdown select,
+        .emc-dropdown--error select {
             -moz-appearance: none;
             -webkit-appearance: none;
             appearance: none;
@@ -111,21 +111,21 @@ export const DropdownTemplate = (args) => html`
             padding: .5em 2em .5em .5em;
             width: 100%;
         }
-        .puds-dropdown--error select {
+        .emc-dropdown--error select {
             border: .25rem solid #b50909;
         }
-        .puds-dropdown select option,
-        .puds-dropdown--error select option {
+        .emc-dropdown select option,
+        .emc-dropdown--error select option {
             color: #000;
         }
-        .puds-dropdown select option[disabled],
-        .puds-dropdown--error select option[disabled] {
+        .emc-dropdown select option[disabled],
+        .emc-dropdown--error select option[disabled] {
             color: #c8c8c8;
         }
     </style>
-    <div class="puds-form-field">
+    <div class="emc-form-field">
         <label for="my-dropdown-1">Dropdown</label>
-        <div class="puds-dropdown">
+        <div class="emc-dropdown">
             <select id="my-dropdown-1">
                 <option>Option 1</option>
                 <option>Option 2</option>
@@ -134,9 +134,9 @@ export const DropdownTemplate = (args) => html`
             </select>
         </div>
     </div>
-    <div class="puds-form-field">
+    <div class="emc-form-field">
         <label for="my-dropdown-2">Dropdown - Focused</label>
-        <div class="puds-dropdown puds-focus">
+        <div class="emc-dropdown emc-focus">
             <select id="my-dropdown-2">
                 <option>Option 1</option>
                 <option>Option 2</option>
@@ -145,9 +145,9 @@ export const DropdownTemplate = (args) => html`
             </select>
         </div>
     </div>
-    <div class="puds-form-field">
+    <div class="emc-form-field">
         <label for="my-dropdown-3">Dropdown - Focused</label>
-        <div class="puds-dropdown--error">
+        <div class="emc-dropdown--error">
             <select id="my-dropdown-3">
                 <option>Option 1</option>
                 <option>Option 2</option>
@@ -159,7 +159,7 @@ export const DropdownTemplate = (args) => html`
 `;
 
 export const ComboBoxTemplate = () => html`
-    <puds-combobox id="mycombo"></puds-combobox>
+    <emc-combobox id="mycombo"></emc-combobox>
     <script id="initscript">
         (function() {
             let options = [
@@ -190,7 +190,7 @@ export const AutocompleteTemplate = (args) => html`
             console.log(e);
         }
     </script>
-    <puds-autocomplete id="myauto" @search-changed="${(e) => generateAutocompleteResults(e) }" @option-selected="${ args.optionSelected }"></puds-autocomplete>
+    <emc-autocomplete id="myauto" @search-changed="${(e) => generateAutocompleteResults(e) }" @option-selected="${ args.optionSelected }"></emc-autocomplete>
 `;
 
 # Forms

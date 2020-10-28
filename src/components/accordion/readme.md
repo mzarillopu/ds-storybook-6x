@@ -1,4 +1,4 @@
-# puds-accordion
+# emc-accordion
 
 
 

@@ -1,4 +1,4 @@
-.puds-quote {
+.emc-quote {
   font-weight: 300;
   font-size: 1.5rem;
   border-top: 1px solid #c8c8c8;
@@ -7,7 +7,7 @@
   margin: 1.5em 0 0;
 }
 
-.puds-quote:before {
+.emc-quote:before {
   content: "";
   width: 115px;
   height: 8px;
@@ -18,7 +18,7 @@
   top: -9px;
 }
 
-.puds-quote:after {
+.emc-quote:after {
   display: block;
   clear: both;
   content: "";

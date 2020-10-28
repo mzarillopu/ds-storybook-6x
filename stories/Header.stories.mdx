@@ -6,7 +6,7 @@ import { html } from 'lit-html';
 export const Template = (args) => html`
     <script id="initscript">
         function toggleMenu(event) {
-            const menuToggle = document.getElementById("puds-header-menu-toggle");
+            const menuToggle = document.getElementById("emc-header-menu-toggle");
             var expandedAttr = menuToggle.getAttribute("aria-expanded");
             var expand = !(expandedAttr && expandedAttr == "true");
             if (expand) {
@@ -15,22 +15,22 @@ export const Template = (args) => html`
             showMenu(expand);
         }
         function showMenu(expand) {
-            const menuToggle = document.getElementById("puds-header-menu-toggle");
-            const menuToggleIcon = menuToggle.querySelector(".puds-icon");
-            const el = document.getElementById("puds-header-nav-container");
-            const navbar = document.querySelector(".puds-menubar");
+            const menuToggle = document.getElementById("emc-header-menu-toggle");
+            const menuToggleIcon = menuToggle.querySelector(".emc-icon");
+            const el = document.getElementById("emc-header-nav-container");
+            const navbar = document.querySelector(".emc-menubar");
             if (expand) {
-                el.classList.add("puds-header__nav-container--expanded");
-                navbar.classList.add("puds-menubar--shown");
+                el.classList.add("emc-header__nav-container--expanded");
+                navbar.classList.add("emc-menubar--shown");
                 menuToggle.setAttribute("aria-expanded", "true");
-                menuToggleIcon.classList.remove("puds-icon-menu");
-                menuToggleIcon.classList.add("puds-icon-close");
+                menuToggleIcon.classList.remove("emc-icon-menu");
+                menuToggleIcon.classList.add("emc-icon-close");
             } else {
-                el.classList.remove("puds-header__nav-container--expanded");
-                navbar.classList.remove("puds-menubar--shown");
+                el.classList.remove("emc-header__nav-container--expanded");
+                navbar.classList.remove("emc-menubar--shown");
                 menuToggle.setAttribute("aria-expanded", "false");
-                menuToggleIcon.classList.remove("puds-icon-close");
-                menuToggleIcon.classList.add("puds-icon-menu");
+                menuToggleIcon.classList.remove("emc-icon-close");
+                menuToggleIcon.classList.add("emc-icon-menu");
             }
         }
         function toggleSearch(event) {
@@ -43,64 +43,64 @@ export const Template = (args) => html`
             showSearch(expand);
         }
         function showSearch(expand) {
-            const searchbar = document.getElementById("puds-header-search-bar-panel");
+            const searchbar = document.getElementById("emc-header-search-bar-panel");
             const searchToggle = document.getElementById("my-search-toggle");
-            const searchToggleIcon = searchToggle.querySelector(".puds-icon");
+            const searchToggleIcon = searchToggle.querySelector(".emc-icon");
             if (expand) {
-                searchbar.classList.add("puds-header__search-bar-panel--shown");
+                searchbar.classList.add("emc-header__search-bar-panel--shown");
                 searchToggle.setAttribute("aria-expanded", "true");
-                searchToggleIcon.classList.remove("puds-icon-search");
-                searchToggleIcon.classList.add("puds-icon-close");
+                searchToggleIcon.classList.remove("emc-icon-search");
+                searchToggleIcon.classList.add("emc-icon-close");
                 var input = searchbar.querySelector("input[type='search']");
                 input.focus();         
             } else {
-                searchbar.classList.remove("puds-header__search-bar-panel--shown");
+                searchbar.classList.remove("emc-header__search-bar-panel--shown");
                 searchToggle.setAttribute("aria-expanded", "false");
-                searchToggleIcon.classList.remove("puds-icon-close");
-                searchToggleIcon.classList.add("puds-icon-search");
+                searchToggleIcon.classList.remove("emc-icon-close");
+                searchToggleIcon.classList.add("emc-icon-search");
             }
         }
-        myMainMenuToggle = document.getElementById("puds-header-menu-toggle");
+        myMainMenuToggle = document.getElementById("emc-header-menu-toggle");
         myMainMenuToggle.addEventListener('click', toggleMenu);
         mySearchToggle = document.getElementById("my-search-toggle");
         mySearchToggle.addEventListener('click', toggleSearch); 
     </script>
-    <header role="banner" class="puds-header">
-        <h1 class="puds-sr-only">Princeton University Design System</h1>
-        <div class="puds-skip-links">
-            <a href="#main-content" class="puds-skip-link">Skip to main content</a>
-            <a href="#search" class="puds-skip-link">Skip to search options</a>
+    <header role="banner" class="emc-header">
+        <h1 class="emc-sr-only">Princeton University Design System</h1>
+        <div class="emc-skip-links">
+            <a href="#main-content" class="emc-skip-link">Skip to main content</a>
+            <a href="#search" class="emc-skip-link">Skip to search options</a>
         </div>
-        <!-- div class="puds-container" -->
-            <div class="puds-header__pu-branding">
-                <div class="puds-container">
+        <!-- div class="emc-container" -->
+            <div class="emc-header__pu-branding">
+                <div class="emc-container">
                 <a href="https://www.princeton.edu" title="Princeton University"><img src="/logos/pu-logo.svg" alt="Princeton University" /></a>
                 </div> 
             </div>
-            <div class="puds-header__site-branding">
-                <div class="puds-container puds-header__site-branding-contents">
-                <a href="/" title="Home" tabindex="-1" aria-hidden="true" class="puds-header__site-branding-home-link"><img src="/logos/shield.svg" /></a>
-                <div class="puds-header__site-branding-info">
-                    <div class="puds-header__site-branding-name">
+            <div class="emc-header__site-branding">
+                <div class="emc-container emc-header__site-branding-contents">
+                <a href="/" title="Home" tabindex="-1" aria-hidden="true" class="emc-header__site-branding-home-link"><img src="/logos/shield.svg" /></a>
+                <div class="emc-header__site-branding-info">
+                    <div class="emc-header__site-branding-name">
                         <a href="/" title="Home">${ args.siteBrandingName }</a>
                     </div>
-                    <div class="puds-header__site-branding-slogan">
+                    <div class="emc-header__site-branding-slogan">
                         ${ args.siteBrandingSlogan }
                     </div>
                 </div>
                 </div>
             </div>
-            <nav aria-label="Main Menu" class="puds-header__main-menu">
-                <h2 class="puds-sr-only">Main Menu</h2>
-                <div class="puds-container">
-                <div class="puds-header__main-menu-navbar">
-                    <button id="puds-header-menu-toggle" class="puds-header__menu-toggle" aria-expanded="false" aria-label="Navigation Menu Toggle">Menu<i class="puds-icon puds-icon-menu" aria-hidden="true"></i></button>
-                    <div id="puds-header-nav-container" class="puds-header__nav-container">
-                        <ul class="puds-menubar" role="list">
+            <nav aria-label="Main Menu" class="emc-header__main-menu">
+                <h2 class="emc-sr-only">Main Menu</h2>
+                <div class="emc-container">
+                <div class="emc-header__main-menu-navbar">
+                    <button id="emc-header-menu-toggle" class="emc-header__menu-toggle" aria-expanded="false" aria-label="Navigation Menu Toggle">Menu<i class="emc-icon emc-icon-menu" aria-hidden="true"></i></button>
+                    <div id="emc-header-nav-container" class="emc-header__nav-container">
+                        <ul class="emc-menubar" role="list">
                             <li aria-current="true">
                                 <a href="/blocks/accordion" aria-current="page">Content Types</a>
                                 <button type="button" aria-expanded="${ args.forceExpanded }">
-                                    <span class="puds-sr-only">
+                                    <span class="emc-sr-only">
                                         Content Types
                                         SubMenu
                                     </span>
@@ -109,12 +109,12 @@ export const Template = (args) => html`
                                     <li>
                                         <a href="/content-types/page">Page</a>
                                         <button type="button" aria-expanded="${ args.forceExpanded }">
-                                            <span class="puds-sr-only">
+                                            <span class="emc-sr-only">
                                                 Page
                                                 SubMenu
                                             </span>
                                         </button>
-                                        <ul class="puds-menubar__submenu--shown">
+                                        <ul class="emc-menubar__submenu--shown">
                                             <li><a href="javascript:void(0);">Page List</a></li>
                                             <li><a href="javascript:void(0);" aria-current="page">Sub Page</a></li>
                                             <li><a href="javascript:void(0);">Sub Page with Right Sidebar</a></li>
@@ -126,7 +126,7 @@ export const Template = (args) => html`
                                     <li>
                                         <a href="/content-types/page">News</a>
                                         <button type="button" aria-expanded="false">
-                                            <span class="puds-sr-only">
+                                            <span class="emc-sr-only">
                                                 News
                                                 SubMenu
                                             </span>
@@ -144,7 +144,7 @@ export const Template = (args) => html`
                             <li>
                                 <a href="/blocks/content-slider">Blocks</a>
                                 <button type="button" aria-expanded="false">
-                                    <span class="puds-sr-only">
+                                    <span class="emc-sr-only">
                                         Blocks
                                         SubMenu
                                     </span>
@@ -161,7 +161,7 @@ export const Template = (args) => html`
                             <li>
                                 <a href="/blocks/content-slider">Images &amp; Media</a>
                                 <button type="button" aria-expanded="false">
-                                    <span class="puds-sr-only">
+                                    <span class="emc-sr-only">
                                         Images &amp; Media
                                         SubMenu
                                     </span>
@@ -177,7 +177,7 @@ export const Template = (args) => html`
                                 </ul>
                             </li>
                         </ul>
-                        <div class="puds-header__utility-menu">
+                        <div class="emc-header__utility-menu">
                             <ul>
                                 <li><a href="javascript void(0);">Documentation</a></li>
                                 <li><a href="javascript:void(0);">Log In</a></li>
@@ -187,18 +187,18 @@ export const Template = (args) => html`
                 </div>
                 </div>
             </nav>
-            <div class="puds-header__search-bar">
-                <div class="puds-container">
-                <h2 class="puds-sr-only">Search</h2>
-                <button id="my-search-toggle" class="puds-header__search-bar-toggle" aria-expanded="false" aria-label="Search Menu Toggle"><i class="puds-icon puds-icon-search" aria-hidden="true"></i><span class="puds-sr-only">Search Menu Toggle</span></button>
-                <div id="puds-header-search-bar-panel" class="puds-header__search-bar-panel">
+            <div class="emc-header__search-bar">
+                <div class="emc-container">
+                <h2 class="emc-sr-only">Search</h2>
+                <button id="my-search-toggle" class="emc-header__search-bar-toggle" aria-expanded="false" aria-label="Search Menu Toggle"><i class="emc-icon emc-icon-search" aria-hidden="true"></i><span class="emc-sr-only">Search Menu Toggle</span></button>
+                <div id="emc-header-search-bar-panel" class="emc-header__search-bar-panel">
                     <form action="javascript:void(0)" method="get" accept-charset="UTF-8" role="search">
-                        <label class="puds-sr-only" for="search-field">Search</label>
+                        <label class="emc-sr-only" for="search-field">Search</label>
                         <a name="search">
                         <input type="search" id="search-field" placeholder="Search" autocomplete="off" />
                         </a>
-                        <button class="puds-button" type="submit">
-                          <span class="puds-sr-only">Search</span>
+                        <button class="emc-button" type="submit">
+                          <span class="emc-sr-only">Search</span>
                         </button>
                     </form>
                 </div>

@@ -1,9 +1,9 @@
 import { Component, ComponentInterface, Prop, Watch, h } from '@stencil/core';
 
 @Component({
-  tag: 'puds-accordion-item'
+  tag: 'emc-accordion-item'
 })
-export class PudsAccordionItem implements ComponentInterface {
+export class AccordionItem implements ComponentInterface {
 
   @Prop() itemId: string;
   @Prop() itemTitle: string;
@@ -35,7 +35,7 @@ export class PudsAccordionItem implements ComponentInterface {
   render() {
     return ([
         <button id={ this.itemId + '__btn'}
-                class="puds-accordion__button"
+                class="emc-accordion__button"
                 aria-expanded="false"
                 role="button"
                 onClick={ () => this.toggleMenuItem() }
@@ -44,7 +44,7 @@ export class PudsAccordionItem implements ComponentInterface {
              aria-hidden="true"
              aria-labelledby={ this.itemId + '__btn'}
              tabindex="0"
-             class="puds-accordion__content"
+             class="emc-accordion__content"
              ref={(el) => this.regionEl = el as HTMLDivElement}>
           <slot />
         </div>

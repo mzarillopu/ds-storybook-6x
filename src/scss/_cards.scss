@@ -1,16 +1,17 @@
-.puds-card {
+.emc-card {
   border: 1px solid #dce1ea;
-  box-shadow: 0 2px 5px rgba(0,0,0,.05), 0 -2px 0 #185b7d;
+  border-top: 3px solid get-theme('highlight-bgcolor');
+  // box-shadow: 0 2px 5px rgba(0,0,0,.05), 0 -2px 0 #185b7d;
 }
 
-.puds-card__heading {
-  font-family: Roboto;
+.emc-card__heading {
+  font-family: $font-face-heading;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
   line-height: 30px;
   text-transform: uppercase;
-  color: #185b7d;
+  //color: #185b7d;
   margin: 0px;
   padding: 14px 22px;
   padding-top: 16px;
@@ -18,14 +19,14 @@
   vertical-align: middle;
 }
 
-.puds-card__content {
+.emc-card__content {
   padding: 15px 22px;
 }
 
-.puds-card__footer {
+.emc-card__footer {
   padding: 10px 12px;
   background: #e7eef0;
-  font-family: Open Sans;
+  font-family: $font-face-body;
   font-style: normal;
   font-weight: 700;
   font-size: 10px;

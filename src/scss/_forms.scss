@@ -1,4 +1,4 @@
-.puds-input, .puds-select, .puds-textarea {
+.emc-input, .emc-select, .emc-textarea {
   border-radius: 0;
   border: 1px solid get-theme('input-border-color');
   color: get-theme('input-text-color');
@@ -9,24 +9,24 @@
   background-color: get-theme('input-bgcolor');
 }
 
-.puds-input.puds-input--error {
+.emc-input.emc-input--error {
   border: .25rem solid get-theme('input--error-border-color');
 }
 
 // taken from digital.gov
-.puds-fieldset {
+.emc-fieldset {
   border: 0;
   margin: 0;
   padding: 0;
 }
 
 // TODO: doesn't work in firefox
-.puds-checkbox__input {
+.emc-checkbox__input {
   width: 1.25em;
   height: 1.25em;
 }
 
-textarea.puds-input {
+textarea.emc-input {
   width: 100%;
   max-width: 100%;
 }

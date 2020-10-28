@@ -1,9 +1,10 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 import { html } from 'lit-html';
 
-export default { title: 'Components/Tables' };
+<Meta title="Components/Tables" component="Table" />
 
-export const Simple = () => html`
-    <table class="puds-table__bordered">
+export const SimpleTemplate = () => html`
+    <table class="emc-table__bordered">
         <thead>
             <tr>
                 <th>Column Title</th>
@@ -31,8 +32,8 @@ export const Simple = () => html`
     </table>
 `;
 
-export const Borderless = () => html`
-    <table class="puds-table__borderless">
+export const BorderlessTemplate = () => html`
+    <table class="emc-table__borderless">
         <thead>
             <tr>
                 <th>Column Title</th>
@@ -59,3 +60,19 @@ export const Borderless = () => html`
         </tbody>
     </table>
 `;
+
+# Tables
+
+<Canvas>
+    <Story name="Simple" args={{
+    }}>
+      {SimpleTemplate.bind({})}
+    </Story>
+</Canvas>
+
+<Canvas>
+    <Story name="Borderless" args={{
+    }}>
+      {BorderlessTemplate.bind({})}
+    </Story>
+</Canvas>

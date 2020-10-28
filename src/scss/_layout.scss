@@ -1,4 +1,4 @@
-.puds-container {
+.emc-container {
   position: relative;
   width: 100%;
   padding-right: 15px;
@@ -7,22 +7,22 @@
   margin-left: auto;
 }
 @media (min-width: 576px) {
-  .puds-container {
+  .emc-container {
     // max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  .puds-container {
+  .emc-container {
     // max-width: 720px;
   }
 }
 @media (min-width: 992px) {
-  .puds-container {
+  .emc-container {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  .puds-container {
+  .emc-container {
     max-width: 1200px;
   }
 }
