@@ -22,13 +22,15 @@ footer.emc-footer a:hover {
 ul.emc-footer__list {
   list-style: none;
   padding-left: 0px;
+  margin-top: 0px;
 }
 ul.emc-footer__list li {
-  margin-bottom: .50rem;
+  // margin-bottom: .50rem;
 }
 ul.emc-footer__icon-list {
   list-style: none;
   padding-left: 0px;
+  margin-top: 0px;
 }
 ul.emc-footer__icon-list li {
   display: inline-block;

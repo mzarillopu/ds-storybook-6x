@@ -1,74 +1,90 @@
 @import 'variables';
 
-.puds-h1--display {
-  font-family: $font-face-heading;
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 1.3em/56px;
-}
-
-h1, .puds-h1 {
-  font-family: $font-face-heading;
-  font-weight: 300;
-  font-size: 53px;
-  line-height: 1.3em/46px;
-}
-
-h2, .puds-h2 {
-  font-family: $font-face-heading;
-  font-weight: 700;
-  font-size: 34px;
-  line-height: 1.3em/39px;
-}
-
-h3, .puds-h3 {
-  font-family: $font-face-heading;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.3em/30px;
-}
-
-h4, .puds-h4 {
-  font-family: $font-face-heading;
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 1.3em/30px;
-}
-
-h5, .puds-h5 {
-  font-family: $font-face-heading;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.3em/22px;
-}
-
-h6, .puds-h6 {
-  font-family: $font-face-heading;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.3em/15px;
-}
-
-.emc-p--lead {
-  font-family: $font-face-heading;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 1.7em/28px;
-}
-
-body {
+html {
   font-family: $font-face-body;
+  font-size: $emc-rem;
+  line-height: 1.875;
+}
+
+p.emc-lead, p.emc-lede {
+  font-weight: 400;
+  font-size: 1.375rem;
+  line-height: 1.7em;
 }
 
 label {
   font-weight: bold;
 }
 
-.emc-p {
-  font-family: $font-face-body;
+h1, .emc-h1 {
+  font-family: $font-face-heading;
   font-weight: 400;
-  font-size: 17px;
-  line-height: 1.3em;
+  font-size: 3.3125rem; // 53px / 16px
+  line-height: 4rem;
+  margin: .4em 0;
+  text-transform: none;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+}
+
+h2, .emc-h2 {
+  font-family: $font-face-heading;
+  font-weight: 600;
+  font-size: 2.125rem; // = 34px / 16px
+  line-height: 3rem;
+  text-transform: none;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+}
+
+h3, .emc-h3 {
+  font-family: $font-face-heading;
+  font-weight: 600;
+  font-size: 1.5rem; // = 24px / 16px
+  line-height: 1.6875rem; // = 27px / 16px
+  text-transform: none;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+h4, .emc-h4 {
+  font-family: $font-face-heading;
+  font-weight: 700;
+  font-size: 1.3125rem; // = 21px / 16px
+  line-height: 1.6875rem; // = 27px / 16px
+  text-transform: none;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+}
+
+h5, .emc-h5 {
+  font-family: $font-face-heading;
+  font-weight: 700;
+  font-size: 1rem; // = 16px / 16px
+  line-height: 1.6875rem; // = 27px / 16px
+  text-transform: uppercase;
+  margin-block-start: 1.67em;
+  margin-block-end: 1.67em;
+}
+
+h6, .emc-h6 {
+  font-family: $font-face-heading;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.6875rem; // = 27px / 16px
+  text-transform: uppercase;
+  margin-block-start: 2.33em;
+  margin-block-end: 2.33em;
+}
+
+.emc-display-heading {
+  font-family: $font-face-heading;
+  font-weight: 700;
+  font-size: 3.3125rem; // 53px / 16px
+  line-height: 4rem;
+  text-transform: none;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
 }
 
 .emc-page-title {
@@ -77,12 +93,14 @@ label {
   margin: 0.2em 0 0.75em;
   font-size: 3.35rem;
   font-weight: 500;
+  text-transform: none;
+  line-height: 4rem;
 }
 
 .emc-block-heading {
   font-weight: 700;
-  font-size: 2.125rem;
-  line-height: 1.53;
+  // margin-block-start: .5rem;
+  margin-block-end: .5rem;
 }
 
 .emc-block-heading:after {

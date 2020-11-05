@@ -1,4 +1,9 @@
-$font-display-preference: swap;
+// Setting this to anything other than 100% eliminates the ability for users to increase font size in their browser
+// and also makes it more difficult to reason about sizes in the design.
+// Disabling the ability to increase font size in the browser might be undesirable from an accessibility perspective.
+$emc-rem: 100%;
+
+$emc-font-display: swap;
 
 // $font-face: 'Roboto', sans-serif;
 $font-face-body: 'Roboto', sans-serif;
