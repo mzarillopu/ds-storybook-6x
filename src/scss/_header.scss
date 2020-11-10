@@ -43,7 +43,6 @@
 .emc-header__main-menu {
   @include emc-theme-color(header-navbar);
   height: px-to-rem(51);
-  // background-color: get-theme('header-navbar-bgcolor');
 }
 .emc-header__search-bar form {
   display: flex;

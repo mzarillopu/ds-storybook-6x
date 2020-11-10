@@ -1,37 +1,40 @@
+@import 'theme';
+
 .emc-table__bordered {
-  border: 1px solid grey;
+  border: 1px solid emc-theme-rgb(neutral-dark); // grey
   border-collapse: collapse;
+  line-height: 1.25;
 }
 
 .emc-table__bordered th,
 .emc-table__bordered td {
-  border: 1px solid grey;
-  padding: 12px;
+  border: 1px solid emc-theme-rgb(neutral-dark); // grey
+  padding: px-to-rem(12);
   text-align: left;
-  font-size: 14px;
+  font-size: px-to-rem(14);
 }
 
 .emc-table__bordered th {
-  background-color: lightgrey;
-  color: black;
+  @include emc-theme-color(neutral-light);
 }
 
 .emc-table__borderless {
   border-collapse: collapse;
+  line-height: 1.25;
 }
 
 .emc-table__borderless th,
 .emc-table__borderless td {
-  border-bottom: 1px solid grey;
-  padding: 12px;
+  border-bottom: 1px solid emc-theme-rgb(neutral-light);
+  padding: px-to-rem(12);
   text-align: left;
-  font-size: 14px;
+  font-size: px-to-rem(14);
 }
 
 .emc-table__borderless th {
-  border-bottom: 3px solid get-theme('highlight-bgcolor');
+  border-bottom: 3px solid emc-theme-rgb(accent);
 }
 
 .emc-table__borderless tr:nth-child(even) {
-  background-color: #e9e9e9;
+  @include emc-theme-color(neutral-light);
 }

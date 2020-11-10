@@ -1,35 +1,35 @@
+@import 'theme';
+
 .emc-card {
-  border: 1px solid #dce1ea;
-  border-top: 3px solid get-theme('highlight-bgcolor');
-  // box-shadow: 0 2px 5px rgba(0,0,0,.05), 0 -2px 0 #185b7d;
+  border: 1px solid emc-theme-rgb(neutral-light);
+  border-top: 3px solid emc-theme-rgb(accent);
 }
 
 .emc-card__heading {
   font-family: $font-face-heading;
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 30px;
+  font-size: px-to-rem(14);
+  line-height: 1.5;
   text-transform: uppercase;
-  //color: #185b7d;
   margin: 0px;
-  padding: 14px 22px;
-  padding-top: 16px;
-  border-bottom: 1px solid #dce1ea;
+  padding: px-to-rem(16) px-to-rem(22) px-to-rem(14) px-to-rem(22);
+  border-bottom: 1px solid emc-theme-rgb(neutral-light);
   vertical-align: middle;
 }
 
 .emc-card__content {
-  padding: 15px 22px;
+  padding: px-to-rem(15) px-to-rem(22);
+  line-height: 1.5;
 }
 
 .emc-card__footer {
-  padding: 10px 12px;
-  background: #e7eef0;
+  @include emc-theme-color(neutral-light);
+  padding: px-to-rem(10) px-to-rem(12);
+  //background: #e7eef0;
   font-family: $font-face-body;
   font-style: normal;
   font-weight: 700;
-  font-size: 10px;
+  font-size: px-to-rem(10);
   text-transform: uppercase;
-  color: #4c4c51;
 }

@@ -10,7 +10,7 @@ $emc-theme-color-map: (
   // neutral 1
   emc-gray: (background-color: #121212, color: #fff),
   emc-gray-80: (background-color: #414141, color: #fff),
-  emc-gray-60: (background-color: #717171, color: #000),
+  emc-gray-60: (background-color: #717171, color: #fff),
   emc-gray-40: (background-color: #A0A0A0, color: #000),
   emc-gray-20: (background-color: #EEEEEE, color: #000),
   // neutral 2
@@ -69,6 +69,17 @@ $emc-theme-concept-colors: (
 
 // default theme
 $emc-theme-feature-colors: (
+
+  // general theme options
+  accent: emc-princeton-orange,
+  neutral-light: emc-gray-20,
+  neutral-dark: emc-gray-60,
+  success: emc-green,
+  error: emc-flame,
+  info: emc-light-blue,
+  warning: emc-indigo,
+
+  // header theme options
   header-cap: emc-princeton-orange,
   header-pu-branding: emc-white,
   header-site-branding: emc-white,
@@ -81,6 +92,8 @@ $emc-theme-feature-colors: (
   header-searchbar: emc-white,
   header-nav: emc-white,
   header-navbar: emc-white,
+
+  // menubar theme options
   menubar-lg-primary: emc-white,
   menubar-lg-primary-hover-underline: emc-gray-40,
   menubar-lg-primary-current-underline: emc-princeton-orange,
@@ -92,6 +105,14 @@ $emc-theme-feature-colors: (
   menubar-sm-current: emc-gray-40,
   menubar-sm-border-bottom: emc-gray-40,
   menubar-sm-border-bottom-hover: emc-princeton-orange,
+
+  // form theme options
+  form-input-border: emc-gray-40,
+  form-input: emc-white,
+  form-input__disabled: emc-gray-40,
+
+  // tabs
+  tab: emc-white,
 );
 
 // example olive theme
@@ -120,57 +141,6 @@ $emc-theme-feature-colors: (
 //  menubar-sm-border-bottom: emc-lime, // emc-gray-40
 //  menubar-sm-border-bottom-hover: emc-raspberry, // emc-princeton-orange
 //);
-
-$theme: (
-  "highlight-bgcolor": #e77500,
-
-  "header-cap-bgcolor": #e77500, // #e77500,
-  "header-pu-branding-bgcolor": #fff, // #fff,
-  "header-pu-branding-text-color": #000,
-  "header-site-branding-bgcolor": #fff, // #fff,
-  "header-site-branding-text-color": #000,
-  "header-navbar-bgcolor": #fff, // #fff,
-  "header-utility-menu-underline-color": #e77500, // #e77500,
-  "header-utility-menu-text-color": #000,
-  "header-searchbar-bgcolor": #fff, // #fff
-  "header-nav-bgcolor": #fff, // #fff
-
-  "menubar-primary-selected-color": #e77500, // #e77500,
-  "menubar-primary-hover-color": #c8c8c8, // #c8c8c8,
-  "menubar-primary-text-color": #000,
-  "menubar-primary-arrow-filter": invert(0), // invert(0)
-  "menubar-secondary-background": #fff, // #fff
-  "menubar-secondary-border-color": #c8c8c8, // #c8c8c8
-  "menubar-secondary-background-hover": #f4f4f4,
-  "menubar-secondary-text-color": #000, // #000
-  "menubar-secondary-text-hover": #000, // #fff
-
-  "form-field--error-border-color": #b50909,
-  "form-field-msg--error-color": #b50909,
-  "form-field-msg-color": #757575,
-  "form-field-required-color": #e77500,
-  "input--error-border-color": #b50909,
-  "input-border-color": #b3c3cc,
-  "input-bgcolor": #fff,
-  "input-text-color": #000,
-  "input--disabled-text-color": #c8c8c8,
-  "dropdown-arrow-color": #e77500,
-
-  "tab-border-color": #e77500,
-  "tab-border-color--hover": #c8c8c8,
-
-  "primary-bg": #005ea2,
-  "primary-bg-dark": #1a4480,
-  "primary-bg-darker": #162e51,
-  "primary-bg-lighter": #c9c9c9,
-  "primary-bg-disabled": #c9c9c9,
-  "primary-bg-unstyled": transparent,
-  "focus": #2491ff
-);
-
-@function get-theme($key) {
-  @return map-get($theme, $key);
-}
 
 @mixin emc-theme-color($feature) {
   background-color: map-get(map-get($emc-theme-color-map, map-get($emc-theme-feature-colors, $feature)), background-color);

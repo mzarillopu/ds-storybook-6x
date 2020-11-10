@@ -1,16 +1,17 @@
+@import 'theme';
+
 .emc-input, .emc-select, .emc-textarea {
+  @include emc-theme-color(form-input);
   border-radius: 0;
-  border: 1px solid get-theme('input-border-color');
-  color: get-theme('input-text-color');
+  border: 1px solid emc-theme-rgb(form-input-border);
   display: block;
   margin-top: .5rem;
   max-width: 30rem;
   padding: .5rem;
-  background-color: get-theme('input-bgcolor');
 }
 
 .emc-input.emc-input--error {
-  border: .25rem solid get-theme('input--error-border-color');
+  border: .25rem solid emc-theme-rgb(error);
 }
 
 // taken from digital.gov

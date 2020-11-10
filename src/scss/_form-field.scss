@@ -1,3 +1,5 @@
+@import 'theme';
+
 .emc-form-field,
  .emc-form-field--error {
    margin-top: 1.5rem;
@@ -14,20 +16,20 @@
 }
 
 .emc-form-field--error {
-  border-left: .25rem solid get-theme('form-field--error-border-color');
+  border-left: 4px solid emc-theme-rgb(error);
 }
 
 .emc-form-field-error-msg {
   font-size: .85em;
-  color: get-theme('form-field-msg--error-color');
+  color: emc-theme-rgb(error);
 }
 
 .emc-form-field-msg {
   font-size: .85em;
-  color: get-theme('form-field-msg-color');
+  color: emc-theme-rgb(neutral-dark);
 }
 
 .emc-form-field-required {
-  padding-left: 5px;
-  color: get-theme('form-field-required-color');
+  padding-left: px-to-rem(5);
+  color: emc-theme-rgb(accent);
 }

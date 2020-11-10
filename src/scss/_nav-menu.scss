@@ -120,8 +120,6 @@ ul.emc-menubar a[aria-current='page'] {
     box-shadow: 1px 1px 1px 0px rgba(128, 128, 128, 0.3);
     min-width: px-to-rem(250);
     border: 1px solid emc-theme-rgb(menubar-lg-secondary-border);
-    //border-top: 1px solid get-theme('menubar-secondary-border-color');
-    //border-left: 1px solid get-theme('menubar-secondary-border-color');
     display: none;
   }
   ul.emc-menubar > li:last-child:hover > ul {
@@ -143,7 +141,7 @@ ul.emc-menubar a[aria-current='page'] {
     transition: transform 0.3s ease;
     background: url(../icons/keyboard_arrow_down-black-18dp.svg) no-repeat center/2ex 2ex;
     // TODO: find a better way to handle button color
-    filter: get-theme('menubar-primary-arrow-filter');
+    filter: invert(0); // invert(1) would turn it white
   }
   ul.emc-menubar > li:hover > button,
   ul.emc-menubar > li > button[aria-expanded='true'] {

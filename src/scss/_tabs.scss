@@ -1,39 +1,40 @@
 @import 'variables';
+@import 'theme';
 
 ol.emc-tab-list {
   list-style: none;
   display: flex;
   padding-inline-start: 0px;
-  border-bottom: 1px solid get-theme('tab-border-color');
+  border-bottom: 1px solid emc-theme-rgb(accent);
 }
 
 li.emc-tab {
   text-align: center;
-  height: 40px;
+  height: px-to-rem(40);
   text-transform: uppercase;
-  border-bottom: 4px solid #fff;
+  border-bottom: 4px solid emc-theme-rgb(tab); // #fff
 }
 
 li.emc-tab:hover,
 li.emc-tab:focus-within {
-  border-bottom: 4px solid get-theme('tab-border-color--hover');
+  border-bottom: 4px solid emc-theme-rgb(neutral-dark);
 }
 
 li.emc-tab--active,
 li.emc-tab--active:focus-within,
 li.emc-tab--active:hover {
-  border-bottom: 4px solid get-theme('tab-border-color');
+  border-bottom: 4px solid emc-theme-rgb(accent);
 }
 
 a.emc-tab-link {
   text-decoration: none;
   color: rgba(0,0,0,.87);
-  height: 40px;
+  height: px-to-rem(40);
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  font-size: px-to-rem(14);
   font-family: $font-face-body;
-  padding: 0 24px;
+  padding: 0 px-to-rem(24);
   display: inline-flex;
   align-items: center;
 }

@@ -1,6 +1,8 @@
+@import 'theme';
+
 .emc-dropdown,
 .emc-dropdown--error {
-  background-color: #fff;
+  @include emc-theme-color(form-input);
   position: relative;
 }
 .emc-dropdown:after,
@@ -20,8 +22,8 @@
 }
 .emc-dropdown:after,
 .emc-dropdown--error:after {
-  border-bottom: 2px solid get-theme('dropdown-arrow-color');
-  border-right: 2px solid get-theme('dropdown-arrow-color');
+  border-bottom: 2px solid emc-theme-rgb(accent);
+  border-right: 2px solid emc-theme-rgb(accent);
   height: .5em;
   margin: auto;
   right: .95em;
@@ -32,27 +34,26 @@
 }
 .emc-dropdown select,
 .emc-dropdown--error select {
+  @include emc-theme-color(form-input);
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  background-color: get-theme('input-bgcolor');
   box-shadow: none;
   border-radius: 0;
-  border: 1px solid get-theme('input-border-color');
-  color: get-theme('input-text-color');
+  border: 1px solid emc-theme-rgb(neutral-dark);
   line-height: normal;
   max-width: 100%;
   padding: .5em 2em .5em .5em;
   width: 100%;
 }
 .emc-dropdown--error select {
-  border: .25rem solid get-theme('input--error-border-color');
+  border: .25rem solid emc-theme-rgb(error);
 }
 .emc-dropdown select option,
 .emc-dropdown--error select option {
-  color: get-theme('input-text-color');
+  @include emc-theme-color(form-input);
 }
 .emc-dropdown select option[disabled],
 .emc-dropdown--error select option[disabled] {
-  color: get-theme('input--disabled-text-color');
+  color: emc-theme-rgb(form-input__disabled);
 }
