@@ -2,6 +2,7 @@
 // and also makes it more difficult to reason about sizes in the design.
 // Disabling the ability to increase font size in the browser might be undesirable from an accessibility perspective.
 $emc-rem: 100%;
+$emc-base-font-size-in-pixels: 16;
 
 $emc-font-display: swap;
 
@@ -9,3 +10,17 @@ $emc-font-display: swap;
 $font-face-body: 'Roboto', sans-serif;
 // $font-face-heading: 'Public Sans', sans-serif;
 $font-face-heading: 'Lora', serif;
+
+// media breakpoints
+
+$emc-breakpoint-small: 36em;
+$emc-breakpoint-medium: 48em;
+$emc-breakpoint-large: 62em;
+$emc-breakpoint-xl: 75em;
+
+// convert a pixel measurement into rems
+// '100px' @ 1rem = 16px -> ''
+@function px-to-rem($px) {
+  $rem: $px / $emc-base_font-size-in-pixels;
+  @return #{$rem}rem;
+}

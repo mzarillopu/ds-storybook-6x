@@ -79,10 +79,10 @@ export const Template = (args) => html`
             </div>
             <div class="emc-header__site-branding">
                 <div class="emc-container emc-header__site-branding-contents">
-                <a href="/" title="Home" tabindex="-1" aria-hidden="true" class="emc-header__site-branding-home-link"><img src="/logos/shield.svg" /></a>
+                <a href="javascript:void(0)" title="Home" rel="home" tabindex="-1" aria-hidden="true" class="emc-header__site-branding-home-link"><img src="/logos/shield.svg" /></a>
                 <div class="emc-header__site-branding-info">
                     <div class="emc-header__site-branding-name">
-                        <a href="/" title="Home">${ args.siteBrandingName }</a>
+                        <a href="javascript:void(0);" title="Home" rel="home">${ args.siteBrandingName }</a>
                     </div>
                     <div class="emc-header__site-branding-slogan">
                         ${ args.siteBrandingSlogan }

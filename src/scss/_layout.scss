@@ -1,28 +1,31 @@
+// em's are used for media queries (instead of rem's) because of a Safari bug
+@import 'variables';
+
 .emc-container {
   position: relative;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: px-to-rem(16);
+  padding-left: px-to-rem(16);
   margin-right: auto;
   margin-left: auto;
 }
-@media (min-width: 576px) {
+@media (min-width: $emc-breakpoint-small) {
   .emc-container {
-    // max-width: 540px;
+    width: 100%;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: $emc-breakpoint-medium) {
   .emc-container {
-    // max-width: 720px;
+    width: 100%;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: $emc-breakpoint-large) {
   .emc-container {
-    max-width: 960px;
+    max-width: 60em;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: $emc-breakpoint-xl) {
   .emc-container {
-    max-width: 1200px;
+    max-width: 75em;
   }
 }

@@ -1,5 +1,71 @@
-@media (min-width: 992px) {
-  ul.emc-menubar {
+@import 'variables';
+@import 'theme';
+
+ul.emc-menubar {
+  @include emc-theme-color(menubar-sm);
+  display: none;
+  list-style: none;
+  padding: px-to-rem(16) px-to-rem(16) px-to-rem(0) 0rem;
+  margin: 0px;
+  line-height: 1.15;
+}
+ul.emc-menubar.emc-menubar--shown {
+  display: block;
+}
+ul.emc-menubar ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+ul.emc-menubar li > button:not([aria-expanded='true']) + ul {
+  display: none;
+}
+ul.emc-menubar li {
+  @include emc-theme-color(menubar-sm);
+  padding-left: px-to-rem(16);
+  position: relative;
+}
+ul.emc-menubar a:hover {
+  border-bottom: 1px solid emc-theme-rgb(menubar-sm-border-bottom-hover);
+}
+ul.emc-menubar li > a {
+  @include emc-theme-color(menubar-sm);
+  border-bottom: 1px solid emc-theme-rgb(menubar-sm-border-bottom);
+  text-decoration: none;
+  font-weight: bold;
+  padding: px-to-rem(15) 0px px-to-rem(15) px-to-rem(5);
+  display: block;
+}
+ul.emc-menubar > li > ul > li {
+  display: block;
+  list-style: none;
+  padding-left: px-to-rem(16);
+  position: relative;
+}
+ul.emc-menubar button {
+  position: absolute;
+  right: px-to-rem(10);
+  top: px-to-rem(12);
+  border: none;
+  background: transparent;
+  width: px-to-rem(20);
+  height: px-to-rem(20);
+  overflow: hidden;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+  background: url(../icons/keyboard_arrow_down-black-18dp.svg) no-repeat center/2ex 2ex;
+}
+ul.emc-menubar  li > button[aria-expanded='true'] {
+  transform: rotate(180deg);
+}
+ul.emc-menubar a[aria-current='page'] {
+  @include emc-theme-color(menubar-sm-current);
+}
+
+@media (min-width: $emc-breakpoint-large) {
+  ul.emc-menubar,
+  ul.emc-menubar.emc-menubar--shown {
+    @include emc-theme-color(menubar-lg-primary);
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: row;
@@ -12,41 +78,50 @@
     line-height: 1.15;
   }
   ul.emc-menubar > li {
-    padding-right: 14px;
-    margin: 0 10px;
+    @include emc-theme-color(menubar-lg-primary);
+    padding-left: 0rem;
+    padding-right: px-to-rem(14);
+    margin: 0 px-to-rem(10);
     position: relative;
   }
-  ul.emc-menubar > li > a {
-    border-bottom: 7px solid transparent;
+  ul.emc-menubar li > a {
+    border-bottom: none;
+  }
+  ul.emc-menubar > li > a,
+  ul.emc-menubar > li > a[aria-current='page'] {
+    @include emc-theme-color(menubar-lg-primary);
+    border-bottom: px-to-rem(7) solid transparent;
     text-decoration: none;
-    color: get-theme('menubar-primary-text-color');
     font-weight: bold;
-    padding: 10px 0px;
+    padding: 0px 0px px-to-rem(10) 0px;
+    display: inline-block;
   }
   ul.emc-menubar > li:hover > a {
-    border-bottom: 7px solid get-theme('menubar-primary-hover-color');
+    border-bottom: px-to-rem(7) solid emc-theme-rgb(menubar-lg-primary-hover-underline);
   }
   ul.emc-menubar > li[aria-current='true'] > a,
   .emc-menubar > ul > li[aria-current='true']:hover > a {
-    border-bottom: 7px solid get-theme('menubar-primary-selected-color');
+    border-bottom: px-to-rem(7) solid emc-theme-rgb(menubar-lg-primary-current-underline);
   }
   ul.emc-menubar > li:hover > ul,
-  ul.emc-menubar > li > button[aria-expanded='true'] + ul {
-    left: 0;
+  ul.emc-menubar > li > button[aria-expanded='true'] + ul,
+  ul.emc-menubar li:hover > button:not([aria-expanded='true']) + ul {
     display: block;
+  }
+  ul.emc-menubar li:hover > button:not([aria-expanded='true']) + ul > li > ul:not(.emc-menubar__submenu--shown) {
+    display: none;
   }
   ul.emc-menubar > li > ul {
     list-style: none;
-    margin-top: 17px;
     position: absolute;
     margin-left: 0;
     padding-left: 0;
     z-index: 100;
-    background: #fff;
-    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3);
-    min-width: 250px;
-    border-top: 1px solid get-theme('menubar-secondary-border-color');
-    border-left: 1px solid get-theme('menubar-secondary-border-color');
+    box-shadow: 1px 1px 1px 0px rgba(128, 128, 128, 0.3);
+    min-width: px-to-rem(250);
+    border: 1px solid emc-theme-rgb(menubar-lg-secondary-border);
+    //border-top: 1px solid get-theme('menubar-secondary-border-color');
+    //border-left: 1px solid get-theme('menubar-secondary-border-color');
     display: none;
   }
   ul.emc-menubar > li:last-child:hover > ul {
@@ -60,18 +135,25 @@
     top: 0;
     bottom: 0;
     padding: 0;
-    width: 20px;
+    width: px-to-rem(20);
     overflow: hidden;
     border: none;
     background: transparent;
     transform: rotate(0deg);
     transition: transform 0.3s ease;
     background: url(../icons/keyboard_arrow_down-black-18dp.svg) no-repeat center/2ex 2ex;
+    // TODO: find a better way to handle button color
     filter: get-theme('menubar-primary-arrow-filter');
   }
   ul.emc-menubar > li:hover > button,
   ul.emc-menubar > li > button[aria-expanded='true'] {
     transform: rotate(180deg);
+  }
+  ul.emc-menubar > li > ul > li {
+    padding-left: 0px;
+  }
+  ul.emc-menubar > li > ul > li > ul li {
+    padding-left: 0px;
   }
   ul.emc-menubar > li > ul > li > ul:not(.emc-menubar__submenu--shown) {
     display: none;
@@ -84,91 +166,33 @@
     left: 0;
     display: block;
   }
+  ul.emc-menubar li > button:not([aria-expanded='true']) + ul.emc-menubar__submenu--shown {
+    display: block;
+  }
   ul.emc-menubar > li > ul li .emc-menubar__submenu--shown a {
-    padding-left: 15px;
+    padding-left: px-to-rem(15);
   }
   ul.emc-menubar > li > ul a {
-    background-color: get-theme('menubar-secondary-background');
+    @include emc-theme-color(menubar-lg-secondary);
     text-decoration: none;
-    color: get-theme('menubar-secondary-text-color');
     font-weight: bold;
-    padding: 13px 5px;
+    padding: px-to-rem(13) px-to-rem(5);
     width: 100%;
     display: block;
   }
   ul.emc-menubar > li > ul li a:hover {
-    background-color: get-theme('menubar-secondary-background-hover');
-    color: get-theme('menubar-secondary-text-hover');
+    @include emc-theme-color(menubar-lg-secondary-hover);
   }
   ul.emc-menubar > li > ul button {
     display: none;
   }
   ul.emc-menubar > li > ul a[aria-current='page'] {
-    border-left: 2px solid get-theme('menubar-primary-selected-color');
-  }
-}
-@media (max-width: 991px) {
-  ul.emc-menubar {
-    display: none;
-    list-style: none;
-    padding-left: 0px;
-    padding-right: 10px;
-    margin-bottom: 0px;
-    line-height: 1.15;
-  }
-  ul.emc-menubar.emc-menubar--shown {
-    display: block;
-  }
-  ul.emc-menubar ul {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-  }
-  ul.emc-menubar li > button:not([aria-expanded='true']) + ul {
-    display: none;
-  }
-  ul.emc-menubar li {
-    padding-left: 1rem;
-    position: relative;
+    border-left: px-to-rem(2) solid emc-theme-rgb(menubar-lg-primary-current-underline);
   }
   ul.emc-menubar a:hover {
-    border-bottom: 1px solid #e77500;
-  }
-  ul.emc-menubar li > a {
-    border-bottom: 1px solid #c8c8c8;
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-    padding: 15px 0px;
-    padding-left: 5px;
-    display: block;
-  }
-  ul.emc-menubar > li > ul > li {
-    display: block;
-    list-style: none;
-    padding-left: 0px;
-  }
-  ul.emc-menubar > li > ul > li {
-    padding-left: 1rem;
-    position: relative;
-  }
-  ul.emc-menubar button {
-    position: absolute;
-    right: 10px;
-    top: .75rem;
-    border: none;
-    background: transparent;
-    width: 20px;
-    height: 20px;
-    overflow: hidden;
-    transform: rotate(0deg);
-    transition: transform 0.3s ease;
-    background: url(../icons/keyboard_arrow_down-black-18dp.svg) no-repeat center/2ex 2ex;
-  }
-  ul.emc-menubar  li > button[aria-expanded='true'] {
-    transform: rotate(180deg);
+    border-bottom: none;
   }
   ul.emc-menubar a[aria-current='page'] {
-    background-color: #f4f4f4;
+    @include emc-theme-color(menubar-lg-secondary-current);
   }
 }
