@@ -193,6 +193,44 @@ export const AutocompleteTemplate = (args) => html`
     <emc-autocomplete id="myauto" @search-changed="${(e) => generateAutocompleteResults(e) }" @option-selected="${ args.optionSelected }"></emc-autocomplete>
 `;
 
+export const FileUploadTemplate = (args) => html`
+    <style>
+        .emc-file-upload {
+            display: none;
+        }
+        .emc-file-upload__label span[role=button] {
+            display: inline-block;
+            font-family: Roboto, sans-serif;
+            font-size: 1rem;
+            padding: 3px 8px;
+            color: #ffffff;
+            cursor: pointer;
+            background-color: #265986;
+        }
+        .emc-file-upload__label span[role=button]:hover {
+            background-color: #183a57;
+            border-color: #265986;
+        }
+        .emc-file-upload__text {
+            display: inline-block;
+            margin-left: -5px;
+            width: 20rem;
+            font-family: Arial;
+            font-size: 1rem;
+            padding: 8px 8px;
+            border: 1px solid #265986;
+            color: #000000;
+            background-color: #ffffff;
+        }
+    </style>
+    <label for="fileupload" id="buttonlabel" class="emc-file-upload__label">
+        <span role="button" aria-controls="filename" tabindex="0">Upload File</span>
+    </label>
+    <input type="file" id="fileupload" class="emc-file-upload" />
+    <label for="filename" class="emc-sr-only">Uploaded File</label>
+    <input type="text" id="filename" autocomplete="off" readonly placeholder="No File Chosen" class="emc-file-upload__text" />
+`;
+
 # Forms
 
 ## Accessibility Guidelines
@@ -244,5 +282,13 @@ export const AutocompleteTemplate = (args) => html`
         legend: "Types of Fruit"
     }}>
       {AutocompleteTemplate.bind({})}
+    </Story>
+</Canvas>
+
+<Canvas>
+    <Story name="File Upload" args={{
+        label: "File Upload",
+    }}>
+      {FileUploadTemplate.bind({})}
     </Story>
 </Canvas>
