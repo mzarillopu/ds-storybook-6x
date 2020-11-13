@@ -1,5 +1,3 @@
-@import 'theme';
-
 .emc-dropdown,
 .emc-dropdown--error {
   @include emc-theme-color(form-input);

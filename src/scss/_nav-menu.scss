@@ -1,6 +1,3 @@
-@import 'variables';
-@import 'theme';
-
 ul.emc-menubar {
   @include emc-theme-color(menubar-sm);
   display: none;

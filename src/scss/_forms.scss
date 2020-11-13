@@ -1,5 +1,3 @@
-@import 'theme';
-
 .emc-input, .emc-select, .emc-textarea {
   @include emc-theme-color(form-input);
   border-radius: 0;

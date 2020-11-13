@@ -1,5 +1,3 @@
-@import 'theme';
-
 .emc-card {
   border: 1px solid emc-theme-rgb(neutral-light);
   border-top: 3px solid emc-theme-rgb(accent);
@@ -32,4 +30,44 @@
   font-weight: 700;
   font-size: px-to-rem(10);
   text-transform: uppercase;
+}
+
+// EE article card
+
+.emc-news-card {
+  @include emc-theme-color(card);
+  display: flex;
+  flex-direction: column;
+  // this allows the card to properly take up space when put into a flex container
+  width: 100%;
+  max-width: px-to-rem(400);
+  font-family: Lora, serif;
+  margin: px-to-rem(20);
+}
+.emc-news-card:hover {
+  box-shadow: 0px px-to-rem(4) px-to-rem(8) px-to-rem(4) rgba(192, 192, 192 ,0.51);
+  cursor: pointer;
+}
+.emc-news-card img {
+  border-bottom: 4px solid emc-theme-rgb(accent);
+  width: 100%;
+}
+.emc-news-card h1,
+.emc-news-card h2,
+.emc-news-card h3,
+.emc-news-card h4,
+.emc-news-card h5,
+.emc-news-card h6 {
+  line-height: 1.5;
+  margin: 0 0 px-to-rem(8) 0;
+  padding: px-to-rem(4) px-to-rem(20);
+}
+.emc-news-card a {
+  text-decoration: none;
+  line-height: 1;
+  color: black;
+  background-color: white;
+}
+.emc-news-card h3 a:hover {
+  border-bottom: px-to-rem(1) solid emc-theme-rgb(accent);
 }

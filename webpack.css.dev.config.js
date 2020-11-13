@@ -87,6 +87,7 @@ module.exports = {
                 // { from: 'node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js', to: 'webcomponents-bundle.js' },
                 { from: 'src/icons', to: 'icons' },
                 { from: 'src/logos', to: 'logos' },
+                { from: 'src/img', to: 'img' },
                 // { from: 'src/fonts', to: 'fonts' },
             ],
         })

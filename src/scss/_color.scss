@@ -1,7 +1,7 @@
-@each $key, $value in $colors {
-  @if $key != 'focus' {
-    .emc-#{$key} {
-      background-color: $value;
-    }
-  }
-}
+//@each $key, $value in $colors {
+//  @if $key != 'focus' {
+//    .emc-#{$key} {
+//      background-color: $value;
+//    }
+//  }
+//}
