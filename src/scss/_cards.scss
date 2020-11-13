@@ -24,7 +24,6 @@
 .emc-card__footer {
   @include emc-theme-color(neutral-light);
   padding: px-to-rem(10) px-to-rem(12);
-  //background: #e7eef0;
   font-family: $font-face-body;
   font-style: normal;
   font-weight: 700;
@@ -45,7 +44,7 @@
   margin: px-to-rem(20);
 }
 .emc-news-card:hover {
-  box-shadow: 0px px-to-rem(4) px-to-rem(8) px-to-rem(4) rgba(192, 192, 192 ,0.51);
+  @include emc-elevation(4);
   cursor: pointer;
 }
 .emc-news-card img {
@@ -70,4 +69,63 @@
 }
 .emc-news-card h3 a:hover {
   border-bottom: px-to-rem(1) solid emc-theme-rgb(accent);
+}
+
+// EE event card
+
+.emc-event-card-container {
+  padding: px-to-rem(20);
+  max-width: px-to-rem(430);
+}
+.emc-event-card {
+  @include emc-theme-color(card);
+  border-top: 4px solid emc-theme-rgb(accent);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  line-height: 1.5;
+}
+.emc-event-card:hover {
+   @include emc-elevation(4);
+}
+.emc-event-card__date-badge {
+  margin: 0px px-to-rem(20) 0px 0px;
+}
+.emc-event-card__title {
+  margin-bottom: px-to-rem(12);
+}
+.emc-event-card__title a {
+  font-family: $font-face-heading;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  line-height: 1.2;
+}
+.emc-event-card__title a:hover {
+  border-bottom: 1px solid emc-theme-rgb(accent);
+}
+.emc-event-card__section {
+  margin-bottom: px-to-rem(12);
+}
+.emc-event-card__label {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: .85rem;
+  display: block;
+  margin-top: px-to-rem(12);
+}
+.emc-event-card__date-badge-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.emc-event-card__date-badge-month {
+  text-transform: uppercase;
+  text-align: center;
+}
+.emc-event-card__date-badge-day {
+  font-size: 1.85em;
+  line-height: 1;
 }
