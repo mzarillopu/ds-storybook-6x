@@ -161,7 +161,8 @@
 }
 // -- end
 
-@media (min-width: $emc-breakpoint-large) {
+@include for-tablet-landscape-up {
+//@media (min-width: $emc-breakpoint-large) {
   .emc-header__menu-toggle {
     display: none;
   }

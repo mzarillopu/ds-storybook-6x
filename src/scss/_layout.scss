@@ -8,22 +8,12 @@
   margin-right: auto;
   margin-left: auto;
 }
-@media (min-width: $emc-breakpoint-small) {
-  .emc-container {
-    width: 100%;
-  }
-}
-@media (min-width: $emc-breakpoint-medium) {
-  .emc-container {
-    width: 100%;
-  }
-}
-@media (min-width: $emc-breakpoint-large) {
+@include for-tablet-landscape-up {
   .emc-container {
     max-width: 60em;
   }
 }
-@media (min-width: $emc-breakpoint-xl) {
+@include for-desktop-up {
   .emc-container {
     max-width: 75em;
   }

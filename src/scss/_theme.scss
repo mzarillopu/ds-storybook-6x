@@ -4,6 +4,9 @@ $emc-theme-color-map: (
   emc-princeton-orange-20: (background-color: #FAE3CC, color: #000),
   emc-princeton-orange-10: (background-color: #FCF1E5, color: #000),
   emc-black: (background-color: #000, color: #fff),
+  // when using orange on a black background, the orange has to be adjusted based on PU Communications guidelines:
+  // https://communications.princeton.edu/guides-tools/logo-graphic-identity
+  emc-black-and-orange: (background-color: #000, color: #F58025),
   emc-white: (background-color: #fff, color: #000),
   // neutral 1
   emc-gray: (background-color: #121212, color: #fff),

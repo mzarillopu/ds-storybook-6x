@@ -59,7 +59,7 @@ ul.emc-menubar a[aria-current='page'] {
   @include emc-theme-color(menubar-sm-current);
 }
 
-@media (min-width: $emc-breakpoint-large) {
+@include for-tablet-landscape-up {
   ul.emc-menubar,
   ul.emc-menubar.emc-menubar--shown {
     @include emc-theme-color(menubar-lg-primary);
