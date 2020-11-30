@@ -115,6 +115,12 @@ $emc-theme-feature-colors: (
   // tabs
   tab: emc-white,
 
+  // pager theme
+  pager-item: emc-gray-20,
+  pager-item-active: emc-gray-60,
+  pager-item-hover: emc-gray-80,
+  pager-item-disabled: emc-gray-20,
+
   card: emc-white,
 );
 

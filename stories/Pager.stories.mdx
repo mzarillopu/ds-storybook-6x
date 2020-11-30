@@ -1,0 +1,113 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { html } from 'lit-html';
+
+<Meta title="Components/Pager" component="Pager" />
+
+export const DefaultPagerTemplate = (args) => html`
+  <ul role="navigation" aria-label="Pagination" class="emc-pager">
+       <li tabIndex="0">
+          <a>Previous</a>
+       </li>
+       <li tabIndex="0">
+          <a aria-label="Go to page 1" href="#">1</a>
+       </li>
+       <li tabIndex="0">
+          <a aria-label="Go to page 2" href="#">2</a>
+      </li>
+      <li tabIndex="0">
+          <a aria-label="Go to page 3" href="#">3</a>
+      </li>
+      <li tabIndex="0">
+          <a aria-label="Go to page 4" href="#">4</a>
+      </li>
+      <li tabIndex="0">
+          <a>Next</a>
+      </li>
+   </ul>
+`;
+
+export const ActivePagerTemplate = (args) => html`
+  <ul role="navigation" aria-label="Pagination" class="emc-pager">
+       <li tabIndex="0">
+          <a>Previous</a>
+       </li>
+       <li class="active" tabIndex="0">
+          <a aria-label="Go to page 1" href="#">1</a>
+       </li>
+       <li tabIndex="0">
+          <a aria-label="Go to page 2" href="#">2</a>
+       </li>
+       <li tabIndex="0">
+          <a aria-label="Go to page 3" href="#">3</a>
+       </li>
+        <li tabIndex="0">
+          <a aria-label="Go to page 4" href="#">4</a>
+       </li>
+       <li tabIndex="0">
+          <a>Next</a>
+       </li>
+   </ul>
+`;
+
+export const TruncatePagerTemplate = (args) => html`
+  <ul role="navigation" aria-label="Pagination" class="emc-pager">
+       <li tabIndex="0">
+          <a>Previous</a>
+       </li>
+       <li tabIndex="0">
+          <a aria-label="Go to page 1" href="#">1</a>
+       </li>
+       <li tabIndex="0">
+          <a aria-label="Go to page 2" href="#">2</a>
+      </li>
+      <li tabIndex="0">
+          <a aria-label="Go to page 3" href="#">3</a>
+      </li>
+      <li class="disabled" tabIndex="-1">
+          <span aria-disabled="true">…</span>
+      </li>
+      <li tabIndex="0">
+        <a aria-label="Go to page 10" href="#">10</a>
+      </li>
+      <li tabIndex="0">
+            <a>Next</a>
+      </li>
+   </ul>
+`;
+
+# Pager
+
+A Pager is used to help users parse a large number of items on a page, whenever there are too many results to show at once. It breaks up results into several pages with controls for navigating forward and backward, or to a specific page.
+
+## Default
+The default form of the pager
+
+<Canvas>
+    <Story name="Default" args={{
+        content: 'The default form of the pager'
+        }}>
+        {DefaultPagerTemplate.bind({})}
+    </Story>
+</Canvas>
+
+## Active
+The pager has an active page selected
+
+<Canvas>
+    <Story name="Active" args={{
+        content: 'The pager has an active page selected'
+        }}>
+        {ActivePagerTemplate.bind({})}
+    </Story>
+</Canvas>
+
+## Truncated
+When the number of pages exceeds the maximum display limit, an ellipsis is used to truncate the remaining pages.
+
+<Canvas>
+    <Story name="Truncated" args={{
+          content: 'When the number of pages exceeds the maximum display limit, an ellipsis is used to truncate the remaining pages.'
+        }}>
+          {TruncatePagerTemplate.bind({})}
+    </Story>
+</Canvas>
