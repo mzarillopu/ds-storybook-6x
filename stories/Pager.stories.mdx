@@ -5,22 +5,22 @@ import { html } from 'lit-html';
 
 export const DefaultPagerTemplate = (args) => html`
   <ul role="navigation" aria-label="Pagination" class="emc-pager">
-       <li tabIndex="0">
+       <li>
           <a>Previous</a>
        </li>
-       <li tabIndex="0">
-          <a aria-label="Go to page 1" href="#">1</a>
+       <li>
+          <a aria-label="Go to page 1" href="javascript:void(0)">1</a>
        </li>
-       <li tabIndex="0">
-          <a aria-label="Go to page 2" href="#">2</a>
+       <li>
+          <a aria-label="Go to page 2" href="javascript:void(0)">2</a>
       </li>
-      <li tabIndex="0">
-          <a aria-label="Go to page 3" href="#">3</a>
+      <li>
+          <a aria-label="Go to page 3" href="javascript:void(0)">3</a>
       </li>
-      <li tabIndex="0">
-          <a aria-label="Go to page 4" href="#">4</a>
+      <li>
+          <a aria-label="Go to page 4" href="javascript:void(0)">4</a>
       </li>
-      <li tabIndex="0">
+      <li>
           <a>Next</a>
       </li>
    </ul>
@@ -28,22 +28,22 @@ export const DefaultPagerTemplate = (args) => html`
 
 export const ActivePagerTemplate = (args) => html`
   <ul role="navigation" aria-label="Pagination" class="emc-pager">
-       <li tabIndex="0">
+       <li>
           <a>Previous</a>
        </li>
-       <li class="active" tabIndex="0">
-          <a aria-label="Go to page 1" href="#">1</a>
+       <li>
+          <a aria-current="page" aria-label="Go to page 1" href="javascript:void(0)">1</a>
        </li>
-       <li tabIndex="0">
-          <a aria-label="Go to page 2" href="#">2</a>
+       <li>
+          <a aria-label="Go to page 2" href="javascript:void(0)">2</a>
        </li>
-       <li tabIndex="0">
-          <a aria-label="Go to page 3" href="#">3</a>
+       <li>
+          <a aria-label="Go to page 3" href="javascript:void(0)">3</a>
        </li>
-        <li tabIndex="0">
-          <a aria-label="Go to page 4" href="#">4</a>
+        <li>
+          <a aria-label="Go to page 4" href="javascript:void(0)">4</a>
        </li>
-       <li tabIndex="0">
+       <li>
           <a>Next</a>
        </li>
    </ul>
@@ -51,25 +51,25 @@ export const ActivePagerTemplate = (args) => html`
 
 export const TruncatePagerTemplate = (args) => html`
   <ul role="navigation" aria-label="Pagination" class="emc-pager">
-       <li tabIndex="0">
+       <li>
           <a>Previous</a>
        </li>
-       <li tabIndex="0">
-          <a aria-label="Go to page 1" href="#">1</a>
+       <li>
+          <a aria-label="Go to page 1" href="javascript:void(0)">1</a>
        </li>
-       <li tabIndex="0">
-          <a aria-label="Go to page 2" href="#">2</a>
+       <li>
+          <a aria-label="Go to page 2" href="javascript:void(0)">2</a>
       </li>
-      <li tabIndex="0">
-          <a aria-label="Go to page 3" href="#">3</a>
+      <li>
+          <a aria-label="Go to page 3" href="javascript:void(0)">3</a>
       </li>
-      <li class="disabled" tabIndex="-1">
+      <li>
           <span aria-disabled="true">…</span>
       </li>
-      <li tabIndex="0">
-        <a aria-label="Go to page 10" href="#">10</a>
+      <li>
+        <a aria-label="Go to page 10" href="javascript:void(0)">10</a>
       </li>
-      <li tabIndex="0">
+      <li>
             <a>Next</a>
       </li>
    </ul>
@@ -84,7 +84,6 @@ The default form of the pager
 
 <Canvas>
     <Story name="Default" args={{
-        content: 'The default form of the pager'
         }}>
         {DefaultPagerTemplate.bind({})}
     </Story>
@@ -95,7 +94,6 @@ The pager has an active page selected
 
 <Canvas>
     <Story name="Active" args={{
-        content: 'The pager has an active page selected'
         }}>
         {ActivePagerTemplate.bind({})}
     </Story>
@@ -106,7 +104,6 @@ When the number of pages exceeds the maximum display limit, an ellipsis is used 
 
 <Canvas>
     <Story name="Truncated" args={{
-          content: 'When the number of pages exceeds the maximum display limit, an ellipsis is used to truncate the remaining pages.'
         }}>
           {TruncatePagerTemplate.bind({})}
     </Story>

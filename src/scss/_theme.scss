@@ -48,6 +48,8 @@ $emc-theme-color-map: (
   emc-violet: (background-color: #983A90, color: #fff),
   emc-rose-dark: (background-color: #880E4F, color: #fff),
   emc-rose: (background-color: #E91E63, color: #000),
+  emc-dirty-white: (background-color: #ddd, color: #000),
+
   // highlights
   emc-cyan: (background-color: #75F4FF, color: #000),
   emc-aqua: (background-color: #03DAC5, color: #000),
@@ -122,6 +124,7 @@ $emc-theme-feature-colors: (
   pager-item-active: emc-gray-60,
   pager-item-hover: emc-gray-80,
   pager-item-disabled: emc-gray-20,
+  pager-item-border: emc-dirty-white,
 
   card: emc-white,
 );

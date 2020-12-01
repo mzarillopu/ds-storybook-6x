@@ -4,7 +4,7 @@
   margin: px-to-rem(20) px-to-rem(0);
 
   font-family: Source Sans Pro Web, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 1.06rem;
+  font-size: 1rem;
   line-height: .9;
 }
 
@@ -15,7 +15,7 @@
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  padding-inline-start: 40px;
+  padding-inline-start: px-to-rem(40);
 }
 
 .emc-pager li {
@@ -24,11 +24,12 @@
 
 .emc-pager li a:hover {
   @include emc-theme-color(pager-item-hover);
+  border-color: emc-theme-rgb(pager-item-hover);
 }
 
 .emc-pager li a:focus {
   font-weight: bold;
-  border-color: #ddd;
+  border-color: emc-theme-rgb(pager-item-hover);
 }
 
 .emc-pager>li:first-child>a {
@@ -43,39 +44,39 @@
   border-bottom-right-radius: px-to-rem(4);
 }
 
-.emc-pager>.disabled>a,
-.emc-pager>.disabled>a:focus,
-.emc-pager>.disabled>a:hover,
-.emc-pager>.disabled>span,
-.emc-pager>.disabled>span:focus,
-.emc-pager>.disabled>span:hover {
+.emc-pager a[aria-disabled=true],
+.emc-pager a[aria-disabled=true]:focus,
+.emc-pager a[aria-disabled=true]:hover,
+.emc-pager span[aria-disabled=true],
+.emc-pager span[aria-disabled=true]:focus,
+.emc-pager span[aria-disabled=true]:hover {
   @include emc-theme-color(pager-item-disabled);
   cursor: not-allowed;
-  border-color: #ddd;
 }
 
-.emc-pager>.active>a,
-.emc-pager>.active>a:focus,
-.emc-pager>.active>a:hover,
-.emc-pager>.active>span,
-.emc-pager>.active>span:focus,
-.emc-pager>.active>span:hover {
+.emc-pager a[aria-current=page],
+.emc-pager a[aria-current=page]:focus,
+.emc-pager a[aria-current=page]:hover,
+.emc-pager span[aria-current=page],
+.emc-pager span[aria-current=page]:focus,
+.emc-pager span[aria-current=page]:hover {
   @include emc-theme-color(pager-item-active);
   cursor: not-allowed;
-  border-color: #ddd;
+  border-color: emc-theme-rgb(pager-item-active);
 }
 
 .emc-pager>li>a,
 .emc-pager>li>span {
   @include emc-theme-color(pager-item);
-  border: 1px solid #ddd;
+  border: 1px solid emc-theme-rgb(pager-item-border);
   float: left;
-  line-height: 1.42857;
+  line-height: 1.5;
   margin-left: -1px;
   padding: px-to-rem(4) px-to-rem(10);
   position: relative;
   text-decoration: none;
 }
+
 .emc-pager>li>a,
 .emc-pager>li>span {
   padding: px-to-rem(6) px-to-rem(12);
