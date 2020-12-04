@@ -1,0 +1,280 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { html } from 'lit-html';
+
+<Meta title="Components/Modal Dialog" component="ModalDialog" />
+
+export const PassiveDialogTemplate = (args) => html`
+    <script id="initscript">
+        var modalPassive = document.getElementById('passiveTest');
+        window.onclick = function(event) {
+            if (event.target == modalPassive) {
+                modalPassive.classList.remove("emc-modal__wrapper--visible");
+            }
+        }
+        function toggleDialogPassive() {
+            modalPassive.classList.toggle("emc-modal__wrapper--visible");
+        }
+    </script>
+    <button class="emc-btn" onClick="toggleDialogPassive()">Test Passive Dialog!</button>
+    <div id="passiveTest" role="presentation" class="emc-modal-wrapper">
+      <div role="dialog" aria-label="Passive Dialog" aria-modal="true" class="emc-modal emc-modal--sm">
+      <div class="emc-modal-title">
+                ${ args.title }
+                  <button class="emc-modal-button__close emc-modal-button--transparent"
+                      aria-label="Close modal dialog" onClick="toggleDialogPassive()"></button>
+        </div>
+        <div class="emc-modal-content" aria-labelledBy="emc-modal-title">${ args.content }</div>
+      </div>
+    </div>
+`;
+
+export const SmallDialogTemplate = (args) => html`
+    <script id="initscript">
+        var modalSmall = document.getElementById('smallTest');
+        window.onclick = function(event) {
+            if (event.target == modalSmall) {
+                modalSmall.classList.remove("emc-modal__wrapper--visible");
+            }
+        }
+        function toggleDialogSmall() {
+            modalSmall.classList.toggle("emc-modal__wrapper--visible");
+        }
+    </script>
+    <button class="emc-btn" onClick="toggleDialogSmall()">Test Small Dialog!</button>
+    <div id="smallTest" role="presentation" class="emc-modal-wrapper">
+      <div role="dialog" aria-label="Small Dialog" aria-modal="true" class="emc-modal emc-modal--sm">
+      <div class="emc-modal-title">
+                ${ args.title }
+                  <button class="emc-modal-button__close emc-modal-button--transparent"
+                      aria-label="Close modal dialog" onClick="toggleDialogSmall()"></button>
+        </div>
+        <div class="emc-modal-content" aria-labelledBy="emc-modal-title">${ args.content }</div>
+        <div class="emc-modal-button-container">
+          <button class="emc-btn" onClick="toggleDialogSmall()">Cancel</button>
+          <button class="emc-btn" onClick="toggleDialogSmall()">OK</button>
+        </div>
+      </div>
+    </div>
+`;
+
+export const MediumDialogTemplate = (args) => html`
+    <script id="initscript">
+        var modalMedium = document.getElementById('mediumTest');
+        window.onclick = function(event) {
+            if (event.target == modalMedium) {
+                modalMedium.classList.remove("emc-modal__wrapper--visible");
+            }
+        }
+        function toggleDialogMedium() {
+            modalMedium.classList.toggle("emc-modal__wrapper--visible");
+        }
+    </script>
+    <button class="emc-btn" onClick="toggleDialogMedium()">Test Medium Dialog!</button>
+    <div id="mediumTest" role="presentation" class="emc-modal-wrapper">
+       <div role="dialog" aria-label="Medium Dialog" aria-modal="true" class="emc-modal emc-modal--md">
+       <div class="emc-modal-title">
+                 ${ args.title }
+                   <button class="emc-modal-button__close emc-modal-button--transparent"
+                       aria-label="Close modal dialog" onClick="toggleDialogMedium()"></button>
+         </div>
+         <div class="emc-modal-content" aria-labelledBy="emc-modal-title">${ args.content }</div>
+         <div class="emc-modal-button-container">
+           <button class="emc-btn" onClick="toggleDialogMedium()">Cancel</button>
+           <button class="emc-btn" onClick="toggleDialogMedium()">OK</button>
+         </div>
+       </div>
+    </div>
+`;
+
+export const LargeDialogTemplate = (args) => html`
+    <script id="initscript">
+        var modalLarge = document.getElementById('largeTest');
+        window.onclick = function(event) {
+            if (event.target == modalLarge) {
+                modalLarge.classList.remove("emc-modal__wrapper--visible");
+            }
+        }
+        function toggleDialogLarge() {
+            var modalLarge = document.getElementById('largeTest');
+            modalLarge.classList.toggle("emc-modal__wrapper--visible");
+        }
+    </script>
+    <button class="emc-btn" onClick="toggleDialogLarge()">Test Large Dialog!</button>
+    <div id="largeTest" role="presentation" class="emc-modal-wrapper">
+       <div role="dialog" aria-label="Large Dialog" aria-modal="true" class="emc-modal emc-modal--lg">
+         <div class="emc-modal-title">
+                     ${ args.title }
+                       <button class="emc-modal-button__close emc-modal-button--transparent"
+                           aria-label="Close modal dialog" onClick="toggleDialogLarge()"></button>
+         </div>
+         <div class="emc-modal-content" aria-labelledBy="emc-modal-title">${ args.content }</div>
+         <div class="emc-modal-button-container">
+           <button class="emc-btn" onClick="toggleDialogLarge()">Cancel</button>
+           <button class="emc-btn" onClick="toggleDialogLarge()">OK</button>
+         </div>
+       </div>
+    </div>
+`;
+
+export const ScrollingDialogTemplate = (args) => html`
+    <script id="initscript">
+        var modalScroll = document.getElementById('scrollTest');
+        window.onclick = function(event) {
+            if (event.target == modalScroll) {
+                modalScroll.classList.remove("emc-modal__wrapper--visible");
+            }
+        }
+        function toggleDialogScroll() {
+            modalScroll.classList.toggle("emc-modal__wrapper--visible");
+        }
+    </script>
+    <button class="emc-btn" onClick="toggleDialogScroll()">Test Scrolling Dialog!</button>
+    <div id="scrollTest" role="presentation" class="emc-modal-wrapper">
+       <div role="dialog" aria-label="Large Dialog" aria-modal="true" class="emc-modal emc-modal--lg">
+         <div class="emc-modal-title">
+           <button class="emc-modal-button__close emc-modal-button--transparent"
+                aria-label="Close modal dialog" onClick="toggleDialogScroll()"></button>
+             ${ args.title }
+         </div>
+         <div class="emc-modal-content emc-modal-content--scroll " aria-labelledBy="emc-modal-title">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+                <br/>
+                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
+                <br/>
+                Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu.
+                <br/>
+                Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus. Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis. Etiam imperdiet imperdiet orci. Nunc nec neque.
+                <br/>
+                Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus accumsan cursus velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus consectetuer vestibulum elit. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue. In turpis. Pellentesque posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Nullam sagittis. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id purus. Ut varius tincidunt libero. Phasellus dolor. Maecenas vestibulum mollis
+         </div>
+         <div class="emc-modal-button-container">
+           <button class="emc-btn" onClick="toggleDialogScroll()">Cancel</button>
+           <button class="emc-btn" onClick="toggleDialogScroll()">OK</button>
+         </div>
+       </div>
+    </div>
+`;
+
+export const TransactionalModalComponentDialogTemplate = (args) => html`
+    <script id="initscript">
+        var modalTransaction = document.getElementById("transactionModal");
+        modalTransaction.addEventListener("ok", function () {
+            console.log("ok");
+        });
+        modalTransaction.addEventListener("cancel", function () {
+            console.log("cancel");
+        });
+         var btn = document.getElementById("btnTest");
+         btn.addEventListener("click", function () {
+             modalTransaction.visible = !modal.visible;
+         });
+    </script>
+    <button class="emc-btn" id="btnTest">Test Me!</button>
+    <emc-modal-dialog id="transactionModal" visible="false" title="${ args.title}">
+        ${ args.content }
+    </emc-modal-dialog>
+`;
+
+export const PassiveModalComponentDialogTemplate = (args) => html`
+    <script id="initscript">
+           var modal = document.querySelector("emc-modal-dialog-passive");
+           modal.addEventListener("cancel", function () {
+               console.log("cancel");
+           });
+            var btn = document.getElementById("btnTest2");
+            btn.addEventListener("click", function () {
+                var modal = document.querySelector("emc-modal-dialog-passive");
+                modal.visible = !modal.visible;
+            });
+       </script>
+       <button class="emc-btn" id="btnTest2">Test Me Too!</button>
+       <emc-modal-dialog-passive visible="false" title="${ args.title}">
+           ${ args.content }
+       </emc-modal-dialog-passive>
+`;
+
+# Modal Dialog
+A modal dialog displays content that requires user interaction, in a layer above the page.
+
+## Small Dialog
+This is a small dialog
+
+<Canvas>
+    <Story name="Small Dialog" args={{
+            title: "This is for small dialogs",
+            content: "We need to add some content here"
+        }}>
+        {SmallDialogTemplate.bind({})}
+    </Story>
+</Canvas>
+
+## Medium Dialog
+This is a medium dialog
+
+<Canvas>
+    <Story name="Medium Dialog" args={{
+            title: "This is for medium dialogs",
+            content: "We need to add some content here"
+        }}>
+        {MediumDialogTemplate.bind({})}
+    </Story>
+</Canvas>
+
+## Large Dialog
+This is a large dialog
+
+<Canvas>
+    <Story name="Large Dialog" args={{
+            title: "This is for large dialogs",
+            content: "We need to add some content here"
+        }}>
+        {LargeDialogTemplate.bind({})}
+    </Story>
+</Canvas>
+
+## Passive Dialog
+Presents information the user needs to be aware of concerning their current workflow. Contains no actions for the user to take.
+
+<Canvas>
+    <Story name="Passive Dialog" args={{
+            title: "This is for passive dialogs",
+            content: "We need to add some content here"
+        }}>
+        {PassiveDialogTemplate.bind({})}
+    </Story>
+</Canvas>
+
+## Scrolling Dialog
+
+<Canvas>
+    <Story name="Scrolling Dialog" args={{
+            title: "This is for scrolling dialogs"
+        }}>
+        {ScrollingDialogTemplate.bind({})}
+    </Story>
+</Canvas>
+
+## Transactional Web Component
+Requires an action to be taken in order for the modal to be completed and closed. Contains a cancel and primary action buttons.
+
+<Canvas>
+    <Story name="Transactional Web Component" args={{
+            title: "We need to add a title here",
+            content: "We need to add some content here"
+        }}>
+        {TransactionalModalComponentDialogTemplate.bind({})}
+    </Story>
+</Canvas>
+
+## Passive Web Component
+Presents information the user needs to be aware of concerning their current workflow. Contains no actions for the user to take.
+
+<Canvas>
+    <Story name="Passive Web Component" args={{
+            title: "We need to add a title here",
+            content: "We need to add some content here"
+        }}>
+        {PassiveModalComponentDialogTemplate.bind({})}
+    </Story>
+</Canvas>
+

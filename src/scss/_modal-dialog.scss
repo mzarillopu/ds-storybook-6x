@@ -1,0 +1,84 @@
+.emc-modal-wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: emc-theme-rgb(modal-wrapper);
+  opacity: 1;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 1;
+}
+
+.emc-modal__wrapper--visible {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.emc-modal {
+  @include emc-theme-color(modal);
+  font-family: Source Sans Pro Web, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  padding: px-to-rem(10);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: px-to-rem(5);
+  min-width: px-to-rem(300);
+  width: 30%;
+}
+
+.emc-modal-title {
+  padding: px-to-rem(2) px-to-rem(5);
+  font-size: 1.5rem;
+}
+
+.emc-modal-content {
+  padding: px-to-rem(2) px-to-rem(5);
+}
+
+.emc-modal--sm  {
+  width: 48%;
+}
+
+.emc-modal--md  {
+  width: 60%;
+}
+
+.emc-modal--lg  {
+  width: 84%;
+}
+
+.emc-modal-button-container {
+  text-align: right;
+  margin-top: px-to-rem(10);
+  margin-bottom: px-to-rem(10);
+}
+
+.emc-modal-content--scroll {
+  overflow: auto;
+  height: px-to-rem(300);
+}
+
+.emc-modal-button__close {
+  background: url(../icons/remove-symbol.svg) 0 no-repeat;
+  background-size: px-to-rem(12) px-to-rem(12);
+  height: 20%;
+  position: absolute;
+  top: px-to-rem(5);
+  right: px-to-rem(15);
+  opacity: 1;
+  transition: opacity 0.5s ease 0s;
+  color: inherit;
+}
+
+.emc-modal-button--transparent {
+  background-color: transparent;
+  border-color: transparent;
+  text-decoration: underline;
+}
