@@ -21,8 +21,6 @@ h1, .emc-h1 {
   line-height: 4rem;
   margin: .4em 0;
   text-transform: none;
-  margin-block-start: 0.67em;
-  margin-block-end: 0.67em;
 }
 
 h2, .emc-h2 {
@@ -31,8 +29,6 @@ h2, .emc-h2 {
   font-size: 2.125rem; // = 34px / 16px
   line-height: 3rem;
   text-transform: none;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
 }
 
 h3, .emc-h3 {
@@ -41,8 +37,6 @@ h3, .emc-h3 {
   font-size: 1.5rem; // = 24px / 16px
   line-height: 1.6875rem; // = 27px / 16px
   text-transform: none;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
 }
 
 h4, .emc-h4 {
@@ -51,8 +45,6 @@ h4, .emc-h4 {
   font-size: 1.3125rem; // = 21px / 16px
   line-height: 1.6875rem; // = 27px / 16px
   text-transform: none;
-  margin-block-start: 1.33em;
-  margin-block-end: 1.33em;
 }
 
 h5, .emc-h5 {
@@ -61,8 +53,6 @@ h5, .emc-h5 {
   font-size: 1rem; // = 16px / 16px
   line-height: 1.6875rem; // = 27px / 16px
   text-transform: uppercase;
-  margin-block-start: 1.67em;
-  margin-block-end: 1.67em;
 }
 
 h6, .emc-h6 {
@@ -71,8 +61,6 @@ h6, .emc-h6 {
   font-size: 1rem;
   line-height: 1.6875rem; // = 27px / 16px
   text-transform: uppercase;
-  margin-block-start: 2.33em;
-  margin-block-end: 2.33em;
 }
 
 .emc-display-heading {
@@ -81,8 +69,6 @@ h6, .emc-h6 {
   font-size: 3.3125rem; // 53px / 16px
   line-height: 4rem;
   text-transform: none;
-  margin-block-start: 0.67em;
-  margin-block-end: 0.67em;
 }
 
 .emc-page-title {
@@ -97,8 +83,6 @@ h6, .emc-h6 {
 
 .emc-block-heading {
   font-weight: 700;
-  // margin-block-start: .5rem;
-  margin-block-end: .5rem;
 }
 
 .emc-block-heading:after {
