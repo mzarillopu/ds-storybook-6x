@@ -6,11 +6,6 @@
 $emc-base-font-size-in-pixels: 16;
 $emc-rem: 100%;
 
-// convert a pixel measurement into rems
-@function px-to-rem($px) {
-  @return ($px / $emc-base-font-size-in-pixels) * 1rem;
-}
-
 $emc-font-display: swap;
 
 $font-face-body: 'Roboto', sans-serif;
