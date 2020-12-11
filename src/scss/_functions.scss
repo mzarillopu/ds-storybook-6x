@@ -1,0 +1,4 @@
+// convert a pixel measurement into rems
+@function px-to-rem($px) {
+  @return ($px / $emc-base-font-size-in-pixels) * 1rem;
+}
