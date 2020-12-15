@@ -1,5 +1,4 @@
 html {
-  font-family: $font-face-body;
   font-size: $emc-rem;
   line-height: 1.875;
 }
@@ -15,7 +14,6 @@ label {
 }
 
 h1, .emc-h1 {
-  font-family: $font-face-heading;
   font-weight: 400;
   font-size: 3.3125rem; // 53px / 16px
   line-height: 4rem;
@@ -24,7 +22,6 @@ h1, .emc-h1 {
 }
 
 h2, .emc-h2 {
-  font-family: $font-face-heading;
   font-weight: 600;
   font-size: 2.125rem; // = 34px / 16px
   line-height: 3rem;
@@ -32,7 +29,6 @@ h2, .emc-h2 {
 }
 
 h3, .emc-h3 {
-  font-family: $font-face-heading;
   font-weight: 600;
   font-size: 1.5rem; // = 24px / 16px
   line-height: 1.6875rem; // = 27px / 16px
@@ -40,7 +36,6 @@ h3, .emc-h3 {
 }
 
 h4, .emc-h4 {
-  font-family: $font-face-heading;
   font-weight: 700;
   font-size: 1.3125rem; // = 21px / 16px
   line-height: 1.6875rem; // = 27px / 16px
@@ -48,7 +43,6 @@ h4, .emc-h4 {
 }
 
 h5, .emc-h5 {
-  font-family: $font-face-heading;
   font-weight: 700;
   font-size: 1rem; // = 16px / 16px
   line-height: 1.6875rem; // = 27px / 16px
@@ -56,7 +50,6 @@ h5, .emc-h5 {
 }
 
 h6, .emc-h6 {
-  font-family: $font-face-heading;
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.6875rem; // = 27px / 16px
@@ -64,7 +57,6 @@ h6, .emc-h6 {
 }
 
 .emc-display-heading {
-  font-family: $font-face-heading;
   font-weight: 700;
   font-size: 3.3125rem; // 53px / 16px
   line-height: 4rem;

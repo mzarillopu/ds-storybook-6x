@@ -4,7 +4,6 @@
 }
 
 .emc-card__heading {
-  font-family: $font-face-heading;
   font-style: normal;
   font-weight: 600;
   font-size: px-to-rem(14);
@@ -24,7 +23,6 @@
 .emc-card__footer {
   @include emc-theme-color(neutral-light);
   padding: px-to-rem(10) px-to-rem(12);
-  font-family: $font-face-body;
   font-style: normal;
   font-weight: 700;
   font-size: px-to-rem(10);
@@ -40,7 +38,6 @@
   // this allows the card to properly take up space when put into a flex container
   width: 100%;
   max-width: px-to-rem(400);
-  font-family: Lora, serif;
   margin: px-to-rem(20);
 }
 .emc-news-card:hover {
@@ -96,7 +93,6 @@
   margin-bottom: px-to-rem(12);
 }
 .emc-event-card__title a {
-  font-family: $font-face-heading;
   font-size: 1.25rem;
   font-weight: bold;
   text-decoration: none;
