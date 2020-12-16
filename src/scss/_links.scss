@@ -1,29 +1,29 @@
 a {
-  @include emc-theme-color(link);
+  color: emc-theme-rgb(link);
 }
 
 a:visited, .emc-link-visited {
-  @include emc-theme-color(link-visited);
+  color: emc-theme-rgb(link-visited);
 }
 
 .emc-highlight-visited a:visited, .emc-highlight-visited .emc-link-visited {
-  @include emc-theme-color(link);
+  color: emc-theme-rgb(link);
 }
 
 a:focus, .emc-link-focus {
-  @include emc-theme-color(link-focus);
+  color: emc-theme-rgb(link-focus);
 }
 
 a:active, .emc-link-active {
-  @include emc-theme-color(link-active);
+  color: emc-theme-rgb(link-active);
 }
 
 a:hover, .emc-link-hover {
-  @include emc-theme-color(link-active);
+  color: emc-theme-rgb(link-hover);
 }
 
 a:disabled, .emc-link-disabled {
-  @include emc-theme-color(link);
+  color: emc-theme-rgb(link);
   cursor: not-allowed;
   opacity: 0.7;
   text-decoration: none;
