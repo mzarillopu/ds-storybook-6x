@@ -4,11 +4,37 @@ import { html } from 'lit-html';
 <Meta title="Components/Link" component="Link" />
 
 export const Template = (args) => html`
-    <a href="">${ args.text }</a>
+    <a href="javascript:void(0);">${ args.text }</a>
+`;
+
+export const VisitedTemplate = (args) => html`
+    <a href="javascript:void(0);" class="emc-link-visited">${ args.text }</a>
+`;
+
+export const AlternativeVisitedTemplate = (args) => html`
+    <div class="emc-highlight-visited">
+        <a href="javascript:void(0);" class="emc-link-visited">${ args.text }</a>
+    </div>
+`;
+
+export const FocusTemplate = (args) => html`
+    <a href="javascript:void(0);" class="emc-link-focus">${ args.text }</a>
+`;
+
+export const ActiveTemplate = (args) => html`
+    <a href="javascript:void(0);" class="emc-link-active">${ args.text }</a>
+`;
+
+export const HoverTemplate = (args) => html`
+    <a href="javascript:void(0);" class="emc-link-hover">${ args.text }</a>
+`;
+
+export const DisabledTemplate = (args) => html`
+    <a href="javascript:void(0);" class="emc-link-disabled" disabled>${ args.text }</a>
 `;
 
 export const ExternalLinkTemplate = (args) => html`
-    <a href="" target="_blank" rel="noopener noreferrer">${ args.text }</a>
+    <a href="javascript:void(0);" target="_blank" rel="noopener noreferrer">${ args.text }</a>
 `;
 
 # Link
@@ -36,4 +62,50 @@ navigate to a different section within the same page/document.
     </Story>
 </Canvas>
 
+<Canvas>
+    <Story name="Visited Link" args={{
+        text: "Link Text"
+    }}>
+      {VisitedTemplate.bind({})}
+    </Story>
+</Canvas>
 
+<Canvas>
+    <Story name="Visited Link Override" args={{
+        text: "Link Text"
+    }}>
+      {AlternativeVisitedTemplate.bind({})}
+    </Story>
+</Canvas>
+
+<Canvas>
+    <Story name="Focused" args={{
+        text: "Link Text"
+    }}>
+      {FocusTemplate.bind({})}
+    </Story>
+</Canvas>
+
+<Canvas>
+    <Story name="Active" args={{
+        text: "Link Text"
+    }}>
+      {ActiveTemplate.bind({})}
+    </Story>
+</Canvas>
+
+<Canvas>
+    <Story name="Hover" args={{
+        text: "Link Text"
+    }}>
+      {HoverTemplate.bind({})}
+    </Story>
+</Canvas>
+
+<Canvas>
+    <Story name="Disabled" args={{
+        text: "Link Text"
+    }}>
+      {DisabledTemplate.bind({})}
+    </Story>
+</Canvas>

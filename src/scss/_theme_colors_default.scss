@@ -12,6 +12,12 @@ $emc-theme-feature-colors: (
 
         body-text: emc-black,
 
+        link: emc-blue-dark,
+        link-visited: emc-indigo-dark,
+        link-hover: emc-blue,
+        link-active: emc-blue,
+        link-focus: emc-blue,
+
   // header theme options
         header-cap: emc-princeton-orange,
         header-pu-branding: emc-white,

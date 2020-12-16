@@ -56,6 +56,7 @@ $emc-color-map: (
         emc-neon: (background-color: #E1FF32, color: #000),
         emc-lime: (background-color: #C9FB36, color: #000),
         emc-olive: (background-color: #A0BD00, color: #000),
+
 );
 
 @each $key, $value in $emc-color-map {

@@ -31,7 +31,7 @@
 @import 'headings';
 @import 'icon';
 @import 'layout';
-@import 'link';
+@import 'links';
 @import 'menu-toggle';
 @import 'modal-dialog';
 @import 'nav-menu';
@@ -44,10 +44,6 @@
 
 body {
   background-color: white;
-}
-
-a:visited {
-  color: rgb(0,0,238);
 }
 
 * {
