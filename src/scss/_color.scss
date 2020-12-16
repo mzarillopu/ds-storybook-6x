@@ -56,6 +56,12 @@ $emc-color-map: (
         emc-neon: (background-color: #E1FF32, color: #000),
         emc-lime: (background-color: #C9FB36, color: #000),
         emc-olive: (background-color: #A0BD00, color: #000),
+
+        emc-link: (background-color: #fff, color: #0645AD),
+        emc-link-hover: (background-color: #fff, color: #005760),
+        emc-link-active: (background-color: #fff, color: #005760),
+        emc-link-focus: (background-color: #fff, color: #005760),
+        emc-link-visited: (background-color: #fff, color: #0B0080),
 );
 
 @each $key, $value in $emc-color-map {
