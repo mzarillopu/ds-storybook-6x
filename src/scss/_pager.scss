@@ -2,8 +2,6 @@
   display: inline-block;
   padding-left: px-to-rem(0);
   margin: px-to-rem(20) px-to-rem(0);
-
-  font-family: Source Sans Pro Web, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1rem;
   line-height: .9;
 }
@@ -11,11 +9,6 @@
 .emc-pager ul {
   display: block;
   list-style-type: disc;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: px-to-rem(40);
 }
 
 .emc-pager li {

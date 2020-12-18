@@ -21,7 +21,6 @@
 
 .emc-modal {
   @include emc-theme-color(modal);
-  font-family: Source Sans Pro Web, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1rem;
   padding: px-to-rem(10);
   position: absolute;

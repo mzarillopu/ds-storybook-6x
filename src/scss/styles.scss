@@ -3,9 +3,14 @@
 @import 'defaults';
 @import 'variables';
 @import 'functions';
+@import 'breakpoints';
+@import 'color';
+@import 'theme_colors_default';
+// @import 'theme_colors_demo';
 @import 'theme';
-//@import 'color';
 @import 'typography';
+@import 'font_pairing_default';
+@import 'font_pairing_casual';
 @import 'elevation';
 
 @import 'focus';
@@ -24,9 +29,10 @@
 @import 'form-field';
 @import 'forms';
 @import 'header';
+@import 'headings';
 @import 'icon';
 @import 'layout';
-@import 'link';
+@import 'links';
 @import 'menu-toggle';
 @import 'modal-dialog';
 @import 'nav-menu';
@@ -41,10 +47,6 @@
 
 body {
   background-color: white;
-}
-
-a:visited {
-  color: rgb(0,0,238);
 }
 
 * {

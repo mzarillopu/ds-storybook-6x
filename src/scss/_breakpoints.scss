@@ -1,0 +1,19 @@
+// Media Breakpoints
+// - these breakpoints were defined based on the philosophy outlined in this post:
+// https://medium.com/free-code-camp/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862
+
+@mixin for-phone-only {
+  @media (max-width: px-to-rem(599)) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: px-to-rem(600)) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: px-to-rem(900)) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: px-to-rem(1200)) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: px-to-rem(1800)) { @content; }
+}
