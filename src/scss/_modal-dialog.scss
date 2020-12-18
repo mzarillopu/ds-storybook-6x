@@ -65,7 +65,7 @@
 }
 
 .emc-modal-button__close {
-  background: url(../icons/remove-symbol.svg) 0 no-repeat;
+  background: url(emc-icons-path("remove")) 0 no-repeat;
   background-size: px-to-rem(12) px-to-rem(12);
   height: 20%;
   position: absolute;
