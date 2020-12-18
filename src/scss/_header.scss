@@ -67,7 +67,7 @@
 //}
 .emc-header__search-bar form [type='submit'] {
   @include emc-theme-color(header-search-input);
-  background-image: url(../icons/iconmonstr-magnifier-2.svg);
+  background-image: url(emc-icons-path("search"));
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 1rem;

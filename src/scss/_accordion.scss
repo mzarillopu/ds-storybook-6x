@@ -24,7 +24,7 @@
 }
 .emc-accordion__button[aria-expanded='false']:after {
   content: ' ';
-  background-image: url(../icons/expand_more-24px.svg);
+  background-image: url(emc-icons-path("expand-more"));
   width: 18px;
   height: 17px;
   background-size: 18px 18px;
@@ -34,7 +34,7 @@
 }
 .emc-accordion__button[aria-expanded='true']:after {
   content: ' ';
-  background-image: url(../icons/expand_less-24px.svg);
+  background-image: url(emc-icons-path("expand-less"));
   width: 18px;
   height: 17px;
   background-size: 18px 18px;
