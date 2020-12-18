@@ -62,9 +62,20 @@ $emc-theme-feature-colors: (
         pager-item-disabled: emc-gray-20,
         pager-item-border: emc-dirty-white,
 
+  // overflow menu theme
+        overflow-menu: emc-white,
+        overflow-menu-divider: emc-cool-gray-20,
+        overflow-menu-active: emc-blue,
+        overflow-menu-danger: emc-red,
+
   // modal theme
         modal-wrapper: emc-gray-40,
         modal: emc-white,
+
+  // toolbar theme
+        toolbar: emc-gray-20,
+        toolbar-section-divider: emc-gray,
+        toolbar-legend-color: emc-gray-80,
 
         card: emc-white,
 );
